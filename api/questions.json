@@ -2294,7 +2294,1568 @@
       },
       "microbiology": {
         "title": "Microbiology (الأحياء الدقيقة)",
-        "questions": []
+        "questions": [
+          {
+            "id": "micro_1",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "Presence of viable bacteria in the blood without active multiplication is called",
+            "options": [
+              "septicemia",
+              "toxemia",
+              "bacteremia",
+              "viremia"
+            ],
+            "correct_id": 2,
+            "explanation": "Transient; may follow dental procedures or mucosal trauma."
+          },
+          {
+            "id": "micro_2",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "A few cases of septic shock are caused by",
+            "options": [
+              "exotoxins",
+              "viruses",
+              "fungi",
+              "parasites"
+            ],
+            "correct_id": 0,
+            "explanation": "Most cases are due to endotoxin of gram-negative bacteria."
+          },
+          {
+            "id": "micro_3",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "Septic shock is nowadays most commonly caused by",
+            "options": [
+              "gram-positive cocci",
+              "fungi",
+              "viruses",
+              "gram-negative bacilli"
+            ],
+            "correct_id": 3,
+            "explanation": "Broad-spectrum antibiotic use shifted the etiology."
+          },
+          {
+            "id": "micro_4",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "All of the following are leading gram-negative causes of septic shock except",
+            "options": [
+              "Pseudomonas aeruginosa",
+              "Staphylococcus aureus",
+              "Klebsiella pneumoniae",
+              "Escherichia coli"
+            ],
+            "correct_id": 1,
+            "explanation": "Look at the Gram reaction of each organism."
+          },
+          {
+            "id": "micro_5",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "Endotoxin is",
+            "options": [
+              "teichoic acid",
+              "lipid A of lipopolysaccharide",
+              "peptidoglycan",
+              "M protein"
+            ],
+            "correct_id": 1,
+            "explanation": "Found in the outer membrane of gram-negative bacteria."
+          },
+          {
+            "id": "micro_6",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "Lipopolysaccharide activates macrophages by binding to",
+            "options": [
+              "CD4",
+              "CD21",
+              "CCR5",
+              "CD14/TLR4"
+            ],
+            "correct_id": 3,
+            "explanation": "A toll-like receptor."
+          },
+          {
+            "id": "micro_7",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "Treatment of septicemia requires appropriate antibiotics for",
+            "options": [
+              "6 weeks or more",
+              "2 days",
+              "5 days",
+              "10 days"
+            ],
+            "correct_id": 0,
+            "explanation": "Along with raising the blood pressure."
+          },
+          {
+            "id": "micro_8",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "One of the following is not a feature of septic shock",
+            "options": [
+              "refractory hypotension",
+              "disseminated intravascular coagulation",
+              "refractory hypertension",
+              "multi-organ failure"
+            ],
+            "correct_id": 2,
+            "explanation": "Think about the blood pressure in shock."
+          },
+          {
+            "id": "micro_9",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "Giving bactericidal antibiotics in gram-negative septicemia may temporarily worsen shock due to",
+            "options": [
+              "bacterial multiplication",
+              "antibiotic resistance",
+              "allergic reaction",
+              "release of endotoxin"
+            ],
+            "correct_id": 3,
+            "explanation": "Killing bacteria lyses them."
+          },
+          {
+            "id": "micro_10",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "Blood culture in suspected septicemia should be taken as",
+            "options": [
+              "one set after antibiotics",
+              "3 separate sets before antibiotics",
+              "urine culture only",
+              "one set from a catheter only"
+            ],
+            "correct_id": 1,
+            "explanation": "Different venipuncture sites; timing relative to antimicrobials matters."
+          },
+          {
+            "id": "micro_11",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "Inflamed red streaks along lymphatic channels are called",
+            "options": [
+              "lymphadenitis",
+              "lymphoma",
+              "lymphangitis",
+              "lymphedema"
+            ],
+            "correct_id": 2,
+            "explanation": "Inflammation of the vessels, not the nodes."
+          },
+          {
+            "id": "micro_12",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "Scarlet fever is caused by",
+            "options": [
+              "group A beta-hemolytic streptococci",
+              "group B streptococci",
+              "Staphylococcus aureus",
+              "Streptococcus pneumoniae"
+            ],
+            "correct_id": 0,
+            "explanation": "Streptococcus pyogenes."
+          },
+          {
+            "id": "micro_13",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "Streptococcus pyogenes is",
+            "options": [
+              "catalase-negative and bacitracin-sensitive",
+              "catalase-positive and bacitracin-sensitive",
+              "catalase-negative and bacitracin-resistant",
+              "catalase-positive and bacitracin-resistant"
+            ],
+            "correct_id": 0,
+            "explanation": "Streptococci lack catalase."
+          },
+          {
+            "id": "micro_14",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "The erythrogenic toxin gene is carried by",
+            "options": [
+              "a plasmid",
+              "a transposon only",
+              "a temperate bacteriophage",
+              "the ribosome"
+            ],
+            "correct_id": 2,
+            "explanation": "Lysogenic conversion."
+          },
+          {
+            "id": "micro_15",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "Erythrogenic toxin acts as",
+            "options": [
+              "a neurotoxin",
+              "a superantigen",
+              "a pore-forming toxin",
+              "an ADP-ribosylating toxin"
+            ],
+            "correct_id": 1,
+            "explanation": "Cross-links MHC II with the T-cell receptor."
+          },
+          {
+            "id": "micro_16",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "Sandpaper rash with strawberry tongue is characteristic of",
+            "options": [
+              "measles",
+              "rubella",
+              "chickenpox",
+              "scarlet fever"
+            ],
+            "correct_id": 3,
+            "explanation": "Also circumoral pallor."
+          },
+          {
+            "id": "micro_17",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "Linear petechiae in skin creases are called",
+            "options": [
+              "Koplik spots",
+              "rose spots",
+              "Pastia’s lines",
+              "Janeway lesions"
+            ],
+            "correct_id": 2,
+            "explanation": "Seen in the antecubital fossa, axillae and groin."
+          },
+          {
+            "id": "micro_18",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "Untreated group A streptococcal infection may lead to",
+            "options": [
+              "rheumatic fever only",
+              "glomerulonephritis only",
+              "both rheumatic fever and glomerulonephritis",
+              "none of them"
+            ],
+            "correct_id": 2,
+            "explanation": "Non-suppurative complications."
+          },
+          {
+            "id": "micro_19",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "Drug of choice for scarlet fever is",
+            "options": [
+              "gentamicin",
+              "ciprofloxacin",
+              "doxycycline",
+              "penicillin"
+            ],
+            "correct_id": 3,
+            "explanation": "No resistance has been documented."
+          },
+          {
+            "id": "micro_20",
+            "topic": "L1 Septicemia Scarlet Fever",
+            "question": "In penicillin-allergic patients with scarlet fever, an alternative is",
+            "options": [
+              "gentamicin",
+              "azithromycin",
+              "ciprofloxacin",
+              "vancomycin"
+            ],
+            "correct_id": 1,
+            "explanation": "A macrolide."
+          },
+          {
+            "id": "micro_21",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "Salmonella is",
+            "options": [
+              "gram-positive cocci",
+              "gram-negative cocci",
+              "gram-negative motile bacilli",
+              "gram-positive bacilli"
+            ],
+            "correct_id": 2,
+            "explanation": "Facultative anaerobe."
+          },
+          {
+            "id": "micro_22",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "Salmonella colonies on MacConkey agar are",
+            "options": [
+              "pale (non-lactose fermenting)",
+              "pink",
+              "mucoid",
+              "metallic green"
+            ],
+            "correct_id": 0,
+            "explanation": "Lac-negative."
+          },
+          {
+            "id": "micro_23",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "Black-centered colonies of Salmonella on SS and Hektoen agar are due to",
+            "options": [
+              "lactose fermentation",
+              "urease production",
+              "indole production",
+              "H2S production"
+            ],
+            "correct_id": 3,
+            "explanation": "Iron thiosulfate reduction."
+          },
+          {
+            "id": "micro_24",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "Salmonella infection is facilitated by",
+            "options": [
+              "high gastric acidity",
+              "antacids",
+              "probiotics",
+              "vitamin C"
+            ],
+            "correct_id": 1,
+            "explanation": "The organism is acid labile."
+          },
+          {
+            "id": "micro_25",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "The strict human pathogen among Salmonella serovars is",
+            "options": [
+              "Enteritidis",
+              "Typhi",
+              "Typhimurium",
+              "Choleraesuis"
+            ],
+            "correct_id": 1,
+            "explanation": "Causes enteric fever."
+          },
+          {
+            "id": "micro_26",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "Salmonella penetrates the intestine through",
+            "options": [
+              "colonic crypts",
+              "gallbladder epithelium",
+              "hepatocytes",
+              "M cells of Peyer’s patches"
+            ],
+            "correct_id": 3,
+            "explanation": "Microfold cells of the ileum."
+          },
+          {
+            "id": "micro_27",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "Membrane ruffling and engulfment of Salmonella is due to",
+            "options": [
+              "T3SS-1",
+              "T3SS-2",
+              "Vi antigen",
+              "flagella"
+            ],
+            "correct_id": 0,
+            "explanation": "The invasion-related secretion system."
+          },
+          {
+            "id": "micro_28",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "Vi antigen of Salmonella Typhi is",
+            "options": [
+              "a flagellar protein",
+              "a somatic O antigen",
+              "a capsular polysaccharide",
+              "an endotoxin"
+            ],
+            "correct_id": 2,
+            "explanation": "Virulence antigen that blocks phagocytosis."
+          },
+          {
+            "id": "micro_29",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "Incubation period of typhoid fever is",
+            "options": [
+              "1–2 days",
+              "3–4 weeks",
+              "6 weeks",
+              "7–14 days"
+            ],
+            "correct_id": 3,
+            "explanation": "About one to two weeks."
+          },
+          {
+            "id": "micro_30",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "Relative bradycardia in typhoid fever is known as",
+            "options": [
+              "Kernig’s sign",
+              "Faget’s sign",
+              "Koplik’s sign",
+              "Pastia’s sign"
+            ],
+            "correct_id": 1,
+            "explanation": "Pulse is slower than the fever suggests."
+          },
+          {
+            "id": "micro_31",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "Rose spots appear in typhoid fever during",
+            "options": [
+              "the first day",
+              "the fourth week",
+              "the second week",
+              "the sixth week"
+            ],
+            "correct_id": 2,
+            "explanation": "Reticuloendothelial hyperplasia phase."
+          },
+          {
+            "id": "micro_32",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "Ileal perforation in typhoid fever occurs mainly in",
+            "options": [
+              "the third week",
+              "the first week",
+              "the second week",
+              "after one year"
+            ],
+            "correct_id": 0,
+            "explanation": "Necrosis of Peyer’s patches."
+          },
+          {
+            "id": "micro_33",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "The best diagnostic specimen in the first week of typhoid fever is",
+            "options": [
+              "blood culture",
+              "stool culture",
+              "Widal test",
+              "urine culture"
+            ],
+            "correct_id": 0,
+            "explanation": "B of BASO."
+          },
+          {
+            "id": "micro_34",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "The most sensitive culture in typhoid fever is",
+            "options": [
+              "stool",
+              "urine",
+              "bone marrow",
+              "sputum"
+            ],
+            "correct_id": 2,
+            "explanation": "Remains positive even after partial antibiotic therapy."
+          },
+          {
+            "id": "micro_35",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "Widal test detects antibodies against",
+            "options": [
+              "Vi only",
+              "O and H antigens",
+              "M protein",
+              "K antigen"
+            ],
+            "correct_id": 1,
+            "explanation": "Somatic and flagellar antigens."
+          },
+          {
+            "id": "micro_36",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "Antibodies that persist for years after infection or vaccination are",
+            "options": [
+              "O antibodies",
+              "Vi antibodies",
+              "IgM antibodies",
+              "H antibodies"
+            ],
+            "correct_id": 3,
+            "explanation": "Flagellar."
+          },
+          {
+            "id": "micro_37",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "The site of chronic carriage of Salmonella Typhi is the",
+            "options": [
+              "spleen",
+              "appendix",
+              "gallbladder",
+              "kidney"
+            ],
+            "correct_id": 2,
+            "explanation": "Biofilm on gallstones."
+          },
+          {
+            "id": "micro_38",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "Oral live attenuated typhoid vaccine is",
+            "options": [
+              "Ty21a",
+              "Vi vaccine",
+              "BCG",
+              "Sabin"
+            ],
+            "correct_id": 0,
+            "explanation": "Capsules given on alternate days."
+          },
+          {
+            "id": "micro_39",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "First-line treatment of multidrug-resistant typhoid fever is",
+            "options": [
+              "ampicillin",
+              "chloramphenicol",
+              "tetracycline",
+              "ceftriaxone"
+            ],
+            "correct_id": 3,
+            "explanation": "A third-generation cephalosporin."
+          },
+          {
+            "id": "micro_40",
+            "topic": "L2 Enteric Fever Enteritis",
+            "question": "Uncomplicated Salmonella gastroenteritis is treated by",
+            "options": [
+              "ciprofloxacin",
+              "supportive care without antibiotics",
+              "ceftriaxone",
+              "azithromycin"
+            ],
+            "correct_id": 1,
+            "explanation": "Antibiotics may prolong the carrier state."
+          },
+          {
+            "id": "micro_41",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "Brucella is",
+            "options": [
+              "motile bacilli",
+              "spore-forming bacilli",
+              "non-motile coccobacilli",
+              "gram-positive cocci"
+            ],
+            "correct_id": 2,
+            "explanation": "Small gram-negative organism, no capsule."
+          },
+          {
+            "id": "micro_42",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "The most severe human brucellosis is caused by",
+            "options": [
+              "Brucella melitensis",
+              "Brucella abortus",
+              "Brucella canis",
+              "Brucella ovis"
+            ],
+            "correct_id": 0,
+            "explanation": "Goats and sheep."
+          },
+          {
+            "id": "micro_43",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "The main route of transmission of brucellosis is",
+            "options": [
+              "insect bite",
+              "blood transfusion",
+              "sexual intercourse",
+              "unpasteurized milk"
+            ],
+            "correct_id": 3,
+            "explanation": "Dairy products."
+          },
+          {
+            "id": "micro_44",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "Brucellosis is characterized by",
+            "options": [
+              "continuous fever",
+              "undulant fever",
+              "step-ladder fever",
+              "biphasic fever"
+            ],
+            "correct_id": 1,
+            "explanation": "Fever rises in the afternoon and falls in the morning."
+          },
+          {
+            "id": "micro_45",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "The granuloma of brucellosis is",
+            "options": [
+              "caseating",
+              "non-caseating",
+              "necrotizing only",
+              "absent"
+            ],
+            "correct_id": 1,
+            "explanation": "Resembles sarcoidosis."
+          },
+          {
+            "id": "micro_46",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "One of the following is not a complication of brucellosis",
+            "options": [
+              "sacroiliitis",
+              "epididymo-orchitis",
+              "endocarditis",
+              "buboes"
+            ],
+            "correct_id": 3,
+            "explanation": "Buboes belong to another zoonosis."
+          },
+          {
+            "id": "micro_47",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "The gold standard diagnosis of brucellosis is",
+            "options": [
+              "blood culture held for 4–6 weeks",
+              "Widal test",
+              "skin test",
+              "urine culture"
+            ],
+            "correct_id": 0,
+            "explanation": "Alert the laboratory staff."
+          },
+          {
+            "id": "micro_48",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "Prozone phenomenon in brucellosis causes",
+            "options": [
+              "false-positive agglutination",
+              "cross-reaction with Salmonella",
+              "false-negative agglutination",
+              "no effect"
+            ],
+            "correct_id": 2,
+            "explanation": "Blocking antibodies at low dilutions."
+          },
+          {
+            "id": "micro_49",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "Treatment of brucellosis requires",
+            "options": [
+              "penicillin alone",
+              "doxycycline alone",
+              "gentamicin alone",
+              "doxycycline plus rifampin"
+            ],
+            "correct_id": 3,
+            "explanation": "Monotherapy has a high relapse rate."
+          },
+          {
+            "id": "micro_50",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "Yersinia pestis shows",
+            "options": [
+              "acid-fast bacilli",
+              "bipolar “safety-pin” staining",
+              "metachromatic granules",
+              "spores"
+            ],
+            "correct_id": 1,
+            "explanation": "Wayson or Giemsa stain."
+          },
+          {
+            "id": "micro_51",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "The vector of plague is",
+            "options": [
+              "Aedes aegypti",
+              "Ixodes scapularis",
+              "Xenopsylla cheopis",
+              "Pediculus humanus"
+            ],
+            "correct_id": 2,
+            "explanation": "Oriental rat flea."
+          },
+          {
+            "id": "micro_52",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "F1 capsular antigen of Yersinia pestis",
+            "options": [
+              "inhibits phagocytosis",
+              "neutralizes complement only",
+              "is an endotoxin",
+              "digests fibrin"
+            ],
+            "correct_id": 0,
+            "explanation": "Expressed at 37°C."
+          },
+          {
+            "id": "micro_53",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "The most common form of plague is",
+            "options": [
+              "bubonic",
+              "septicemic",
+              "pneumonic",
+              "meningeal"
+            ],
+            "correct_id": 0,
+            "explanation": "Tender lymph nodes."
+          },
+          {
+            "id": "micro_54",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "Pneumonic plague is transmitted from person to person by",
+            "options": [
+              "flea bite",
+              "contaminated water",
+              "respiratory droplets",
+              "sexual contact"
+            ],
+            "correct_id": 2,
+            "explanation": "Fatal within 24–48 hours if untreated."
+          },
+          {
+            "id": "micro_55",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "Drug of choice for plague is",
+            "options": [
+              "penicillin",
+              "streptomycin",
+              "erythromycin",
+              "metronidazole"
+            ],
+            "correct_id": 1,
+            "explanation": "An aminoglycoside."
+          },
+          {
+            "id": "micro_56",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "Cat-scratch disease is caused by",
+            "options": [
+              "Brucella abortus",
+              "Coxiella burnetii",
+              "Yersinia pestis",
+              "Bartonella henselae"
+            ],
+            "correct_id": 3,
+            "explanation": "Regional lymphadenopathy after a cat scratch."
+          },
+          {
+            "id": "micro_57",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "Bacillary angiomatosis occurs in",
+            "options": [
+              "healthy children",
+              "pregnant women",
+              "advanced HIV infection",
+              "diabetic patients"
+            ],
+            "correct_id": 2,
+            "explanation": "It mimics Kaposi sarcoma."
+          },
+          {
+            "id": "micro_58",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "Q fever is transmitted by",
+            "options": [
+              "inhalation of aerosols",
+              "tick bite",
+              "flea bite",
+              "louse feces"
+            ],
+            "correct_id": 0,
+            "explanation": "Dried barnyard dust and placental fluids."
+          },
+          {
+            "id": "micro_59",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "One of the following is not a feature of acute Q fever",
+            "options": [
+              "atypical pneumonia",
+              "hepatitis",
+              "severe headache",
+              "skin rash"
+            ],
+            "correct_id": 3,
+            "explanation": "Q fever has no cutaneous rash."
+          },
+          {
+            "id": "micro_60",
+            "topic": "L3 Brucella Yersinia Coxiella",
+            "question": "Chronic Q fever causes",
+            "options": [
+              "meningitis",
+              "culture-negative endocarditis",
+              "osteomyelitis",
+              "cystitis"
+            ],
+            "correct_id": 1,
+            "explanation": "Treated with doxycycline plus hydroxychloroquine."
+          },
+          {
+            "id": "micro_61",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "Rickettsiae are",
+            "options": [
+              "free-living bacteria",
+              "viruses",
+              "obligate intracellular bacteria",
+              "fungi"
+            ],
+            "correct_id": 2,
+            "explanation": "They cannot grow on cell-free media."
+          },
+          {
+            "id": "micro_62",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "The target cells of Rickettsiae are",
+            "options": [
+              "vascular endothelial cells",
+              "hepatocytes",
+              "neurons",
+              "erythrocytes"
+            ],
+            "correct_id": 0,
+            "explanation": "The pathology is vasculitis."
+          },
+          {
+            "id": "micro_63",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "Rickettsiae are best visualized by",
+            "options": [
+              "Gram stain",
+              "Ziehl–Neelsen stain",
+              "India ink",
+              "Giemsa stain"
+            ],
+            "correct_id": 3,
+            "explanation": "They stain weakly with Gram stain."
+          },
+          {
+            "id": "micro_64",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "Epidemic typhus is caused by",
+            "options": [
+              "Rickettsia typhi",
+              "Rickettsia prowazekii",
+              "Rickettsia rickettsii",
+              "Coxiella burnetii"
+            ],
+            "correct_id": 1,
+            "explanation": "Transmitted by the body louse."
+          },
+          {
+            "id": "micro_65",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "The vector of epidemic typhus is",
+            "options": [
+              "rat flea",
+              "body louse",
+              "hard tick",
+              "mosquito"
+            ],
+            "correct_id": 1,
+            "explanation": "Pediculus humanus humanus."
+          },
+          {
+            "id": "micro_66",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "Murine typhus is transmitted by",
+            "options": [
+              "body louse",
+              "hard tick",
+              "sandfly",
+              "rat flea"
+            ],
+            "correct_id": 3,
+            "explanation": "Xenopsylla cheopis."
+          },
+          {
+            "id": "micro_67",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "Brill–Zinsser disease is",
+            "options": [
+              "recrudescent epidemic typhus",
+              "a form of murine typhus",
+              "a type of scrub typhus",
+              "a complication of Q fever"
+            ],
+            "correct_id": 0,
+            "explanation": "Dormant organisms reactivate years later."
+          },
+          {
+            "id": "micro_68",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "Rocky Mountain spotted fever is caused by",
+            "options": [
+              "Rickettsia prowazekii",
+              "Rickettsia typhi",
+              "Rickettsia rickettsii",
+              "Orientia tsutsugamushi"
+            ],
+            "correct_id": 2,
+            "explanation": "Transmitted by ticks."
+          },
+          {
+            "id": "micro_69",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "The vector of Rocky Mountain spotted fever is",
+            "options": [
+              "Ixodes tick only",
+              "body louse",
+              "rat flea",
+              "Dermacentor tick"
+            ],
+            "correct_id": 3,
+            "explanation": "Dog tick and wood tick."
+          },
+          {
+            "id": "micro_70",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "The rash that spares the palms and soles is that of",
+            "options": [
+              "Rocky Mountain spotted fever",
+              "epidemic typhus",
+              "measles",
+              "secondary syphilis"
+            ],
+            "correct_id": 1,
+            "explanation": "It spreads centrifugally from the trunk."
+          },
+          {
+            "id": "micro_71",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "The rash of Rocky Mountain spotted fever begins on",
+            "options": [
+              "trunk",
+              "face",
+              "wrists and ankles",
+              "scalp"
+            ],
+            "correct_id": 2,
+            "explanation": "Hallmark: it involves palms and soles."
+          },
+          {
+            "id": "micro_72",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "Centripetal spread of rash is characteristic of",
+            "options": [
+              "Rocky Mountain spotted fever",
+              "epidemic typhus",
+              "murine typhus",
+              "Q fever"
+            ],
+            "correct_id": 0,
+            "explanation": "Moves from extremities to the trunk."
+          },
+          {
+            "id": "micro_73",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "Weil–Felix test uses antigens of",
+            "options": [
+              "Proteus",
+              "Salmonella",
+              "Brucella",
+              "Escherichia"
+            ],
+            "correct_id": 0,
+            "explanation": "Cross-reacting carbohydrate O antigens."
+          },
+          {
+            "id": "micro_74",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "The typhus group agglutinates strongly with",
+            "options": [
+              "OX-19",
+              "OX-K",
+              "OX-2 only",
+              "none of them"
+            ],
+            "correct_id": 0,
+            "explanation": "Negative for OX-K."
+          },
+          {
+            "id": "micro_75",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "Scrub typhus agglutinates exclusively with",
+            "options": [
+              "OX-19",
+              "OX-2",
+              "OX-K",
+              "all of them"
+            ],
+            "correct_id": 2,
+            "explanation": "Caused by Orientia tsutsugamushi."
+          },
+          {
+            "id": "micro_76",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "The reference serologic test for rickettsial diseases is",
+            "options": [
+              "Widal test",
+              "Weil–Felix test",
+              "Paul–Bunnell test",
+              "indirect immunofluorescence assay"
+            ],
+            "correct_id": 3,
+            "explanation": "4-fold rise in paired titers."
+          },
+          {
+            "id": "micro_77",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "Weil–Felix test is negative in",
+            "options": [
+              "epidemic typhus",
+              "Rocky Mountain spotted fever",
+              "Q fever",
+              "scrub typhus"
+            ],
+            "correct_id": 2,
+            "explanation": "Coxiella has no cross-reaction with Proteus."
+          },
+          {
+            "id": "micro_78",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "Human monocytic ehrlichiosis is caused by",
+            "options": [
+              "Ehrlichia chaffeensis",
+              "Anaplasma phagocytophilum",
+              "Rickettsia typhi",
+              "Coxiella burnetii"
+            ],
+            "correct_id": 0,
+            "explanation": "The lone star tick is the vector."
+          },
+          {
+            "id": "micro_79",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "Morulae in neutrophils are seen in",
+            "options": [
+              "monocytic ehrlichiosis",
+              "epidemic typhus",
+              "Q fever",
+              "anaplasmosis"
+            ],
+            "correct_id": 3,
+            "explanation": "Anaplasma phagocytophilum."
+          },
+          {
+            "id": "micro_80",
+            "topic": "L4 Typhus Spotted Fevers",
+            "question": "Drug of choice for all rickettsial infections, even in children, is",
+            "options": [
+              "penicillin",
+              "doxycycline",
+              "ciprofloxacin",
+              "gentamicin"
+            ],
+            "correct_id": 1,
+            "explanation": "Start on clinical suspicion."
+          },
+          {
+            "id": "micro_81",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "Epstein–Barr virus is",
+            "options": [
+              "a naked ssDNA virus",
+              "an enveloped ssRNA virus",
+              "an enveloped dsDNA virus",
+              "a naked dsRNA virus"
+            ],
+            "correct_id": 2,
+            "explanation": "Human herpesvirus 4."
+          },
+          {
+            "id": "micro_82",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "The receptor for EBV on B lymphocytes is",
+            "options": [
+              "CD21",
+              "CD4",
+              "CD8",
+              "CCR5"
+            ],
+            "correct_id": 0,
+            "explanation": "Complement receptor 2."
+          },
+          {
+            "id": "micro_83",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "EBV establishes latency in",
+            "options": [
+              "neurons",
+              "hepatocytes",
+              "macrophages only",
+              "memory B cells"
+            ],
+            "correct_id": 3,
+            "explanation": "Contrast with HSV in ganglia."
+          },
+          {
+            "id": "micro_84",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "Downey cells in infectious mononucleosis are",
+            "options": [
+              "infected B cells",
+              "reactive CD8+ T cells",
+              "plasma cells",
+              "monocytes"
+            ],
+            "correct_id": 1,
+            "explanation": "Atypical lymphocytes on blood smear."
+          },
+          {
+            "id": "micro_85",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "The classic triad of infectious mononucleosis is",
+            "options": [
+              "fever, rash and jaundice",
+              "fever, pharyngitis and lymphadenopathy",
+              "fever, cough and diarrhea",
+              "rash, arthritis and carditis"
+            ],
+            "correct_id": 1,
+            "explanation": "Posterior cervical nodes."
+          },
+          {
+            "id": "micro_86",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "A dangerous complication of infectious mononucleosis is",
+            "options": [
+              "liver abscess",
+              "pancreatitis",
+              "nephrotic syndrome",
+              "splenic rupture"
+            ],
+            "correct_id": 3,
+            "explanation": "Avoid contact sports."
+          },
+          {
+            "id": "micro_87",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "Rash after ampicillin in infectious mononucleosis is",
+            "options": [
+              "not a true IgE allergy",
+              "a type 1 hypersensitivity",
+              "a sign of penicillin resistance",
+              "a sign of hepatitis"
+            ],
+            "correct_id": 0,
+            "explanation": "It occurs in more than 90%."
+          },
+          {
+            "id": "micro_88",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "Monospot test detects",
+            "options": [
+              "anti-EBNA",
+              "anti-VCA IgG",
+              "heterophile antibodies",
+              "viral DNA"
+            ],
+            "correct_id": 2,
+            "explanation": "They agglutinate sheep or horse red cells."
+          },
+          {
+            "id": "micro_89",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "The marker of acute primary EBV infection is",
+            "options": [
+              "anti-VCA IgG",
+              "anti-VCA IgM",
+              "anti-EBNA",
+              "none of them"
+            ],
+            "correct_id": 1,
+            "explanation": "Disappears by 3 months."
+          },
+          {
+            "id": "micro_90",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "Burkitt lymphoma is associated with",
+            "options": [
+              "t(9;22) translocation",
+              "t(8;14) translocation",
+              "t(15;17) translocation",
+              "t(14;18) translocation"
+            ],
+            "correct_id": 1,
+            "explanation": "c-myc gene."
+          },
+          {
+            "id": "micro_91",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "EBV is associated with",
+            "options": [
+              "cervical carcinoma",
+              "hepatocellular carcinoma",
+              "nasopharyngeal carcinoma",
+              "Kaposi sarcoma"
+            ],
+            "correct_id": 2,
+            "explanation": "High anti-EBV IgA titers."
+          },
+          {
+            "id": "micro_92",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "Reed–Sternberg cells of Hodgkin lymphoma may contain",
+            "options": [
+              "EBV genome",
+              "HBV genome",
+              "HPV genome",
+              "HHV-8 genome"
+            ],
+            "correct_id": 0,
+            "explanation": "Mixed cellularity subtype."
+          },
+          {
+            "id": "micro_93",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "Oral hairy leukoplakia is",
+            "options": [
+              "a white plaque that cannot be scraped off",
+              "a malignant tumor",
+              "a white plaque that can be scraped off",
+              "a vesicular lesion"
+            ],
+            "correct_id": 0,
+            "explanation": "Seen in HIV patients."
+          },
+          {
+            "id": "micro_94",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "Dengue virus is transmitted by",
+            "options": [
+              "Anopheles",
+              "Culex",
+              "Aedes aegypti",
+              "Ixodes"
+            ],
+            "correct_id": 2,
+            "explanation": "A daytime-biting mosquito."
+          },
+          {
+            "id": "micro_95",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "Dengue virus belongs to",
+            "options": [
+              "alphaviruses",
+              "flaviviruses",
+              "herpesviruses",
+              "rhabdoviruses"
+            ],
+            "correct_id": 1,
+            "explanation": "Enveloped (+) ssRNA."
+          },
+          {
+            "id": "micro_96",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "Dengue hemorrhagic fever is mediated by",
+            "options": [
+              "immune complex deposition only",
+              "toxin production",
+              "direct bacterial invasion",
+              "antibody-dependent enhancement"
+            ],
+            "correct_id": 3,
+            "explanation": "Secondary infection with a different serotype."
+          },
+          {
+            "id": "micro_97",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "In dengue fever, the patient should avoid",
+            "options": [
+              "acetaminophen",
+              "intravenous fluids",
+              "aspirin and NSAIDs",
+              "rest"
+            ],
+            "correct_id": 2,
+            "explanation": "Bleeding risk."
+          },
+          {
+            "id": "micro_98",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "Councilman bodies are seen in",
+            "options": [
+              "yellow fever",
+              "dengue fever",
+              "chikungunya",
+              "infectious mononucleosis"
+            ],
+            "correct_id": 0,
+            "explanation": "Apoptotic hepatocytes."
+          },
+          {
+            "id": "micro_99",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "Yellow fever vaccine is",
+            "options": [
+              "killed vaccine",
+              "subunit vaccine",
+              "toxoid",
+              "17D live attenuated"
+            ],
+            "correct_id": 3,
+            "explanation": "A single subcutaneous dose."
+          },
+          {
+            "id": "micro_100",
+            "topic": "L5 EBV Dengue Yellow Fever",
+            "question": "Persistent polyarthralgia is characteristic of",
+            "options": [
+              "yellow fever",
+              "chikungunya",
+              "dengue fever",
+              "mumps"
+            ],
+            "correct_id": 1,
+            "explanation": "An alphavirus transmitted by Aedes."
+          },
+          {
+            "id": "micro_101",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "Parvovirus B19 is",
+            "options": [
+              "an enveloped dsDNA virus",
+              "an enveloped ssRNA virus",
+              "a non-enveloped ssDNA virus",
+              "a non-enveloped dsRNA virus"
+            ],
+            "correct_id": 2,
+            "explanation": "The smallest DNA virus."
+          },
+          {
+            "id": "micro_102",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "Parvovirus B19 binds to",
+            "options": [
+              "P antigen",
+              "CD4",
+              "CD21",
+              "CCR5"
+            ],
+            "correct_id": 0,
+            "explanation": "Globoside of erythroid progenitors."
+          },
+          {
+            "id": "micro_103",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "Slapped cheek rash is the characteristic of",
+            "options": [
+              "roseola infantum",
+              "measles",
+              "rubella",
+              "erythema infectiosum"
+            ],
+            "correct_id": 3,
+            "explanation": "Fifth disease."
+          },
+          {
+            "id": "micro_104",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "Aplastic crisis due to parvovirus B19 occurs in",
+            "options": [
+              "healthy children",
+              "sickle cell anemia",
+              "hemophilia",
+              "leukemia"
+            ],
+            "correct_id": 1,
+            "explanation": "Chronic hemolytic anemias."
+          },
+          {
+            "id": "micro_105",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "Hydrops fetalis may be caused by",
+            "options": [
+              "rotavirus",
+              "parvovirus B19",
+              "measles virus",
+              "HSV-2 only"
+            ],
+            "correct_id": 1,
+            "explanation": "Primary maternal infection in the first two trimesters."
+          },
+          {
+            "id": "micro_106",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "HIV belongs to",
+            "options": [
+              "alphaviruses",
+              "flaviviruses",
+              "herpesviruses",
+              "lentiviruses"
+            ],
+            "correct_id": 3,
+            "explanation": "Family Retroviridae."
+          },
+          {
+            "id": "micro_107",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "HIV genome is",
+            "options": [
+              "two identical copies of (+) ssRNA",
+              "one copy of dsDNA",
+              "one copy of (–) ssRNA",
+              "two copies of dsDNA"
+            ],
+            "correct_id": 0,
+            "explanation": "Diploid."
+          },
+          {
+            "id": "micro_108",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "The major capsid protein of HIV is",
+            "options": [
+              "gp120",
+              "gp41",
+              "p24",
+              "p17"
+            ],
+            "correct_id": 2,
+            "explanation": "Early diagnostic marker."
+          },
+          {
+            "id": "micro_109",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "HIV attaches to CD4 through",
+            "options": [
+              "gp41",
+              "p24",
+              "p7",
+              "gp120"
+            ],
+            "correct_id": 3,
+            "explanation": "Surface envelope glycoprotein."
+          },
+          {
+            "id": "micro_110",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "Fusion of HIV with the cell membrane is mediated by",
+            "options": [
+              "gp120",
+              "gp41",
+              "p24",
+              "integrase"
+            ],
+            "correct_id": 1,
+            "explanation": "Transmembrane glycoprotein."
+          },
+          {
+            "id": "micro_111",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "Reverse transcriptase is",
+            "options": [
+              "DNA-dependent DNA polymerase",
+              "DNA-dependent RNA polymerase",
+              "RNA-dependent DNA polymerase",
+              "RNA-dependent RNA polymerase"
+            ],
+            "correct_id": 2,
+            "explanation": "Converts viral RNA to DNA."
+          },
+          {
+            "id": "micro_112",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "The enzyme that integrates viral DNA into the host genome is",
+            "options": [
+              "integrase",
+              "protease",
+              "reverse transcriptase",
+              "helicase"
+            ],
+            "correct_id": 0,
+            "explanation": "Encoded by the pol gene."
+          },
+          {
+            "id": "micro_113",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "R5 strains of HIV use the co-receptor",
+            "options": [
+              "CCR5",
+              "CXCR4",
+              "CD8",
+              "CD21"
+            ],
+            "correct_id": 0,
+            "explanation": "Macrophage-tropic; dominant in early infection."
+          },
+          {
+            "id": "micro_114",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "Resistance to HIV infection is seen in homozygotes for",
+            "options": [
+              "CXCR4 deletion",
+              "CD4 deletion",
+              "CCR5-Δ32 deletion",
+              "HLA-B*5701"
+            ],
+            "correct_id": 2,
+            "explanation": "A 32-base-pair deletion."
+          },
+          {
+            "id": "micro_115",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "Acute retroviral syndrome resembles",
+            "options": [
+              "malaria",
+              "infectious mononucleosis",
+              "typhoid fever",
+              "tuberculosis"
+            ],
+            "correct_id": 1,
+            "explanation": "Occurs 2–4 weeks after infection."
+          },
+          {
+            "id": "micro_116",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "AIDS is diagnosed when CD4 count is below",
+            "options": [
+              "500 cells/µL",
+              "350 cells/µL",
+              "1000 cells/µL",
+              "200 cells/µL"
+            ],
+            "correct_id": 3,
+            "explanation": "Or an AIDS-defining illness."
+          },
+          {
+            "id": "micro_117",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "Pneumocystis jirovecii pneumonia is prevented by",
+            "options": [
+              "ganciclovir",
+              "azithromycin",
+              "trimethoprim-sulfamethoxazole",
+              "fluconazole"
+            ],
+            "correct_id": 2,
+            "explanation": "Prophylaxis starts at CD4 below 200."
+          },
+          {
+            "id": "micro_118",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "CMV retinitis in AIDS is treated by",
+            "options": [
+              "ganciclovir",
+              "acyclovir",
+              "zidovudine",
+              "fluconazole"
+            ],
+            "correct_id": 0,
+            "explanation": "CD4 below 50."
+          },
+          {
+            "id": "micro_119",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "The preferred screening test for HIV is",
+            "options": [
+              "Western blot only",
+              "culture",
+              "viral load only",
+              "4th-generation antibody/p24 antigen immunoassay"
+            ],
+            "correct_id": 3,
+            "explanation": "Shortens the window period."
+          },
+          {
+            "id": "micro_120",
+            "topic": "L6 Parvovirus B19 HIV",
+            "question": "Post-exposure prophylaxis for HIV should be started within",
+            "options": [
+              "1 week",
+              "72 hours",
+              "1 month",
+              "6 months"
+            ],
+            "correct_id": 1,
+            "explanation": "Continued for 28 days."
+          }
+        ]
       }
     }
   },
