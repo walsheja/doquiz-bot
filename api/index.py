@@ -1,40 +1,72 @@
 from http.server import BaseHTTPRequestHandler
 import json
 import urllib.request
+import urllib.error
 import os
 import random
 import time
+import traceback
+import firebase_admin
+from firebase_admin import credentials, firestore
 
 BOT_TOKEN = "8940346683:AAGv0cP4HXtCZd5BVEPahjHaRPqFJ-h6xBA"
 BOT_USERNAME = "DoquizGame"
 DEFAULT_CHANNEL = "@yashrahly"
 
-# مسار حفظ جلسات المستخدمين في الذاكرة المؤقتة لـ Vercel
-SESSIONS_FILE = "/tmp/doquiz_sessions.json"
+_db = None
 
-def load_sessions() -> dict:
-    if os.path.exists(SESSIONS_FILE):
+def get_firestore_db():
+    global _db
+    if _db is not None:
+        return _db
+
+    # 1. First priority: Environment variable
+    cred_json = os.environ.get("FIREBASE_CREDENTIALS")
+    if cred_json:
         try:
-            with open(SESSIONS_FILE, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except Exception:
-            return {}
-    return {}
+            cred_dict = json.loads(cred_json)
+            if not firebase_admin._apps:
+                cred = credentials.Certificate(cred_dict)
+                firebase_admin.initialize_app(cred)
+            _db = firestore.client()
+            return _db
+        except Exception as e:
+            print(f"Error initializing Firebase from FIREBASE_CREDENTIALS env: {e}")
 
-def save_sessions(sessions: dict):
-    try:
-        with open(SESSIONS_FILE, "w", encoding="utf-8") as f:
-            json.dump(sessions, f, ensure_ascii=False)
-    except Exception as e:
-        print(f"Error saving sessions: {e}")
+    # 2. Second priority: Local file paths
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    possible_paths = [
+        os.path.join(base_dir, "firebase_credentials.json"),
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "firebase_credentials.json"),
+        os.path.join(os.getcwd(), "firebase_credentials.json"),
+        "firebase_credentials.json"
+    ]
+    for cred_path in possible_paths:
+        if os.path.exists(cred_path):
+            try:
+                if not firebase_admin._apps:
+                    cred = credentials.Certificate(cred_path)
+                    firebase_admin.initialize_app(cred)
+                _db = firestore.client()
+                return _db
+            except Exception as e:
+                print(f"Error initializing Firebase from {cred_path}: {e}")
+
+    raise RuntimeError("Could not initialize Firebase: credentials not found in env or files.")
 
 def get_questions_bank():
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    file_path = os.path.join(base_dir, "questions.json")
-    if not os.path.exists(file_path):
-        file_path = "questions.json"
-    with open(file_path, "r", encoding="utf-8") as f:
-        return json.load(f)
+    possible_paths = [
+        os.path.join(base_dir, "questions.json"),
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "questions.json"),
+        os.path.join(os.getcwd(), "questions.json"),
+        "questions.json"
+    ]
+    for p in possible_paths:
+        if os.path.exists(p):
+            with open(p, "r", encoding="utf-8") as f:
+                return json.load(f)
+    raise FileNotFoundError("questions.json not found in any expected location.")
 
 def call_telegram(method: str, payload: dict):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/{method}"
@@ -43,6 +75,13 @@ def call_telegram(method: str, payload: dict):
     try:
         with urllib.request.urlopen(req) as res:
             return json.loads(res.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        err_body = e.read().decode("utf-8", errors="ignore")
+        print(f"Telegram HTTPError in {method} (code {e.code}): {err_body}")
+        try:
+            return json.loads(err_body)
+        except Exception:
+            return {"ok": False, "error": err_body}
     except Exception as e:
         print(f"Error calling telegram {method}: {e}")
         return {"ok": False, "error": str(e)}
@@ -65,10 +104,6 @@ def get_subjects_keyboard(block_key: str):
     return {"inline_keyboard": keyboard}
 
 def get_timer_keyboard(block_key: str, subject_key: str, current_minutes: int):
-    """
-    أزرار عداد الوقت: بخطوات 5 دقائق فقط حتى نصف ساعة (30 دقيقة) كحد أقصى وصفر كحد أدنى.
-    يتم تضمين القيمة التالية المحسوبة مباشرة في الـ callback_data لضمان الاستجابة مع كل نقرة متكررة!
-    """
     next_plus = min(30, current_minutes + 5)
     next_minus = max(0, current_minutes - 5)
 
@@ -97,7 +132,7 @@ class handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(json.dumps({
             "status": "ok",
-            "service": "Doquiz Medical Telegram Bot on Vercel 24/7",
+            "service": "Doquiz Medical Telegram Bot on Vercel with Firestore State",
             "bot": f"@{BOT_USERNAME}"
         }).encode("utf-8"))
 
@@ -110,6 +145,7 @@ class handler(BaseHTTPRequestHandler):
             self.process_update(update)
         except Exception as e:
             print(f"Error processing update: {e}")
+            traceback.print_exc()
 
         self.send_response(200)
         self.send_header("Content-Type", "application/json")
@@ -127,7 +163,7 @@ class handler(BaseHTTPRequestHandler):
             if text.startswith("/start"):
                 welcome = (
                     f"مرحباً بك يا **{first_name}** في بوت الاختبارات **Doquiz** 🧠✨\n\n"
-                    "هنا يمكنك خوض تجربة اختبارات تفاعلية مميزة\n\n"
+                    "هنا يمكنك خوض تجربة اختبارات سريرية تفاعلية.\n\n"
                     "👇 **الخطوة 1:** اختر البلوك الدراسي الذي ترغب في اختباره:"
                 )
                 call_telegram("sendMessage", {
@@ -138,21 +174,26 @@ class handler(BaseHTTPRequestHandler):
                 })
 
             elif text.startswith("/stop") or text.startswith("/cancel"):
-                # أمر إنهاء الاختبار مبكراً
-                sessions = load_sessions()
-                session = sessions.get(str(chat_id))
-                if session and session.get("total", 0) > 0:
-                    call_telegram("sendMessage", {
-                        "chat_id": chat_id,
-                        "text": "🛑 **تم إيقاف الاختبار بناءً على طلبك.**\nجاري عرض نتيجتك لما تم حله حتى الآن...",
-                        "parse_mode": "Markdown"
-                    })
-                    self.finish_round(chat_id, session)
-                else:
-                    call_telegram("sendMessage", {
-                        "chat_id": chat_id,
-                        "text": "لا يوجد اختبار نشط حالياً لإيقافه. يمكنك بدء اختبار جديد عبر /start 🩺"
-                    })
+                try:
+                    db = get_firestore_db()
+                    session_doc = db.collection("doquiz_sessions").document(str(chat_id)).get()
+                    if session_doc.exists:
+                        session = session_doc.to_dict()
+                        call_telegram("sendMessage", {
+                            "chat_id": chat_id,
+                            "text": "🛑 **تم إيقاف الاختبار بناءً على طلبك.**\nجاري احتساب نتيجتك لما تم حله حتى الآن...",
+                            "parse_mode": "Markdown"
+                        })
+                        self.finish_round(chat_id, session)
+                    else:
+                        call_telegram("sendMessage", {
+                            "chat_id": chat_id,
+                            "text": "لا يوجد اختبار نشط حالياً لإيقافه. يمكنك بدء اختبار جديد عبر القائمة أدناه 🩺",
+                            "reply_markup": get_blocks_keyboard()
+                        })
+                except Exception as e:
+                    print(f"Stop command error: {e}")
+                    traceback.print_exc()
 
             elif text.startswith("/post"):
                 parts = text.split()
@@ -180,7 +221,7 @@ class handler(BaseHTTPRequestHandler):
                     "text": f"✅ تم نشر إعلان الاختبار في القناة: {target}"
                 })
 
-        # 2. ضغطات الأزرار
+        # 2. ضغطات الأزرار (Callback Queries)
         elif "callback_query" in update:
             cb = update["callback_query"]
             data = cb.get("data", "")
@@ -250,7 +291,6 @@ class handler(BaseHTTPRequestHandler):
                     "⏱️ **الوقت المحدد للجولة:** **[ مفتوح ♾️ (بدون مؤقت) ]**\n"
                     "يمكنك تعديل الوقت بالأزرار أدناه (حتى 30 دقيقة) أو البدء فوراً:"
                 )
-                # نعدل الرسالة الأصلية، وإذا كانت رسالة قديمة في الأعلى نرسل رسالة جديدة في الأسفل مباشرة
                 res = call_telegram("editMessageText", {
                     "chat_id": chat_id,
                     "message_id": msg_id,
@@ -309,20 +349,24 @@ class handler(BaseHTTPRequestHandler):
         # 3. حل السؤال (Poll Answer)
         elif "poll_answer" in update:
             ans = update["poll_answer"]
-            user_id = ans["user"]["id"]
-            poll_id = ans["poll_id"]
+            user_id = ans.get("user", {}).get("id")
+            poll_id = str(ans.get("poll_id"))
             selected_option = ans["option_ids"][0] if ans.get("option_ids") else None
 
+            print(f"Update poll_answer received for user {user_id}, poll {poll_id}, option {selected_option}")
             self.handle_poll_answer(user_id, poll_id, selected_option)
 
     def clean_previous_round(self, chat_id: int):
-        sessions = load_sessions()
-        session = sessions.get(str(chat_id))
-        if session:
-            for m_id in session.get("poll_msg_ids", []):
-                call_telegram("deleteMessage", {"chat_id": chat_id, "message_id": m_id})
-            session["poll_msg_ids"] = []
-            save_sessions(sessions)
+        try:
+            db = get_firestore_db()
+            session_doc = db.collection("doquiz_sessions").document(str(chat_id)).get()
+            if session_doc.exists:
+                session = session_doc.to_dict()
+                for m_id in session.get("poll_msg_ids", []):
+                    call_telegram("deleteMessage", {"chat_id": chat_id, "message_id": m_id})
+                db.collection("doquiz_sessions").document(str(chat_id)).update({"poll_msg_ids": []})
+        except Exception as e:
+            print(f"Clean round error: {e}")
 
     def launch_round(self, chat_id: int, block_key: str, subject_key: str, minutes: int, edit_msg_id: int = None):
         data_bank = get_questions_bank()
@@ -331,13 +375,12 @@ class handler(BaseHTTPRequestHandler):
         questions = subj.get("questions", [])
 
         if not questions:
-            call_telegram("sendMessage", {"chat_id": chat_id, "text": "لا توجد أسئلة متوفرة حالياً."})
+            call_telegram("sendMessage", {"chat_id": chat_id, "text": "لا توجد أسئلة متوفرة حالياً في هذه المادة."})
             return
 
         selected = random.sample(questions, min(len(questions), 20))
 
-        sessions = load_sessions()
-        sessions[str(chat_id)] = {
+        session_data = {
             "block_key": block_key,
             "subject_key": subject_key,
             "block_title": block.get("title", ""),
@@ -349,9 +392,11 @@ class handler(BaseHTTPRequestHandler):
             "minutes": minutes,
             "started_at": time.time(),
             "poll_msg_ids": [],
-            "poll_to_q": {}
+            "status": "active"
         }
-        save_sessions(sessions)
+
+        db = get_firestore_db()
+        db.collection("doquiz_sessions").document(str(chat_id)).set(session_data)
 
         time_info = "مفتوح ♾️ (بدون ضغط وقت)" if minutes == 0 else f"{minutes} دقيقة للجولة بالكامل ⏱️"
 
@@ -361,7 +406,7 @@ class handler(BaseHTTPRequestHandler):
             f"📚 **المادة:** {subj.get('title', '')}\n"
             f"🎯 عدد أسئلة الجولة: {len(selected)} سؤالاً.\n"
             f"⏱️ إجمالي وقت الجولة: {time_info}\n"
-            "💡 **حرية التفكير:** يمكنك قضاء أي وقت تحتاجه في التفكير في الحالات السريرية المعقدة وتعويضه في الأسئلة الأسرع!\n\n"
+            "💡 **حرية التفكير:** خذ كامل وقتك في التفكير؛ وبمجرد اختيار الإجابة سيصلك السؤال التالي تلقائياً!\n\n"
             "بالتوفيق يا دكتور! 🩺🌟"
         )
 
@@ -383,64 +428,120 @@ class handler(BaseHTTPRequestHandler):
         self.send_question(chat_id, 0)
 
     def send_question(self, chat_id: int, index: int):
-        sessions = load_sessions()
-        session = sessions.get(str(chat_id))
-        if not session:
+        db = get_firestore_db()
+        session_doc = db.collection("doquiz_sessions").document(str(chat_id)).get()
+        if not session_doc.exists:
+            print(f"Session not found for chat_id {chat_id}")
             return
+        session = session_doc.to_dict()
 
-        if index >= session["total"]:
+        if index >= session.get("total", 0):
             self.finish_round(chat_id, session)
             return
 
-        q = session["questions"][index]
+        questions = session.get("questions", [])
+        if index >= len(questions):
+            self.finish_round(chat_id, session)
+            return
+
+        q = questions[index]
         q_text = f"السؤال ({index + 1} من {session['total']}):\n{q['question']}"
 
-        # بدون قفل للسؤال، ليأخذ الطالب كامل وقته في التفكير ويتحكم في رصيد وقته الإجمالي
+        raw_expl = q.get("explanation") or "إجابة سريرية صحيحة!"
+        expl = raw_expl[:200]
+
         poll_payload = {
             "chat_id": chat_id,
             "question": q_text[:300],
             "options": [opt[:100] for opt in q["options"]],
             "type": "quiz",
-            "correct_option_id": q["correct_id"],
-            "explanation": (q.get("explanation") or "إجابة صحيحة!")[:200],
+            "correct_option_id": int(q["correct_id"]),
+            "explanation": expl,
             "is_anonymous": False
         }
 
         res = call_telegram("sendPoll", poll_payload)
         if res.get("ok") and "poll" in res.get("result", {}):
-            poll_id = res["result"]["poll"]["id"]
+            poll_id = str(res["result"]["poll"]["id"])
             msg_id = res["result"]["message_id"]
 
-            session["current_index"] = index
-            session["poll_msg_ids"].append(msg_id)
-            session["poll_to_q"][poll_id] = index
-            save_sessions(sessions)
+            db.collection("doquiz_polls").document(poll_id).set({
+                "user_id": chat_id,
+                "q_idx": index
+            })
+
+            poll_msg_ids = session.get("poll_msg_ids", [])
+            poll_msg_ids.append(msg_id)
+
+            db.collection("doquiz_sessions").document(str(chat_id)).update({
+                "current_index": index,
+                "poll_msg_ids": poll_msg_ids
+            })
+            print(f"Successfully dispatched question {index+1} (poll_id: {poll_id}) to {chat_id}")
+        else:
+            print(f"Failed to send poll to {chat_id}: {res}")
 
     def handle_poll_answer(self, user_id: int, poll_id: str, selected_option: int):
-        sessions = load_sessions()
-        session = sessions.get(str(user_id))
-        if not session:
+        print(f"Handling poll_answer: user={user_id}, poll={poll_id}, option={selected_option}")
+        db = get_firestore_db()
+        poll_doc = db.collection("doquiz_polls").document(str(poll_id)).get()
+
+        if poll_doc.exists:
+            p_data = poll_doc.to_dict()
+            cur_idx = p_data.get("q_idx", 0)
+            target_user_id = p_data.get("user_id", user_id)
+        else:
+            print(f"Poll {poll_id} not found in doquiz_polls, falling back to user_id")
+            target_user_id = user_id
+            cur_idx = None
+
+        session_doc = db.collection("doquiz_sessions").document(str(target_user_id)).get()
+        if not session_doc.exists:
+            print(f"No active session found for user {target_user_id}")
             return
 
-        cur_idx = session.get("poll_to_q", {}).get(poll_id)
+        session = session_doc.to_dict()
+        session_idx = session.get("current_index", 0)
         if cur_idx is None:
-            cur_idx = session.get("current_index", 0)
+            cur_idx = session_idx
 
-        q = session["questions"][cur_idx]
-        if selected_option is not None and selected_option == q["correct_id"]:
-            session["score"] += 1
+        # Guard against duplicate updates
+        if cur_idx != session_idx:
+            print(f"Duplicate answer ignored: poll idx {cur_idx} != session idx {session_idx}")
+            return
 
-        save_sessions(sessions)
+        questions = session.get("questions", [])
+        if cur_idx < len(questions):
+            q = questions[cur_idx]
+            new_score = session.get("score", 0)
+            if selected_option is not None and selected_option == q.get("correct_id"):
+                new_score += 1
+        else:
+            new_score = session.get("score", 0)
 
-        # انتظار 1.8 ثانية لقراءة الشرح ثم إرسال السؤال التالي
-        time.sleep(1.8)
-        self.send_question(user_id, cur_idx + 1)
+        next_idx = cur_idx + 1
+
+        db.collection("doquiz_sessions").document(str(target_user_id)).update({
+            "score": new_score,
+            "current_index": next_idx
+        })
+
+        db.collection("doquiz_polls").document(str(poll_id)).delete()
+
+        # انتظار ثانية ونصف ليرى الطالب التفسير والإجابة الصحيحة
+        time.sleep(1.5)
+        self.send_question(target_user_id, next_idx)
 
     def finish_round(self, chat_id: int, session: dict):
-        score = session["score"]
-        total = session["total"]
-        block = session["block_title"]
-        subject = session["subject_title"]
+        db = get_firestore_db()
+        fresh_doc = db.collection("doquiz_sessions").document(str(chat_id)).get()
+        if fresh_doc.exists:
+            session = fresh_doc.to_dict()
+
+        score = session.get("score", 0)
+        total = session.get("total", len(session.get("questions", [])))
+        block = session.get("block_title", "البلوك الطبي")
+        subject = session.get("subject_title", "المادة")
         percentage = int((score / total) * 100) if total > 0 else 0
 
         if percentage == 100:
@@ -466,7 +567,7 @@ class handler(BaseHTTPRequestHandler):
 
         keyboard = {
             "inline_keyboard": [
-                [{"text": "🔄 بدء جولة جديدة (20 سؤال)", "callback_data": f"new_round:{session['block_key']}:{session['subject_key']}"}],
+                [{"text": "🔄 بدء جولة جديدة (20 سؤال)", "callback_data": f"new_round:{session.get('block_key')}:{session.get('subject_key')}"}],
                 [{"text": "📚 اختيار بلوك / مادة أخرى", "callback_data": "back_blocks"}],
                 [{"text": "📢 شارك نتيجتك مع زملائك", "url": share_url}]
             ]

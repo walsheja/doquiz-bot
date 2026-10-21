@@ -6,5 +6,6 @@ __pycache__/
 env/
 venv/
 doquiz.db
+firebase_credentials.json
 
 .vercel
