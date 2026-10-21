@@ -137,6 +137,23 @@ class handler(BaseHTTPRequestHandler):
                     "reply_markup": get_blocks_keyboard()
                 })
 
+            elif text.startswith("/stop") or text.startswith("/cancel"):
+                # أمر إنهاء الاختبار مبكراً
+                sessions = load_sessions()
+                session = sessions.get(str(chat_id))
+                if session and session.get("total", 0) > 0:
+                    call_telegram("sendMessage", {
+                        "chat_id": chat_id,
+                        "text": "🛑 **تم إيقاف الاختبار بناءً على طلبك.**\nجاري عرض نتيجتك لما تم حله حتى الآن...",
+                        "parse_mode": "Markdown"
+                    })
+                    self.finish_round(chat_id, session)
+                else:
+                    call_telegram("sendMessage", {
+                        "chat_id": chat_id,
+                        "text": "لا يوجد اختبار نشط حالياً لإيقافه. يمكنك بدء اختبار جديد عبر /start 🩺"
+                    })
+
             elif text.startswith("/post"):
                 parts = text.split()
                 target = parts[1] if len(parts) > 1 else DEFAULT_CHANNEL
@@ -170,17 +187,27 @@ class handler(BaseHTTPRequestHandler):
             chat_id = cb["message"]["chat"]["id"]
             msg_id = cb["message"]["message_id"]
 
-            call_telegram("answerCallbackQuery", {"callback_query_id": cb["id"]})
+            call_telegram("answerCallbackQuery", {
+                "callback_query_id": cb["id"],
+                "text": "تم الاختيار 🩺"
+            })
 
             if data == "back_blocks":
                 welcome = "👇 **الخطوة 1:** اختر البلوك الدراسي الذي ترغب في اختباره:"
-                call_telegram("editMessageText", {
+                res = call_telegram("editMessageText", {
                     "chat_id": chat_id,
                     "message_id": msg_id,
                     "text": welcome,
                     "parse_mode": "Markdown",
                     "reply_markup": get_blocks_keyboard()
                 })
+                if not res.get("ok"):
+                    call_telegram("sendMessage", {
+                        "chat_id": chat_id,
+                        "text": welcome,
+                        "parse_mode": "Markdown",
+                        "reply_markup": get_blocks_keyboard()
+                    })
 
             elif data.startswith("blk:"):
                 block_key = data.split(":")[1]
@@ -191,13 +218,20 @@ class handler(BaseHTTPRequestHandler):
                     f"ℹ️ {block.get('description', '')}\n\n"
                     "👇 **الخطوة 2:** اختر المادة التي ترغب باختبارها في هذا البلوك:"
                 )
-                call_telegram("editMessageText", {
+                res = call_telegram("editMessageText", {
                     "chat_id": chat_id,
                     "message_id": msg_id,
                     "text": text,
                     "parse_mode": "Markdown",
                     "reply_markup": get_subjects_keyboard(block_key)
                 })
+                if not res.get("ok"):
+                    call_telegram("sendMessage", {
+                        "chat_id": chat_id,
+                        "text": text,
+                        "parse_mode": "Markdown",
+                        "reply_markup": get_subjects_keyboard(block_key)
+                    })
 
             elif data.startswith("subj:"):
                 _, block_key, subject_key = data.split(":")
@@ -216,13 +250,21 @@ class handler(BaseHTTPRequestHandler):
                     "⏱️ **الوقت المحدد للجولة:** **[ مفتوح ♾️ (بدون مؤقت) ]**\n"
                     "يمكنك تعديل الوقت بالأزرار أدناه (حتى 30 دقيقة) أو البدء فوراً:"
                 )
-                call_telegram("editMessageText", {
+                # نعدل الرسالة الأصلية، وإذا كانت رسالة قديمة في الأعلى نرسل رسالة جديدة في الأسفل مباشرة
+                res = call_telegram("editMessageText", {
                     "chat_id": chat_id,
                     "message_id": msg_id,
                     "text": text,
                     "parse_mode": "Markdown",
                     "reply_markup": get_timer_keyboard(block_key, subject_key, 0)
                 })
+                if not res.get("ok"):
+                    call_telegram("sendMessage", {
+                        "chat_id": chat_id,
+                        "text": text,
+                        "parse_mode": "Markdown",
+                        "reply_markup": get_timer_keyboard(block_key, subject_key, 0)
+                    })
 
             elif data.startswith("time_adj:"):
                 parts = data.split(":")
