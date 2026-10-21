@@ -1,205 +1,2282 @@
 {
   "blood_lymph": {
     "title": "🩸 Blood & Lymph (الدم والجهاز اللمفاوي)",
-    "description": "أمراض وأدوية وميكروبات أمراض الدم والمناعة",
+    "description": "يشمل أمراض الدم، الأدوية، والأحياء الدقيقة الخاصة بالدم والجهاز المناعي.",
     "subjects": {
       "pathology": {
-        "title": "🔬 Pathology (علم الأمراض)",
-        "description": "أمراض واعتلالات خلايا الدم ونخاع العظم والغدد اللمفاوية",
+        "title": "Pathology (علم الأمراض)",
         "questions": [
           {
-            "id": "path_bl_001",
-            "question": "Which of the following is the most common cause of microcytic hypochromic anemia worldwide?",
+            "id": "patho_1",
+            "topic": "ACD Anemia of Chronic Disease",
+            "question": "A 55-year-old with rheumatoid arthritis has mild normocytic anemia with low serum iron, low TIBC and high ferritin. Which sequence best explains this?",
+            "options": [
+              "IL-6 raises hepcidin, ferroportin is degraded, and iron is trapped in macrophages",
+              "IL-6 lowers hepcidin, ferroportin increases, and iron absorption rises",
+              "Autoantibodies against intrinsic factor impair B12 absorption",
+              "Chronic GI blood loss depletes total body iron stores"
+            ],
+            "correct_id": 0,
+            "explanation": "Follow the pathway from the inflammatory cytokine to the iron export channel."
+          },
+          {
+            "id": "patho_2",
+            "topic": "ACD Anemia of Chronic Disease",
+            "question": "Which stimuli downregulate hepcidin?",
+            "options": [
+              "Inflammatory stimuli such as IL-6",
+              "HFE and TfR2 signaling",
+              "BMP/Smad4 signaling",
+              "Hypoxia and ineffective erythropoiesis"
+            ],
+            "correct_id": 3,
+            "explanation": "Think about signals that tell the body it needs more iron for red cells."
+          },
+          {
+            "id": "patho_3",
+            "topic": "ACD Anemia of Chronic Disease",
+            "question": "Why is TIBC low or normal in anemia of chronic disease, unlike iron deficiency anemia?",
+            "options": [
+              "The liver increases transferrin to capture unavailable iron",
+              "The liver reduces transferrin production during chronic inflammation",
+              "Hepcidin degrades circulating transferrin",
+              "Iron stores are depleted so transferrin is fully saturated"
+            ],
+            "correct_id": 1,
+            "explanation": "Consider what happens to hepatic protein synthesis during inflammation."
+          },
+          {
+            "id": "patho_4",
+            "topic": "ACD Anemia of Chronic Disease",
+            "question": "A patient with tuberculosis has Hb 10 g/dL, MCV 82 fL and low serum iron. Which finding best distinguishes anemia of chronic disease from iron deficiency anemia?",
+            "options": [
+              "Low serum iron",
+              "Fatigue and pallor",
+              "Normal or high serum ferritin",
+              "Mild reduction in hemoglobin"
+            ],
+            "correct_id": 2,
+            "explanation": "Ferritin is an acute phase reactant."
+          },
+          {
+            "id": "patho_5",
+            "topic": "ACD Anemia of Chronic Disease",
+            "question": "Which of the following is a typical cause of anemia of chronic disease?",
+            "options": [
+              "Celiac disease",
+              "Rheumatoid arthritis",
+              "Strict unsupplemented vegan diet",
+              "Methotrexate therapy"
+            ],
+            "correct_id": 1,
+            "explanation": "The other options cause nutrient deficiencies rather than chronic inflammation."
+          },
+          {
+            "id": "patho_6",
+            "topic": "ACD Anemia of Chronic Disease",
+            "question": "Why do patients with anemia of chronic disease lack pica, koilonychia and glossitis?",
+            "options": [
+              "Total body iron is depleted but compensated by high ferritin",
+              "Tissue and cellular iron is actually elevated, only locked away from the marrow",
+              "The anemia is too severe to show tissue signs",
+              "Serum iron is normal, so tissues are well supplied"
+            ],
+            "correct_id": 1,
+            "explanation": "Think about where the iron actually is in this condition."
+          },
+          {
+            "id": "patho_7",
+            "topic": "ACD Anemia of Chronic Disease",
+            "question": "Which statement defines anemia of chronic disease?",
+            "options": [
+              "A severe macrocytic anemia from defective DNA synthesis",
+              "A microcytic anemia from total body iron depletion",
+              "A mild to moderate normocytic or microcytic anemia in chronic systemic disease, with abundant...",
+              "A hemolytic anemia with raised reticulocytes"
+            ],
+            "correct_id": 2,
+            "explanation": "Iron is present but cannot be used."
+          },
+          {
+            "id": "patho_8",
+            "topic": "ACD Anemia of Chronic Disease",
+            "question": "Hepcidin causes functional iron deficiency by degrading which structure?",
+            "options": [
+              "Transferrin receptor on erythroblasts",
+              "Ferritin in hepatocytes",
+              "Intrinsic factor in parietal cells",
+              "Ferroportin, the iron export channel on enterocytes and macrophages"
+            ],
+            "correct_id": 3,
+            "explanation": "It blocks iron export from gut cells and macrophages."
+          },
+          {
+            "id": "patho_9",
+            "topic": "ACD Anemia of Chronic Disease",
+            "question": "What MCV and smear pattern is typical of anemia of chronic disease?",
+            "options": [
+              "Marked macrocytosis with hypersegmented neutrophils",
+              "Severe microcytosis with pencil cells",
+              "Normocytic, or mildly microcytic",
+              "Sickled cells with Howell-Jolly bodies"
+            ],
+            "correct_id": 2,
+            "explanation": "The blockade usually causes a mild anemia before severe microcytosis."
+          },
+          {
+            "id": "patho_10",
+            "topic": "ACD Anemia of Chronic Disease",
+            "question": "In a patient with anemia of chronic disease, what usually dominates the clinical picture?",
+            "options": [
+              "Severe pallor and dyspnea",
+              "The underlying inflammatory, infectious or malignant disease",
+              "Pica and koilonychia",
+              "Subacute combined degeneration"
+            ],
+            "correct_id": 1,
+            "explanation": "The anemia itself is usually mild."
+          },
+          {
+            "id": "patho_11",
+            "topic": "Acute Leukemias ALL AML",
+            "question": "A 4-year-old child presents with fatigue, fever, bone pain and easy bruising. The peripheral smear shows >20% blasts with scanty cytoplasm and inconspicuous nucleoli; MPO is negative and TdT is positive. What is the most likely diagnosis?",
+            "options": [
+              "Acute myeloid leukemia (AML)",
+              "Acute lymphoblastic leukemia (ALL)",
+              "Chronic myeloid leukemia (CML)",
+              "Chronic lymphocytic leukemia (CLL)"
+            ],
+            "correct_id": 1,
+            "explanation": "MPO negative excludes myeloid origin, and TdT marks immature lymphoid cells."
+          },
+          {
+            "id": "patho_12",
+            "topic": "Acute Leukemias ALL AML",
+            "question": "A 16-year-old male presents with an anterior mediastinal mass and lymphoblasts in the marrow. Which genetic abnormality is most characteristic of this leukemia?",
+            "options": [
+              "Notch1 mutations",
+              "PML-RARA fusion",
+              "BCR-ABL1 fusion with 9q+ only",
+              "BCL2 overexpression"
+            ],
+            "correct_id": 0,
+            "explanation": "Think of the T-cell variant of acute lymphoblastic leukemia."
+          },
+          {
+            "id": "patho_13",
+            "topic": "Acute Leukemias ALL AML",
+            "question": "A bone marrow smear shows myeloblasts with prominent nucleoli and needle-like azurophilic granules. Cytochemistry is MPO positive and Sudan Black B positive; flow cytometry shows CD13, CD33 and CD117. What is the diagnosis?",
+            "options": [
+              "B-cell acute lymphoblastic leukemia",
+              "T-cell acute lymphoblastic leukemia",
+              "Acute myeloid leukemia (AML)",
+              "Chronic lymphocytic leukemia"
+            ],
+            "correct_id": 2,
+            "explanation": "Auer rods are never seen in ALL."
+          },
+          {
+            "id": "patho_14",
+            "topic": "Acute Leukemias ALL AML",
+            "question": "A 25-year-old woman presents with mucosal bleeding and a prolonged PT/aPTT. The marrow shows blasts with Auer rods and t(15;17). What is the mechanism of her life-threatening coagulopathy?",
+            "options": [
+              "Autoantibody-mediated platelet destruction",
+              "Marrow fibrosis causing platelet loss",
+              "Hypogammaglobulinemia causing consumption of clotting factors",
+              "Release of primary granules from abnormal promyelocytes triggering DIC"
+            ],
+            "correct_id": 3,
+            "explanation": "The granules of the malignant promyelocytes are the trigger."
+          },
+          {
+            "id": "patho_15",
+            "topic": "Acute Leukemias ALL AML",
+            "question": "In acute promyelocytic leukemia, the PML-RARA fusion gene blocks myeloid maturation at which stage?",
+            "options": [
+              "Myeloblast",
+              "Promyelocyte",
+              "Myelocyte",
+              "Band neutrophil"
+            ],
+            "correct_id": 1,
+            "explanation": "The subtype's name tells you the stage."
+          },
+          {
+            "id": "patho_16",
+            "topic": "Acute Leukemias ALL AML",
+            "question": "According to WHO 2022, which scenario is sufficient to diagnose AML even if the blast count is below 20%?",
+            "options": [
+              "12% blasts with Auer rods only",
+              "12% blasts with gingival hyperplasia",
+              "12% blasts with t(8;21)",
+              "12% blasts that are MPO positive without any genetic abnormality"
+            ],
+            "correct_id": 2,
+            "explanation": "t(15;17), t(8;21) and inv(16) are examples of defining genetic abnormalities."
+          },
+          {
+            "id": "patho_17",
+            "topic": "Acute Leukemias ALL AML",
+            "question": "Which statement correctly describes the WHO 2022 definition of AML with myelodysplasia-related changes?",
+            "options": [
+              "It requires defining cytogenetic abnormalities or specific defining mutations; morphology alone...",
+              "It is diagnosed by morphologic dysplasia alone",
+              "It replaces the category of AML defined by differentiation",
+              "It requires a preceding diagnosis of CML"
+            ],
+            "correct_id": 0,
+            "explanation": "The definition moved from morphology toward genetics."
+          },
+          {
+            "id": "patho_18",
+            "topic": "Acute Leukemias ALL AML",
+            "question": "Which cytochemical profile is expected in acute lymphoblastic leukemia?",
+            "options": [
+              "TdT negative, MPO positive, PAS negative",
+              "TdT positive, MPO negative, PAS positive",
+              "TdT positive, MPO positive, Sudan Black B positive",
+              "TdT negative, MPO negative, PAS negative"
+            ],
+            "correct_id": 1,
+            "explanation": "One of these enzymes helps exclude myeloid lineage."
+          },
+          {
+            "id": "patho_19",
+            "topic": "Acute Leukemias ALL AML",
+            "question": "Flow cytometry of a lymphoblast population shows CD2, CD3, CD5 and CD7 positivity along with TdT. Which leukemia is this?",
+            "options": [
+              "B-cell ALL",
+              "AML",
+              "T-cell ALL",
+              "CLL"
+            ],
+            "correct_id": 2,
+            "explanation": "CD10, CD19 and CD20 would point to the other lineage."
+          },
+          {
+            "id": "patho_20",
+            "topic": "Acute Leukemias ALL AML",
+            "question": "Which sites are frequently involved by extramedullary spread in ALL?",
+            "options": [
+              "CNS (meninges) and testicles",
+              "Gingiva and skin",
+              "Spleen only",
+              "Lungs and kidneys"
+            ],
+            "correct_id": 0,
+            "explanation": "Think of the sites that need prophylactic attention in ALL."
+          },
+          {
+            "id": "patho_21",
+            "topic": "Acute Leukemias ALL AML",
+            "question": "A patient with AML of monocytic differentiation presents with gum swelling and violaceous skin nodules. These findings represent which pair?",
+            "options": [
+              "Gingival hyperplasia and smudge cells",
+              "Leukemia cutis and Philadelphia chromosome",
+              "Auer rods and anterior mediastinal mass",
+              "Gingival hyperplasia and leukemia cutis"
+            ],
+            "correct_id": 3,
+            "explanation": "Both are tissue infiltrations seen in monocytic subtypes."
+          },
+          {
+            "id": "patho_22",
+            "topic": "Acute Leukemias ALL AML",
+            "question": "Which inherited condition shows a strong association with ALL, particularly in children older than 5 years?",
+            "options": [
+              "Turner syndrome",
+              "Down syndrome",
+              "Klinefelter syndrome",
+              "Marfan syndrome"
+            ],
+            "correct_id": 1,
+            "explanation": "A trisomy syndrome carries a markedly raised leukemia risk."
+          },
+          {
+            "id": "patho_23",
+            "topic": "Chronic Leukemia CML CLL",
+            "question": "A 62-year-old man has an incidental WBC of 150,000/µL with a full spectrum of granulocyte maturation, absolute basophilia and massive splenomegaly. Which pair of findings is expected?",
+            "options": [
+              "High LAP score and t(9;22) / BCR-ABL1",
+              "Low LAP score and CD5+/CD23+ lymphocytes",
+              "High LAP score and t(15;17)",
+              "Low LAP score and t(9;22) / BCR-ABL1"
+            ],
+            "correct_id": 3,
+            "explanation": "Malignant neutrophils in this disease lack the enzyme."
+          },
+          {
+            "id": "patho_24",
+            "topic": "Chronic Leukemia CML CLL",
+            "question": "Which finding best favors a benign leukemoid reaction over chronic myeloid leukemia in a patient with marked leukocytosis?",
+            "options": [
+              "Absolute basophilia",
+              "High leukocyte alkaline phosphatase (LAP) score",
+              "Presence of the BCR-ABL1 transcript",
+              "Massive splenomegaly with early satiety"
+            ],
+            "correct_id": 1,
+            "explanation": "Remember that the LAP score is the opposite in the benign condition."
+          },
+          {
+            "id": "patho_25",
+            "topic": "Chronic Leukemia CML CLL",
+            "question": "Which statement best describes the early pathogenesis of CML?",
+            "options": [
+              "A block in differentiation at the promyelocyte stage",
+              "Decreased apoptosis due to BCL2 overexpression",
+              "A constitutively active tyrosine kinase drives proliferation and blocks apoptosis, while...",
+              "Notch1-driven arrest of lymphoid maturation"
+            ],
+            "correct_id": 2,
+            "explanation": "This is why mature and maturing granulocytes fill the blood."
+          },
+          {
+            "id": "patho_26",
+            "topic": "Chronic Leukemia CML CLL",
+            "question": "A patient with CML in the chronic phase develops rapidly rising blasts, fever and bone pain. Into which diseases can this blast crisis transform?",
+            "options": [
+              "AML or ALL",
+              "AML only",
+              "ALL only",
+              "CLL or mantle cell lymphoma"
+            ],
+            "correct_id": 0,
+            "explanation": "The triphasic course ends with a fatal transformation into an acute leukemia."
+          },
+          {
+            "id": "patho_27",
+            "topic": "Chronic Leukemia CML CLL",
+            "question": "Why does molecular detection of the BCR-ABL1 transcript directly guide therapy in CML?",
+            "options": [
+              "It predicts response to anti-CD20 antibodies",
+              "It indicates the need for all-trans retinoic acid",
+              "It identifies a BCL2 inhibitor target",
+              "It identifies the exact target for tyrosine kinase inhibitors such as imatinib"
+            ],
+            "correct_id": 3,
+            "explanation": "Think of the abnormal protein that the drug inhibits."
+          },
+          {
+            "id": "patho_28",
+            "topic": "Chronic Leukemia CML CLL",
+            "question": "Which finding on immunophenotyping definitively distinguishes CLL from mantle cell lymphoma, since both co-express CD5 with B-cell markers?",
+            "options": [
+              "CD19 positivity",
+              "CD20 positivity",
+              "CD23 positivity",
+              "CD5 positivity"
+            ],
+            "correct_id": 2,
+            "explanation": "Both share CD5, so look for the other marker that differs."
+          },
+          {
+            "id": "patho_29",
+            "topic": "Chronic Leukemia CML CLL",
+            "question": "Why are smudge cells seen on the peripheral smear of CLL?",
+            "options": [
+              "They are apoptotic blasts with Auer rods",
+              "The fragile neoplastic lymphocytes burst during smear preparation",
+              "They represent dysplastic neutrophils",
+              "They are plasma cells producing excess immunoglobulin"
+            ],
+            "correct_id": 1,
+            "explanation": "Mature-looking but fragile cells."
+          },
+          {
+            "id": "patho_30",
+            "topic": "Chronic Leukemia CML CLL",
+            "question": "CLL is primarily a disease of which pathogenic mechanism?",
+            "options": [
+              "Decreased apoptosis with BCL2 overexpression",
+              "Rapid proliferation driven by BCR-ABL1",
+              "Maturation block at the promyelocyte stage",
+              "Marrow replacement by lymphoblasts with Notch1 mutations"
+            ],
+            "correct_id": 0,
+            "explanation": "Cells accumulate because they do not die, not because they divide fast."
+          },
+          {
+            "id": "patho_31",
+            "topic": "Chronic Leukemia CML CLL",
+            "question": "A 72-year-old with CLL has recurrent bacterial infections and a falling hemoglobin with a positive direct antiglobulin test. Which pair of complications explains this picture?",
+            "options": [
+              "Disseminated intravascular coagulation and leukemia cutis",
+              "Blast crisis and massive splenomegaly",
+              "Mediastinal mass and CNS infiltration",
+              "Hypogammaglobulinemia and warm autoimmune hemolytic anemia"
+            ],
+            "correct_id": 3,
+            "explanation": "One complication is immune deficiency, the other is immune dysregulation."
+          },
+          {
+            "id": "patho_32",
+            "topic": "Chronic Leukemia CML CLL",
+            "question": "What is the Philadelphia chromosome?",
+            "options": [
+              "A shortened chromosome 9 formed by t(15;17)",
+              "An extra copy of chromosome 21",
+              "A shortened chromosome 22 (22q-) carrying the BCR-ABL1 fusion gene, formed by t(9;22)",
+              "A deletion of 13q found in CLL"
+            ],
+            "correct_id": 2,
+            "explanation": "Chromosome 9 becomes 9q+ and the partner becomes the shortened one."
+          },
+          {
+            "id": "patho_33",
+            "topic": "Hemolytic Anemias",
+            "question": "Which laboratory panel is consistent with hemolytic anemia?",
+            "options": [
+              "Reticulocytes low, LDH high, indirect bilirubin high, haptoglobin low",
+              "Reticulocytes high, LDH high, indirect bilirubin high, haptoglobin low",
+              "Reticulocytes high, LDH low, direct bilirubin high, haptoglobin high",
+              "Reticulocytes high, LDH normal, indirect bilirubin high, haptoglobin high"
+            ],
+            "correct_id": 1,
+            "explanation": "The marrow compensates, and a protein that binds free hemoglobin is consumed."
+          },
+          {
+            "id": "patho_34",
+            "topic": "Hemolytic Anemias",
+            "question": "During a transfusion a patient develops cola-colored urine and severe back pain; haptoglobin is profoundly low. Which mechanism is most likely?",
+            "options": [
+              "Extravascular hemolysis by splenic macrophages",
+              "Intravascular hemolysis with release of free hemoglobin into plasma",
+              "Ineffective erythropoiesis with death of precursors in the marrow",
+              "Aplastic marrow failure with low reticulocytes"
+            ],
+            "correct_id": 1,
+            "explanation": "Where are the red cells lysed: inside the vessels or inside macrophages?"
+          },
+          {
+            "id": "patho_35",
+            "topic": "Hemolytic Anemias",
+            "question": "What causes splenomegaly in chronic extravascular hemolysis?",
+            "options": [
+              "Extramedullary hematopoiesis from marrow fibrosis",
+              "Infiltration of the spleen by leukemic cells",
+              "Work hypertrophy of splenic macrophages that remove abnormal RBCs",
+              "Splenic infarction and autosplenectomy"
+            ],
+            "correct_id": 2,
+            "explanation": "Think about which cells are doing the extra work."
+          },
+          {
+            "id": "patho_36",
+            "topic": "Hemolytic Anemias",
+            "question": "A 30-year-old has anemia, jaundice and a positive direct antiglobulin (Coombs) test. Which diagnosis is most likely?",
+            "options": [
+              "Hereditary spherocytosis",
+              "Warm antibody autoimmune hemolytic anemia",
+              "G6PD deficiency",
+              "Microangiopathic hemolytic anemia"
+            ],
+            "correct_id": 1,
+            "explanation": "Which options are DAT-negative?"
+          },
+          {
+            "id": "patho_37",
+            "topic": "Hemolytic Anemias",
+            "question": "Chronic hemolysis predisposes to which type of gallstones?",
+            "options": [
+              "Cholesterol stones",
+              "Calcium oxalate stones",
+              "Uric acid stones",
+              "Pigmented (black) bilirubin stones"
+            ],
+            "correct_id": 3,
+            "explanation": "Consider what accumulates in excess in chronic hemolysis."
+          },
+          {
+            "id": "patho_38",
+            "topic": "Hemolytic Anemias",
+            "question": "Which of the following is an extrinsic (acquired) cause of hemolytic anemia?",
+            "options": [
+              "Mechanical fragmentation by a prosthetic cardiac valve",
+              "Hereditary spherocytosis",
+              "G6PD deficiency",
+              "Sickle cell disease"
+            ],
+            "correct_id": 0,
+            "explanation": "The RBC itself is normal; the damage comes from outside."
+          },
+          {
+            "id": "patho_39",
+            "topic": "Hemolytic Anemias",
+            "question": "Which smear findings point to G6PD deficiency?",
+            "options": [
+              "Sickled cells and target cells",
+              "Hypersegmented neutrophils with macrocytes",
+              "Pencil cells and cigar cells",
+              "Heinz bodies with bite and blister cells"
+            ],
+            "correct_id": 3,
+            "explanation": "Oxidative damage leaves characteristic marks on red cells."
+          },
+          {
+            "id": "patho_40",
+            "topic": "Hemolytic Anemias",
+            "question": "Which statement defines hemolytic anemia?",
+            "options": [
+              "Defective DNA synthesis with macrocytes",
+              "Iron depletion with microcytic cells",
+              "Marrow failure with low reticulocytes",
+              "Premature destruction of red cells (lifespan under 120 days) with compensatory marrow..."
+            ],
+            "correct_id": 3,
+            "explanation": "Short red cell survival, compensated by the marrow."
+          },
+          {
+            "id": "patho_41",
+            "topic": "Hemolytic Anemias",
+            "question": "What is the most common mechanism of hemolysis?",
+            "options": [
+              "Intravascular lysis by complement only",
+              "Extravascular, by macrophages in the spleen and liver",
+              "Mechanical fragmentation only",
+              "Direct marrow destruction of precursors"
+            ],
+            "correct_id": 1,
+            "explanation": "RBCs are recognized as abnormal and phagocytosed."
+          },
+          {
+            "id": "patho_42",
+            "topic": "Hemolytic Anemias",
+            "question": "What is the classic triad of hemolytic anemia?",
+            "options": [
+              "Fever, rash and arthritis",
+              "Pica, koilonychia and glossitis",
+              "Anemia, jaundice and splenomegaly",
+              "Neuropathy, glossitis and ataxia"
+            ],
+            "correct_id": 2,
+            "explanation": "Pallor, bilirubin and spleen."
+          },
+          {
+            "id": "patho_43",
+            "topic": "IDA Iron Deficiency Anemia",
+            "question": "A 34-year-old woman with heavy menstrual bleeding has fatigue, craves ice and has spoon-shaped nails. Which laboratory pattern is expected?",
+            "options": [
+              "Low MCV, low ferritin, high TIBC, transferrin saturation below 15%",
+              "Low MCV, high ferritin, low TIBC",
+              "High MCV, elevated homocysteine and MMA",
+              "Normal MCV, high LDH, low haptoglobin"
+            ],
+            "correct_id": 0,
+            "explanation": "Think about what the liver does with transferrin when usable iron is scarce."
+          },
+          {
+            "id": "patho_44",
+            "topic": "IDA Iron Deficiency Anemia",
+            "question": "A 62-year-old man has iron deficiency anemia. Which cause is most likely and should be sought first?",
+            "options": [
+              "Inadequate dietary iron intake",
+              "Increased demand from rapid growth",
+              "Malabsorption from celiac disease",
+              "Chronic gastrointestinal blood loss (ulcer, polyp or malignancy)"
+            ],
+            "correct_id": 3,
+            "explanation": "Consider the most common cause in adults in developed countries."
+          },
+          {
+            "id": "patho_45",
+            "topic": "IDA Iron Deficiency Anemia",
+            "question": "In the earliest stage of iron deficiency, which finding is present?",
+            "options": [
+              "Microcytic hypochromic RBCs with pencil cells",
+              "Decreased ferritin with still-normal RBC morphology",
+              "Low serum iron and high TIBC with overt anemia",
+              "High ferritin with iron trapped in macrophages"
+            ],
+            "correct_id": 1,
+            "explanation": "Marrow macrophages lose iron before the red cells change."
+          },
+          {
+            "id": "patho_46",
+            "topic": "IDA Iron Deficiency Anemia",
+            "question": "Why are the red cells small and pale in iron deficiency anemia?",
+            "options": [
+              "Insufficient iron limits heme synthesis, so erythroblasts undergo extra divisions to maintain...",
+              "Lack of thymidine delays DNA replication while the cytoplasm keeps growing",
+              "Excess unpaired globin chains damage the membrane and precursors",
+              "Hepcidin degrades ferroportin and blocks iron release from macrophages"
+            ],
+            "correct_id": 0,
+            "explanation": "Compare with the cause of macrocytosis: here the problem is heme, not DNA synthesis."
+          },
+          {
+            "id": "patho_47",
+            "topic": "IDA Iron Deficiency Anemia",
+            "question": "Which set of changes in serum iron, TIBC and transferrin saturation is expected in iron deficiency anemia?",
+            "options": [
+              "Low iron, low TIBC, low transferrin saturation",
+              "High iron, low TIBC, high transferrin saturation",
+              "Low iron, high TIBC, low transferrin saturation",
+              "Low iron, normal TIBC, high transferrin saturation"
+            ],
+            "correct_id": 2,
+            "explanation": "TIBC reflects transferrin made by the liver."
+          },
+          {
+            "id": "patho_48",
+            "topic": "IDA Iron Deficiency Anemia",
+            "question": "Which pair of findings is expected in iron deficiency anemia but absent in anemia of chronic disease?",
+            "options": [
+              "Fatigue and pallor",
+              "Low serum iron and mild anemia",
+              "Pica and koilonychia",
+              "Reduced exercise tolerance and tachycardia"
+            ],
+            "correct_id": 2,
+            "explanation": "Look for tissue iron-deficit signs rather than general anemia symptoms."
+          },
+          {
+            "id": "patho_49",
+            "topic": "IDA Iron Deficiency Anemia",
+            "question": "A blood smear shows microcytes with pencil and cigar cells and an elevated RDW. Which diagnosis is most consistent?",
             "options": [
               "Iron deficiency anemia",
-              "Folate deficiency",
-              "Vitamin B12 deficiency",
+              "Megaloblastic anemia",
+              "Sickle cell disease",
               "Aplastic anemia"
             ],
             "correct_id": 0,
-            "explanation": "Iron deficiency anemia is the single most common cause of microcytic hypochromic anemia worldwide."
+            "explanation": "Small, elongated cells with marked variation in size."
           },
           {
-            "id": "path_bl_002",
-            "question": "Reed-Sternberg cells (owl-eyed appearance) are the characteristic diagnostic hallmark of:",
+            "id": "patho_50",
+            "topic": "IDA Iron Deficiency Anemia",
+            "question": "Which finding marks the second stage of iron deficiency (iron-restricted erythropoiesis)?",
             "options": [
-              "Hodgkin lymphoma",
-              "Non-Hodgkin lymphoma",
-              "Multiple myeloma",
-              "Chronic lymphocytic leukemia"
+              "Ferritin falls while RBC morphology remains normal",
+              "Erythroblasts undergo extra divisions to produce microcytic cells",
+              "Serum iron falls and TIBC rises, with fewer RBCs produced",
+              "Ferritin rises because iron is trapped in macrophages"
+            ],
+            "correct_id": 2,
+            "explanation": "It comes after depletion of stores but before overt microcytic anemia."
+          },
+          {
+            "id": "patho_51",
+            "topic": "IDA Iron Deficiency Anemia",
+            "question": "Which signs are iron-specific tissue deficits in iron deficiency anemia?",
+            "options": [
+              "Hypersegmented neutrophils and ataxia",
+              "Dactylitis and autosplenectomy",
+              "Koilonychia, angular stomatitis and a smooth, beefy red tongue (glossitis)",
+              "Hemoglobinuria and cola-colored urine"
+            ],
+            "correct_id": 2,
+            "explanation": "Think of epithelial changes in nails, mouth corners and tongue."
+          },
+          {
+            "id": "patho_52",
+            "topic": "IDA Iron Deficiency Anemia",
+            "question": "Which situation increases iron demand and can lead to iron deficiency anemia?",
+            "options": [
+              "Chronic hemolysis with haptoglobin consumption",
+              "Pregnancy, infancy or rapid growth in adolescence",
+              "Strict hypoxia with polycythemia",
+              "Excess hepcidin suppression"
+            ],
+            "correct_id": 1,
+            "explanation": "Think of periods of increased blood volume and growth."
+          },
+          {
+            "id": "patho_53",
+            "topic": "Lecture1 Stem Cells and Classification",
+            "question": "A 70-year-old has anemia, neutropenia and thrombocytopenia. The marrow is hypercellular with dysplasia in more than one lineage. Which category and risk fit best?",
+            "options": [
+              "Aplastic anemia; fat-replaced marrow and HSCT is curative",
+              "Myelodysplastic syndrome; 10%–40% progress to AML",
+              "Myeloproliferative neoplasm; high counts with splenomegaly",
+              "Acute leukemia; abrupt blast accumulation without dysplasia"
+            ],
+            "correct_id": 1,
+            "explanation": "Cytopenias despite a hypercellular marrow: what is wrong with the quality of hematopoiesis?"
+          },
+          {
+            "id": "patho_54",
+            "topic": "Lecture1 Stem Cells and Classification",
+            "question": "What does pluripotency mean for hematopoietic stem cells (HSCs)?",
+            "options": [
+              "They can only produce red blood cells",
+              "They exist only in the thymus",
+              "They produce only lymphocytes",
+              "They reside in the bone marrow and give rise to all lineages of mature blood cells"
+            ],
+            "correct_id": 3,
+            "explanation": "Think of how many lineages arise from one cell."
+          },
+          {
+            "id": "patho_55",
+            "topic": "Lecture1 Stem Cells and Classification",
+            "question": "Which mature cells arise from the myeloid progenitor?",
+            "options": [
+              "T cells and B cells only",
+              "T cells and platelets",
+              "Erythrocytes, granulocytes and platelets",
+              "B cells and erythrocytes"
+            ],
+            "correct_id": 2,
+            "explanation": "Lymphocytes come from the other branch."
+          },
+          {
+            "id": "patho_56",
+            "topic": "Lecture1 Stem Cells and Classification",
+            "question": "How do diseases of hematopoietic stem cells (clonal disorders) typically manifest?",
+            "options": [
+              "As widespread abnormalities in blood cell production, either pancytopenia or excessive proliferation",
+              "As an isolated defect of a single mature cell membrane protein",
+              "As an inherited deficiency of one clotting factor",
+              "As a localized tumor without blood changes"
             ],
             "correct_id": 0,
-            "explanation": "Reed-Sternberg cells are neoplastic giant cells characteristic of Hodgkin lymphoma."
+            "explanation": "The stem cell sits at the root of every lineage."
           },
           {
-            "id": "path_bl_003",
-            "question": "The Philadelphia chromosome involving t(9;22) translocation is characteristically associated with:",
+            "id": "patho_57",
+            "topic": "Lecture1 Stem Cells and Classification",
+            "question": "Which of the following is NOT one of the four major categories of stem or progenitor cell disorders?",
             "options": [
-              "Chronic Myeloid Leukemia (CML)",
-              "Acute Lymphoblastic Leukemia (ALL)",
+              "Hemolytic anemia",
+              "Aplastic anemia",
+              "Myeloproliferative disorders",
+              "Myelodysplastic syndromes"
+            ],
+            "correct_id": 0,
+            "explanation": "Aplastic, myeloproliferative, myelodysplastic and acute leukemia make up the list."
+          },
+          {
+            "id": "patho_58",
+            "topic": "Lecture1 Stem Cells and Classification",
+            "question": "Which category is a syndrome of primary hematopoietic failure with profound pancytopenia?",
+            "options": [
+              "Myeloproliferative neoplasm",
+              "Aplastic anemia",
+              "Myelodysplastic syndrome",
+              "Acute leukemia"
+            ],
+            "correct_id": 1,
+            "explanation": "The marrow fails to produce cells."
+          },
+          {
+            "id": "patho_59",
+            "topic": "Lecture1 Stem Cells and Classification",
+            "question": "Mutated HSCs that overproduce one or more mature blood lineages (for example polycythemia vera) belong to which category?",
+            "options": [
+              "Aplastic anemia",
+              "Myelodysplastic syndromes",
+              "Acute leukemia",
+              "Myeloproliferative neoplasms"
+            ],
+            "correct_id": 3,
+            "explanation": "Overproduction of mature cells."
+          },
+          {
+            "id": "patho_60",
+            "topic": "Lecture1 Stem Cells and Classification",
+            "question": "How does the marrow of myelodysplastic syndrome (MDS) differ from that of aplastic anemia?",
+            "options": [
+              "Both are markedly hypocellular",
+              "MDS marrow is empty of cells, aplastic marrow is packed with blasts",
+              "Both show panmyelosis",
+              "MDS marrow is hypercellular and dysplastic, whereas aplastic marrow is hypocellular and fatty"
+            ],
+            "correct_id": 3,
+            "explanation": "Both give cytopenias, but the marrow cellularity is opposite."
+          },
+          {
+            "id": "patho_61",
+            "topic": "Lecture1 Stem Cells and Classification",
+            "question": "Which genes are the driver mutations in MDS?",
+            "options": [
+              "Constitutively active tyrosine kinases such as JAK2 and BCR-ABL",
+              "Telomerase and DNA repair genes only",
+              "Immunoglobulin heavy chain genes",
+              "Splicing factors, epigenetic regulators and transcription factors involved in hematopoiesis"
+            ],
+            "correct_id": 3,
+            "explanation": "Contrast with the tyrosine kinase drivers of MPNs."
+          },
+          {
+            "id": "patho_62",
+            "topic": "Lecture1 Stem Cells and Classification",
+            "question": "What do all subtypes of acute leukemia (AML, B-ALL, T-ALL) have in common?",
+            "options": [
+              "Constitutively active BCR-ABL1 in every case",
+              "Hypocellular fatty marrow",
+              "Mutations that interfere with hematopoietic stem cell differentiation",
+              "Overproduction of mature red cells"
+            ],
+            "correct_id": 2,
+            "explanation": "A block in differentiation leads to blast accumulation."
+          },
+          {
+            "id": "patho_63",
+            "topic": "Lecture2 Aplastic Anemia",
+            "question": "A 24-year-old presents with progressive pallor, petechiae and recurrent fever. CBC shows pancytopenia with a very low reticulocyte count, and the spleen is not palpable. Which bone marrow finding is expected?",
+            "options": [
+              "Hypercellular marrow with panmyelosis",
+              "Hypercellular marrow with dysplasia in one or more lineages",
+              "Markedly hypocellular marrow replaced by fat",
+              "Marrow packed with blasts and no fat spaces"
+            ],
+            "correct_id": 2,
+            "explanation": "Look at the reticulocyte count and the absence of splenomegaly: is the marrow failing to produce or to mature?"
+          },
+          {
+            "id": "patho_64",
+            "topic": "Lecture2 Aplastic Anemia",
+            "question": "Which cytokines released by autoreactive TH1 cells suppress and destroy hematopoietic progenitors in aplastic anemia?",
+            "options": [
+              "IL-4 and IL-5",
+              "IFN-γ and TNF",
+              "IL-17 and IL-23",
+              "TGF-β and IL-10"
+            ],
+            "correct_id": 1,
+            "explanation": "Think of the cytokines typical of a TH1 cellular response."
+          },
+          {
+            "id": "patho_65",
+            "topic": "Lecture2 Aplastic Anemia",
+            "question": "A patient with pancytopenia has teardrop-shaped red cells and early erythroid and myeloid precursors in the peripheral blood. Which diagnosis is most likely?",
+            "options": [
+              "Myelophthisic anemia due to marrow infiltration (e.g., metastatic carcinoma)",
+              "Aplastic anemia, because precursors escape from the fatty marrow",
+              "Hypersplenism, because the enlarged spleen releases precursors",
+              "Parvovirus B19-induced transient marrow suppression"
+            ],
+            "correct_id": 0,
+            "explanation": "What pushes immature cells into the blood when the marrow is crowded out?"
+          },
+          {
+            "id": "patho_66",
+            "topic": "Lecture2 Aplastic Anemia",
+            "question": "Which finding would argue AGAINST aplastic anemia in a patient with pancytopenia?",
+            "options": [
+              "Very low reticulocyte count",
+              "Onset after seronegative (non-A, non-B, non-C) hepatitis",
+              "Insidious onset with fever and mucosal bleeding",
+              "Palpable splenomegaly"
+            ],
+            "correct_id": 3,
+            "explanation": "Look for the sign that is characteristically absent in this disease."
+          },
+          {
+            "id": "patho_67",
+            "topic": "Lecture2 Aplastic Anemia",
+            "question": "A 19-year-old has severe acquired aplastic anemia and an HLA-matched sibling. Which treatment is the curative option of choice?",
+            "options": [
+              "Phlebotomy to keep hematocrit below 45%",
+              "Hematopoietic stem cell transplantation (HSCT)",
+              "ATG plus cyclosporine alone, since the disease is purely immune-mediated",
+              "Ruxolitinib to inhibit JAK2 signaling"
+            ],
+            "correct_id": 1,
+            "explanation": "The goal is a cure, not just immune suppression, especially in young patients."
+          },
+          {
+            "id": "patho_68",
+            "topic": "Lecture2 Aplastic Anemia",
+            "question": "Which agent causes aplastic anemia through an idiosyncratic (non-dose-related) reaction?",
+            "options": [
+              "Chloramphenicol",
+              "Benzene",
+              "Whole-body irradiation",
+              "Telomerase gene mutations"
+            ],
+            "correct_id": 0,
+            "explanation": "Distinguish dose-related toxicity from an unpredictable individual reaction."
+          },
+          {
+            "id": "patho_69",
+            "topic": "Lecture2 Aplastic Anemia",
+            "question": "Shortened telomeres in hematopoietic stem cells lead to aplastic anemia mainly through which mechanism?",
+            "options": [
+              "TH1-mediated autoimmune destruction of progenitors",
+              "Marrow infiltration by metastatic tumor cells",
+              "Constitutive tyrosine kinase signaling",
+              "Stem cell exhaustion and apoptosis"
+            ],
+            "correct_id": 3,
+            "explanation": "This is an intrinsic mechanism, not an immune one."
+          },
+          {
+            "id": "patho_70",
+            "topic": "Lecture2 Aplastic Anemia",
+            "question": "Which statement defines aplastic anemia?",
+            "options": [
+              "Replacement of the marrow by metastatic carcinoma",
+              "Clonal overproduction of mature granulocytes",
+              "Suppression of multipotent myeloid stem cells leading to marrow failure and pancytopenia",
+              "Ineffective hematopoiesis in a hypercellular dysplastic marrow"
+            ],
+            "correct_id": 2,
+            "explanation": "Look for stem cell suppression and an empty marrow."
+          },
+          {
+            "id": "patho_71",
+            "topic": "Lecture2 Aplastic Anemia",
+            "question": "A patient with pancytopenia and a chronically enlarged spleen is most likely to have which condition, and why?",
+            "options": [
+              "Aplastic anemia, because the spleen is always enlarged",
+              "Myelophthisic anemia, because the spleen produces extra precursors",
+              "Hypersplenism, because the spleen removes excess formed elements, platelets in particular",
+              "Polycythemia vera, because of panmyelosis"
+            ],
+            "correct_id": 2,
+            "explanation": "Splenomegaly is characteristically absent in aplastic anemia."
+          },
+          {
+            "id": "patho_72",
+            "topic": "Lecture2 Aplastic Anemia",
+            "question": "What is the defining histologic feature of the aplastic anemia bone marrow?",
+            "options": [
+              "Hypercellularity with dysplastic lineages",
+              "Sheets of blasts with Auer rods",
+              "Obliterative fibrosis with dense megakaryocyte clusters",
+              "Marked hypocellularity with fat replacement, often more than 90% of the marrow space"
+            ],
+            "correct_id": 3,
+            "explanation": "The marrow is described as empty."
+          },
+          {
+            "id": "patho_73",
+            "topic": "Lecture3 Myeloproliferative Neoplasms",
+            "question": "Which statement describes the unifying molecular hallmark of classic myeloproliferative neoplasms?",
+            "options": [
+              "Acquired somatic mutations causing constitutive activation of tyrosine kinase signaling",
+              "Inherited defects in DNA repair factors",
+              "Mutations in splicing factors causing ineffective hematopoiesis",
+              "Antigenic alteration of stem cells provoking a T-cell attack"
+            ],
+            "correct_id": 0,
+            "explanation": "Think about independence from growth factors."
+          },
+          {
+            "id": "patho_74",
+            "topic": "Lecture3 Myeloproliferative Neoplasms",
+            "question": "Which of the following is NOT a shared feature of the classic myeloproliferative neoplasms?",
+            "options": [
+              "Extramedullary hematopoiesis with splenomegaly",
+              "Tendency to progress to marrow fibrosis (spent phase)",
+              "Variable risk of transformation to AML",
+              "Early profound pancytopenia from suppression of residual marrow"
+            ],
+            "correct_id": 3,
+            "explanation": "The proliferating cells in these diseases go outside the marrow rather than suppress the rest."
+          },
+          {
+            "id": "patho_75",
+            "topic": "Lecture3 Myeloproliferative Neoplasms",
+            "question": "Mutated CALR, which stimulates the thrombopoietin receptor, is characteristic of which myeloproliferative neoplasms?",
+            "options": [
+              "Chronic myeloid leukemia and polycythemia vera",
+              "Polycythemia vera only",
+              "Essential thrombocythemia and primary myelofibrosis",
+              "Chronic myeloid leukemia only"
+            ],
+            "correct_id": 2,
+            "explanation": "Follow the thrombopoietin pathway: which neoplasms depend on megakaryocytes/platelets?"
+          },
+          {
+            "id": "patho_76",
+            "topic": "Lecture3 Myeloproliferative Neoplasms",
+            "question": "A 48-year-old has splenomegaly and WBC 80,000/µL with neutrophilia, marked left shift and fewer than 10% blasts. Which pair is correct?",
+            "options": [
+              "BCR-ABL fusion, t(9;22); treated with ABL kinase inhibitors",
+              "JAK2 V617F; treated mainly with phlebotomy",
+              "CALR mutation; treated with ATG and cyclosporine",
+              "MPL mutation; treated with HSCT as the only option"
+            ],
+            "correct_id": 0,
+            "explanation": "The genetic lesion here is a fusion gene, not a point mutation."
+          },
+          {
+            "id": "patho_77",
+            "topic": "Lecture3 Myeloproliferative Neoplasms",
+            "question": "A 68-year-old with no prior hematologic disease has progressive anemia and increasing splenomegaly. The smear shows leukoerythroblastosis; the marrow shows obliterative fibrosis driven by megakaryocyte cytokines. What is the diagnosis?",
+            "options": [
+              "Chronic myeloid leukemia",
+              "Primary myelofibrosis",
+              "Polycythemia vera",
+              "Aplastic anemia"
+            ],
+            "correct_id": 1,
+            "explanation": "The oldest age group and the most extensive extramedullary hematopoiesis."
+          },
+          {
+            "id": "patho_78",
+            "topic": "Lecture3 Myeloproliferative Neoplasms",
+            "question": "A patient has a platelet count near 1,000,000/mm³ with giant platelets and massively increased marrow megakaryocytes. Hematocrit is normal, there is no BCR-ABL, and no marrow fibrosis. Which diagnosis fits, and what is notable about it?",
+            "options": [
+              "Primary myelofibrosis; the oldest age group with obliterative fibrosis",
+              "Polycythemia vera; panmyelosis dominated by red cells",
+              "Chronic myeloid leukemia; Philadelphia chromosome in about 90%",
+              "Essential thrombocythemia; the rarest MPN and often a diagnosis of exclusion"
+            ],
+            "correct_id": 3,
+            "explanation": "The dominant lineage is platelets and there is no fibrosis."
+          },
+          {
+            "id": "patho_79",
+            "topic": "Lecture3 Myeloproliferative Neoplasms",
+            "question": "Which statement defines myeloproliferative neoplasms (MPNs)?",
+            "options": [
+              "Disorders of ineffective hematopoiesis with cytopenias",
+              "Disorders of immature lymphoblast accumulation",
+              "Immune-mediated marrow failure with pancytopenia",
+              "Clonal hematopoietic stem cell disorders with proliferation of one or more mature myeloid lineages"
+            ],
+            "correct_id": 3,
+            "explanation": "They are also called chronic myeloproliferative disorders."
+          },
+          {
+            "id": "patho_80",
+            "topic": "Lecture3 Myeloproliferative Neoplasms",
+            "question": "How do MPNs differ from myelodysplastic syndromes (MDS) in hematopoiesis and blood counts?",
+            "options": [
+              "MPN: cytopenias; MDS: high counts",
+              "Both show high counts with splenomegaly",
+              "Both show pancytopenia with an empty marrow",
+              "MPN: increased production and high counts; MDS: ineffective production with cytopenias"
+            ],
+            "correct_id": 3,
+            "explanation": "One overproduces, the other fails to mature."
+          },
+          {
+            "id": "patho_81",
+            "topic": "Lecture3 Myeloproliferative Neoplasms",
+            "question": "Which marrow and blood picture fits CML?",
+            "options": [
+              "Hypocellular fatty marrow",
+              "More than 20% blasts with Auer rods",
+              "100% cellular marrow with a massively increased M:E ratio and left-shifted neutrophils but under...",
+              "Predominant dense fibrosis with teardrop cells"
+            ],
+            "correct_id": 2,
+            "explanation": "All cell lines are increased, but blasts remain few."
+          },
+          {
+            "id": "patho_82",
+            "topic": "Lecture3 Myeloproliferative Neoplasms",
+            "question": "Which feature is characteristic of primary myelofibrosis (PMF)?",
+            "options": [
+              "Oldest age group of the MPNs, with the most extensive extramedullary hematopoiesis",
+              "Youngest age group of the MPNs",
+              "Absence of extramedullary hematopoiesis",
+              "Marrow that is the primary site of hematopoiesis"
+            ],
+            "correct_id": 0,
+            "explanation": "The marrow is not the main site of blood production here."
+          },
+          {
+            "id": "patho_83",
+            "topic": "Lecture4 Polycythemia Vera",
+            "question": "A 58-year-old with polycythemia vera has plethora and headaches. What is the mainstay of initial therapy and its target?",
+            "options": [
+              "Hydroxyurea as first-line, targeting a normal platelet count",
+              "Ruxolitinib as first-line, to suppress JAK2",
+              "Phlebotomy, targeting hematocrit below 45%",
+              "Erythropoietin, to maintain hematocrit near 45%"
+            ],
+            "correct_id": 2,
+            "explanation": "The main treatment physically removes red cells."
+          },
+          {
+            "id": "patho_84",
+            "topic": "Lecture4 Polycythemia Vera",
+            "question": "Which best explains the markedly low serum EPO in polycythemia vera?",
+            "options": [
+              "Destruction of renal EPO-producing cells by autoreactive T cells",
+              "Loss of the EPO receptor on erythroid precursors",
+              "Autonomous JAK2-driven red cell production; the expanded red cell mass suppresses renal EPO via...",
+              "Ectopic EPO secretion by a tumor"
+            ],
+            "correct_id": 2,
+            "explanation": "Ask what controls red cell production instead of EPO, and what the expanded red cell mass does to the kidney."
+          },
+          {
+            "id": "patho_85",
+            "topic": "Lecture4 Polycythemia Vera",
+            "question": "Which laboratory pattern favors polycythemia vera over secondary erythrocytosis from chronic hypoxia?",
+            "options": [
+              "High EPO, JAK2 negative, no splenomegaly",
+              "High EPO, JAK2 V617F positive",
+              "Low EPO, JAK2 negative, normal platelets",
+              "Low EPO, JAK2 V617F positive, with leukocytosis and thrombocytosis"
+            ],
+            "correct_id": 3,
+            "explanation": "Compare primary (clonal) and reactive causes by EPO level, mutation status and other lineages."
+          },
+          {
+            "id": "patho_86",
+            "topic": "Lecture4 Polycythemia Vera",
+            "question": "A patient with polycythemia vera complains of intense itching after a hot bath. What is the best explanation?",
+            "options": [
+              "Histamine release from increased basophils",
+              "Uric acid deposition in the skin",
+              "Cytokine release by autoreactive TH1 cells",
+              "Qualitative platelet dysfunction"
+            ],
+            "correct_id": 0,
+            "explanation": "Focus on the cells raised in the peripheral blood other than red cells."
+          },
+          {
+            "id": "patho_87",
+            "topic": "Lecture4 Polycythemia Vera",
+            "question": "Why may patients with polycythemia vera have epistaxis or GI bleeding despite thrombocytosis?",
+            "options": [
+              "Consumption coagulopathy (DIC)",
+              "The platelets are qualitatively abnormal",
+              "Marrow failure causing thrombocytopenia",
+              "Deficiency of clotting factor VIII"
+            ],
+            "correct_id": 1,
+            "explanation": "The platelet count is high, but what about their function?"
+          },
+          {
+            "id": "patho_88",
+            "topic": "Lecture4 Polycythemia Vera",
+            "question": "A patient with polycythemia vera for 12 years develops worsening anemia, leukoerythroblastosis and massive splenomegaly, and no longer needs phlebotomy. What is the most likely explanation?",
+            "options": [
+              "Reversal of the JAK2 mutation",
+              "Development of secondary erythrocytosis from hypoxia",
+              "Spent phase (post-PV myelofibrosis)",
+              "Transformation to aplastic anemia"
+            ],
+            "correct_id": 2,
+            "explanation": "After years of overproduction the marrow 'burns out'."
+          },
+          {
+            "id": "patho_89",
+            "topic": "Lecture4 Polycythemia Vera",
+            "question": "What does the JAK2 V617F mutation do in polycythemia vera?",
+            "options": [
+              "It deletes the EPO receptor",
+              "It makes JAK2 constitutively active, so erythroid signalling occurs even without erythropoietin",
+              "It blocks maturation at the promyelocyte stage",
+              "It causes telomere shortening"
+            ],
+            "correct_id": 1,
+            "explanation": "Signals without the ligand."
+          },
+          {
+            "id": "patho_90",
+            "topic": "Lecture4 Polycythemia Vera",
+            "question": "What is meant by panmyelosis in polycythemia vera?",
+            "options": [
+              "Proliferation of all three myeloid lineages, with red cells dominant",
+              "Proliferation of red cells only",
+              "Replacement of marrow by fat",
+              "Proliferation of lymphoblasts"
+            ],
+            "correct_id": 0,
+            "explanation": "Despite the name, other lines rise too."
+          },
+          {
+            "id": "patho_91",
+            "topic": "Lecture4 Polycythemia Vera",
+            "question": "Which unusual thrombosis is peculiarly associated with polycythemia vera?",
+            "options": [
+              "Renal artery stenosis",
+              "Superior sagittal sinus only",
+              "Aortic dissection",
+              "Hepatic vein thrombosis (Budd-Chiari syndrome)"
+            ],
+            "correct_id": 3,
+            "explanation": "A liver vein."
+          },
+          {
+            "id": "patho_92",
+            "topic": "Lecture4 Polycythemia Vera",
+            "question": "In what proportion of polycythemia vera patients does the spent phase (post-PV myelofibrosis) develop?",
+            "options": [
+              "Under 1%",
+              "15%-20%",
+              "About 50%",
+              "About 90%"
+            ],
+            "correct_id": 1,
+            "explanation": "After years of overproduction, the marrow burns out."
+          },
+          {
+            "id": "patho_93",
+            "topic": "Lecture7 Coagulation Disorders",
+            "question": "An 8-year-old boy has recurrent hemarthroses after minor trauma. His maternal uncle had a similar problem. Which screening profile is expected?",
+            "options": [
+              "Prolonged bleeding time and PTT with normal PT",
+              "Prolonged PT and PTT with low platelets",
+              "Normal bleeding time, platelet count and PT; prolonged PTT",
+              "All screening tests normal"
+            ],
+            "correct_id": 2,
+            "explanation": "Think of factor VIII and the intrinsic pathway."
+          },
+          {
+            "id": "patho_94",
+            "topic": "Lecture7 Coagulation Disorders",
+            "question": "A woman who is a carrier of hemophilia A has a son with a normal partner. What is the chance that the son is affected?",
+            "options": [
+              "50%",
+              "0%",
+              "25%",
+              "100%"
+            ],
+            "correct_id": 0,
+            "explanation": "The disease is X-linked recessive."
+          },
+          {
+            "id": "patho_95",
+            "topic": "Lecture7 Coagulation Disorders",
+            "question": "A boy with joint and muscle bleeds has the same screening results as hemophilia A, but the FVIII assay is normal. Which test confirms the diagnosis?",
+            "options": [
+              "Ristocetin-induced platelet aggregation",
+              "Factor IX assay showing decreased activity",
+              "vWF antigen",
+              "Fibrinogen level"
+            ],
+            "correct_id": 1,
+            "explanation": "Also known as Christmas disease."
+          },
+          {
+            "id": "patho_96",
+            "topic": "Lecture7 Coagulation Disorders",
+            "question": "A 24-year-old woman has epistaxis and menorrhagia. Tests show prolonged bleeding time and PTT, normal PT and platelet count, and defective ristocetin aggregation. What is the diagnosis?",
+            "options": [
+              "Hemophilia A",
+              "Hemophilia B",
+              "von Willebrand disease",
+              "Bernard-Soulier syndrome"
+            ],
+            "correct_id": 2,
+            "explanation": "Mucocutaneous bleeding with both bleeding time and PTT prolonged."
+          },
+          {
+            "id": "patho_97",
+            "topic": "Lecture7 Coagulation Disorders",
+            "question": "Why is the PTT prolonged in von Willebrand disease even though the factor VIII gene is normal?",
+            "options": [
+              "vWF is a cofactor for thrombin in the common pathway",
+              "vWF directly inhibits factor IX",
+              "vWF is consumed by widespread microvascular thrombosis",
+              "vWF is the carrier for factor VIII, so a deficiency of vWF lowers FVIII activity"
+            ],
+            "correct_id": 3,
+            "explanation": "Think of vWF's two functions."
+          },
+          {
+            "id": "patho_98",
+            "topic": "Lecture7 Coagulation Disorders",
+            "question": "A patient has a complete quantitative deficiency of von Willebrand factor. Which type is this?",
+            "options": [
+              "Type 3",
+              "Type 1",
+              "Type 2",
+              "Type 2 with preserved quantity"
+            ],
+            "correct_id": 0,
+            "explanation": "Type 1 is partial and type 2 is qualitative."
+          },
+          {
+            "id": "patho_99",
+            "topic": "Lecture7 Coagulation Disorders",
+            "question": "Which of the following is a chronic cause of DIC?",
+            "options": [
+              "Amniotic fluid embolism",
+              "Cancer",
+              "Snake bite",
+              "Acute hemolytic transfusion reaction"
+            ],
+            "correct_id": 1,
+            "explanation": "The other options are acute triggers."
+          },
+          {
+            "id": "patho_100",
+            "topic": "Lecture7 Coagulation Disorders",
+            "question": "Which laboratory profile is expected in DIC?",
+            "options": [
+              "Low platelets, normal PT/PTT, normal fibrinogen",
+              "Normal platelets, prolonged PTT only, increased fibrinogen",
+              "Low platelets, prolonged PT/PTT/TT, reduced fibrinogen and increased D-dimer",
+              "High platelets, shortened PT/PTT, decreased D-dimer"
+            ],
+            "correct_id": 2,
+            "explanation": "Consumption of factors plus fibrinolysis."
+          },
+          {
+            "id": "patho_101",
+            "topic": "Lecture7 Coagulation Disorders",
+            "question": "A septic patient develops oliguria, confusion and diffuse bleeding, with schistocytes on the blood film. Why does he bleed despite widespread microvascular thrombosis?",
+            "options": [
+              "The thrombi directly destroy vWF",
+              "He has an inherited deficiency of factor VIII",
+              "Aspirin-like inhibition of cyclo-oxygenase in platelets",
+              "Clotting factors and platelets are consumed, and plasmin generates fibrin split products that..."
+            ],
+            "correct_id": 3,
+            "explanation": "Thrombosis and bleeding coexist because of consumption and fibrinolysis."
+          },
+          {
+            "id": "patho_102",
+            "topic": "Lecture7 Coagulation Disorders",
+            "question": "Which components does normal hemostasis depend on?",
+            "options": [
+              "Red cells and white cells only",
+              "Platelets and lymphatics only",
+              "Complement and immunoglobulins only",
+              "Blood vessels, platelets, coagulation factors, fibrinolysis and natural anticoagulant inhibitors"
+            ],
+            "correct_id": 3,
+            "explanation": "Several systems cooperate."
+          },
+          {
+            "id": "patho_103",
+            "topic": "Lecture7 Platelet Disorders",
+            "question": "A patient with severe thrombocytopenia, microangiopathic changes and neurologic symptoms is diagnosed with TTP. A colleague suggests a platelet transfusion for the low count. What is the correct response?",
+            "options": [
+              "Transfuse only if the count is below 50,000/µL",
+              "Avoid it, because it is contraindicated in TTP and fuels the coagulopathy",
+              "Transfuse routinely, because the count is low",
+              "Transfuse only after confirming a normal PT and PTT"
+            ],
+            "correct_id": 1,
+            "explanation": "Low counts are generally not corrected by transfusion unless bleeding or below 10,000/µL, with this key exception."
+          },
+          {
+            "id": "patho_104",
+            "topic": "Lecture7 Platelet Disorders",
+            "question": "A child has ecchymoses and epistaxis. The smear shows giant platelets with thrombocytopenia, and ristocetin-induced aggregation is impaired. Which defect is responsible?",
+            "options": [
+              "Defective GP IIb-IIIa",
+              "Absent dense granules",
+              "Deficiency of alpha granule contents",
+              "Defective GP Ib/IX and V"
+            ],
+            "correct_id": 3,
+            "explanation": "These receptors mediate adhesion through von Willebrand factor."
+          },
+          {
+            "id": "patho_105",
+            "topic": "Lecture7 Platelet Disorders",
+            "question": "Platelet aggregation tests in a patient with petechiae and purpura show no aggregation with ADP, thrombin, collagen or epinephrine. Which disorder and defect fit?",
+            "options": [
+              "Glanzmann thrombasthenia; defective GP IIb-IIIa",
+              "Bernard-Soulier syndrome; defective GP Ib/IX",
+              "Storage pool disease; absent dense granules",
+              "Gray platelet syndrome; alpha granule deficiency"
+            ],
+            "correct_id": 0,
+            "explanation": "This is a defect of primary aggregation, which depends on the fibrinogen receptor."
+          },
+          {
+            "id": "patho_106",
+            "topic": "Lecture7 Platelet Disorders",
+            "question": "A patient with ecchymoses, epistaxis and hematuria has reduced collagen-induced aggregation and no secondary aggregation response to ADP and epinephrine. What is the underlying abnormality?",
+            "options": [
+              "Absent or decreased alpha (α) granules",
+              "Defective GP Ib/IX and V",
+              "Absent or decreased dense (δ) granules",
+              "Irreversible cyclo-oxygenase inactivation"
+            ],
+            "correct_id": 2,
+            "explanation": "Dense granules store the substances released for secondary aggregation."
+          },
+          {
+            "id": "patho_107",
+            "topic": "Lecture7 Platelet Disorders",
+            "question": "Large platelets with thrombocytopenia and decreased PF4 and β-thromboglobulin are found in which condition?",
+            "options": [
+              "Bernard-Soulier syndrome",
+              "Gray platelet syndrome",
+              "Glanzmann thrombasthenia",
+              "Storage pool disease"
+            ],
+            "correct_id": 1,
+            "explanation": "PF4 and β-thromboglobulin are stored in one specific type of granule."
+          },
+          {
+            "id": "patho_108",
+            "topic": "Lecture7 Platelet Disorders",
+            "question": "Why does a single dose of aspirin impair platelet function for 3 to 7 days?",
+            "options": [
+              "It irreversibly inactivates cyclo-oxygenase, so TXA₂ formation and the ADP release reaction are...",
+              "It reversibly blocks GP IIb-IIIa receptors",
+              "It depletes dense granule stores permanently in the megakaryocyte",
+              "It destroys von Willebrand factor in plasma"
+            ],
+            "correct_id": 0,
+            "explanation": "Platelets have no nucleus to synthesize new enzyme."
+          },
+          {
+            "id": "patho_109",
+            "topic": "Lecture7 Platelet Disorders",
+            "question": "Which of the following is stored in platelet alpha granules?",
+            "options": [
+              "ADP and serotonin",
+              "ATP and calcium",
+              "Hydrolases",
+              "Fibrinogen and factor V"
+            ],
+            "correct_id": 3,
+            "explanation": "Dense granules hold ADP, ATP, Ca and serotonin; lysosomes hold hydrolases."
+          },
+          {
+            "id": "patho_110",
+            "topic": "Lecture7 Platelet Disorders",
+            "question": "Which platelet glycoprotein binds collagen?",
+            "options": [
+              "GP Ib-IX",
+              "GP V",
+              "GP Ia-IIa",
+              "GP IIb-IIIa"
+            ],
+            "correct_id": 2,
+            "explanation": "Remember the ligands: vWF, thrombin, fibrinogen and collagen each have their own receptor."
+          },
+          {
+            "id": "patho_111",
+            "topic": "Lecture7 Platelet Disorders",
+            "question": "Which of the following is a cause of thrombocytopenia due to decreased production?",
+            "options": [
+              "Liver failure with reduced thrombopoietin",
+              "Thrombotic thrombocytopenic purpura",
+              "Hypersplenism with splenic pooling",
+              "Post-transfusion purpura"
+            ],
+            "correct_id": 0,
+            "explanation": "The liver produces thrombopoietin."
+          },
+          {
+            "id": "patho_112",
+            "topic": "Lecture7 Platelet Disorders",
+            "question": "Which of the following is an acquired platelet functional disorder?",
+            "options": [
+              "Bernard-Soulier syndrome",
+              "Uremia",
+              "Storage pool disease",
+              "Glanzmann thrombasthenia"
+            ],
+            "correct_id": 1,
+            "explanation": "The other options are inherited."
+          },
+          {
+            "id": "patho_113",
+            "topic": "Lecture7 Platelet Disorders",
+            "question": "A patient with a prolonged bleeding time is taking a drug known to interfere with platelet function. What is the next step in the diagnostic flowchart?",
+            "options": [
+              "Immediately perform a bone marrow biopsy",
+              "Order factor VIII and IX assays",
+              "Start platelet transfusion",
+              "Discontinue the drug and repeat the bleeding time; if it corrects, no further evaluation is needed"
+            ],
+            "correct_id": 3,
+            "explanation": "Look for a reversible, drug-induced cause first."
+          },
+          {
+            "id": "patho_114",
+            "topic": "Lecture7 Platelet Disorders",
+            "question": "Why is von Willebrand disease described as strictly not a platelet disorder?",
+            "options": [
+              "The platelets are absent from blood",
+              "The abnormality is quantitative or qualitative, and lies in von Willebrand factor, not in the...",
+              "It affects only coagulation factor IX",
+              "It is caused by a defect of GP IIb-IIIa"
+            ],
+            "correct_id": 1,
+            "explanation": "The defect is in a plasma protein."
+          },
+          {
+            "id": "patho_115",
+            "topic": "Lymphoma Classification Hodgkin",
+            "question": "A 24-year-old man presents with painless, non-tender cervical lymphadenopathy, weight loss and intermittent fever lasting a few days followed by 1–2 afebrile weeks. A node biopsy shows large binucleated cells with an owl-eye appearance. Which immunophenotype is expected in these cells?",
+            "options": [
+              "CD20+ and CD10+",
+              "CD5+ and cyclin D1+",
+              "CD30+ and CD15+",
+              "CD19+ and surface IgM+"
+            ],
+            "correct_id": 2,
+            "explanation": "The fever pattern is named after Pel and Ebstein."
+          },
+          {
+            "id": "patho_116",
+            "topic": "Lymphoma Classification Hodgkin",
+            "question": "Why do most cells in a Hodgkin lymphoma node turn out to be non-neoplastic?",
+            "options": [
+              "Reed-Sternberg cells differentiate into eosinophils and plasma cells",
+              "The neoplastic cells are mostly lost through extensive apoptosis",
+              "Reed-Sternberg cells undergo clonal expansion into lymphocytes",
+              "Reed-Sternberg cells secrete cytokines such as IL-5 and TGF-β that recruit a reactive..."
+            ],
+            "correct_id": 3,
+            "explanation": "The rare neoplastic cell orchestrates its own background."
+          },
+          {
+            "id": "patho_117",
+            "topic": "Lymphoma Classification Hodgkin",
+            "question": "A lymph node biopsy shows collagen bands dividing the node into nodules, with lacunar cells in a mixed inflammatory background. Which Hodgkin lymphoma subtype is this?",
+            "options": [
+              "Mixed cellularity",
+              "Nodular sclerosis",
+              "Lymphocyte-depleted",
+              "Lymphocyte-rich"
+            ],
+            "correct_id": 1,
+            "explanation": "The architectural clue is in the name, and it is also the most common subtype."
+          },
+          {
+            "id": "patho_118",
+            "topic": "Lymphoma Classification Hodgkin",
+            "question": "Which pair of Hodgkin lymphoma subtypes is strongly associated with EBV?",
+            "options": [
+              "Nodular sclerosis and lymphocyte-rich",
+              "Nodular sclerosis and mixed cellularity",
+              "Mixed cellularity and lymphocyte-depleted",
+              "Lymphocyte-rich and lymphocyte-depleted"
+            ],
+            "correct_id": 2,
+            "explanation": "One has a diffuse mixed background, the other is rare with fibrosis."
+          },
+          {
+            "id": "patho_119",
+            "topic": "Lymphoma Classification Hodgkin",
+            "question": "A 68-year-old HIV-positive patient has a rare Hodgkin lymphoma subtype with a diffuse inflammatory background, fibrosis and pleomorphic variants of RS cells. What is the expected prognosis?",
+            "options": [
+              "The worst prognosis among the Hodgkin subtypes",
+              "Excellent prognosis",
+              "Similar to nodular sclerosis",
+              "Good prognosis, because EBV-associated tumors respond to antivirals"
+            ],
+            "correct_id": 0,
+            "explanation": "Lymphocytes are scarce in this subtype."
+          },
+          {
+            "id": "patho_120",
+            "topic": "Lymphoma Classification Hodgkin",
+            "question": "Which histologic description fits lymphocyte-rich Hodgkin lymphoma, and what is its prognosis?",
+            "options": [
+              "Numerous reactive lymphocytes with scattered RS cells; worst prognosis",
+              "Numerous reactive lymphocytes with scattered RS cells; excellent prognosis",
+              "Collagen bands with lacunar cells; excellent prognosis",
+              "Diffuse fibrosis with pleomorphic RS cells; excellent prognosis"
+            ],
+            "correct_id": 1,
+            "explanation": "The name describes the background cells."
+          },
+          {
+            "id": "patho_121",
+            "topic": "Lymphoma Classification Hodgkin",
+            "question": "On what does the WHO classification of lymphomas rely?",
+            "options": [
+              "Serum LDH level and age only",
+              "Presence of B symptoms only",
+              "Morphology, cell of origin, immunophenotype (CD markers) and genetics",
+              "Site of the lymph node group only"
+            ],
+            "correct_id": 2,
+            "explanation": "Several features are combined."
+          },
+          {
+            "id": "patho_122",
+            "topic": "Lymphoma Classification Hodgkin",
+            "question": "What is the age distribution of Hodgkin lymphoma?",
+            "options": [
+              "Only in infants",
+              "Only after age 70",
+              "Uniform across all ages",
+              "Bimodal, with peaks in young adulthood and again after 55 years"
+            ],
+            "correct_id": 3,
+            "explanation": "Two peaks."
+          },
+          {
+            "id": "patho_123",
+            "topic": "Lymphoma Classification Hodgkin",
+            "question": "Which Hodgkin lymphoma subtype shows a lymphocyte background in a diffuse pattern, rare RS cells and a 'popcorn' variant?",
+            "options": [
+              "Nodular sclerosis",
+              "Lymphocyte predominance type",
+              "Mixed cellularity",
+              "Lymphocyte depleted"
+            ],
+            "correct_id": 1,
+            "explanation": "Named after the background cells and the variant cell shape."
+          },
+          {
+            "id": "patho_124",
+            "topic": "Lymphoma Classification Hodgkin",
+            "question": "Which gross description fits an involved node in Hodgkin lymphoma?",
+            "options": [
+              "Enlarged, firm and discrete, later adherent from capsular invasion, with a homogeneous...",
+              "Soft, necrotic and hemorrhagic with a starry sky cut surface",
+              "Small, shrunken and calcified",
+              "Cystic and filled with mucin"
+            ],
+            "correct_id": 0,
+            "explanation": "Early discrete, late adherent."
+          },
+          {
+            "id": "patho_125",
+            "topic": "Lymphoma Non Hodgkin",
+            "question": "Which feature best favors Hodgkin lymphoma over non-Hodgkin lymphoma?",
+            "options": [
+              "Localized to a single axial node group with orderly, contiguous spread",
+              "Frequent extranodal involvement such as GI tract, skin or brain",
+              "Non-contiguous, random spread to multiple peripheral nodes",
+              "A tumor mass composed entirely of neoplastic lymphoid cells"
+            ],
+            "correct_id": 0,
+            "explanation": "Think about how the disease moves from one node group to the next."
+          },
+          {
+            "id": "patho_126",
+            "topic": "Lymphoma Non Hodgkin",
+            "question": "What is the molecular consequence of t(14;18) in follicular lymphoma?",
+            "options": [
+              "Cyclin D1 is fused to the IgH locus, driving G1-to-S progression",
+              "c-MYC is overexpressed, causing rapid cell-cycle proliferation",
+              "BCL6 is dysregulated, producing large proliferating cells",
+              "BCL2 is placed next to the immunoglobulin heavy-chain locus, causing overexpression and..."
+            ],
+            "correct_id": 3,
+            "explanation": "Germinal center B-cells fail to die and accumulate."
+          },
+          {
+            "id": "patho_127",
+            "topic": "Lymphoma Non Hodgkin",
+            "question": "A 58-year-old woman has painless, generalized, waxing and waning lymphadenopathy for years. Biopsy shows nodular effacement of the architecture. Which immunophenotype is expected?",
+            "options": [
+              "CD19+, CD20+, CD5+, cyclin D1+",
+              "CD30+, CD15+",
+              "CD19+, CD20+, CD10+, BCL2+",
+              "CD19+, CD20+, CD10+, surface IgM+ with Ki-67 near 100%"
+            ],
+            "correct_id": 2,
+            "explanation": "This is a germinal center B-cell tumor with an anti-apoptotic marker."
+          },
+          {
+            "id": "patho_128",
+            "topic": "Lymphoma Non Hodgkin",
+            "question": "A patient with long-standing follicular lymphoma develops a rapidly enlarging mass with fever and night sweats. Biopsy shows a diffuse pattern of large cells with a high Ki-67 index. What has happened?",
+            "options": [
+              "Progression to Burkitt lymphoma",
+              "Transformation to diffuse large B-cell lymphoma",
+              "Transformation to Hodgkin lymphoma",
+              "Development of reactive follicular hyperplasia"
+            ],
+            "correct_id": 1,
+            "explanation": "An indolent lymphoma can become aggressive."
+          },
+          {
+            "id": "patho_129",
+            "topic": "Lymphoma Non Hodgkin",
+            "question": "Which statement about diffuse large B-cell lymphoma is correct?",
+            "options": [
+              "It is the most common NHL overall and is caused by dysregulation of BCL6, BCL2 or MYC",
+              "It is the most common indolent NHL and is driven by t(14;18)",
+              "It is driven by t(11;14) with cyclin D1 overexpression",
+              "It is defined by CD30+ and CD15+ giant cells"
+            ],
+            "correct_id": 0,
+            "explanation": "Do not confuse the most common NHL overall with the most common indolent one."
+          },
+          {
+            "id": "patho_130",
+            "topic": "Lymphoma Non Hodgkin",
+            "question": "A biopsy shows sheets of intermediate cells with a high mitotic rate, extensive apoptosis and macrophages creating a starry sky pattern; Ki-67 is nearly 100%. Which translocation is expected?",
+            "options": [
+              "t(14;18) involving BCL2",
+              "t(11;14) involving cyclin D1",
+              "t(9;22) involving BCR-ABL1",
+              "t(8;14) involving c-MYC"
+            ],
+            "correct_id": 3,
+            "explanation": "Starry sky and a near 100% proliferation index point to the most aggressive B-cell lymphoma."
+          },
+          {
+            "id": "patho_131",
+            "topic": "Lymphoma Non Hodgkin",
+            "question": "A 6-year-old child presents with an abdominal mass in the ileocecal region. Biopsy shows a highly aggressive B-cell lymphoma with surface IgM and CD10. Which form of the disease is this?",
+            "options": [
+              "Endemic Burkitt lymphoma",
+              "Mantle cell lymphoma",
+              "Sporadic Burkitt lymphoma",
+              "Lymphocyte-depleted Hodgkin lymphoma"
+            ],
+            "correct_id": 2,
+            "explanation": "The African form presents elsewhere, with jaw and facial bone lesions."
+          },
+          {
+            "id": "patho_132",
+            "topic": "Lymphoma Non Hodgkin",
+            "question": "In mantle cell lymphoma, how does t(11;14) promote tumor growth?",
+            "options": [
+              "It fuses cyclin D1 to the IgH locus, and its overexpression drives G1-to-S phase progression",
+              "It places BCL2 next to the IgH locus, blocking apoptosis",
+              "It overexpresses c-MYC, driving rapid proliferation with extensive apoptosis",
+              "It creates a constitutively active tyrosine kinase"
+            ],
+            "correct_id": 0,
+            "explanation": "The overexpressed protein regulates the cell cycle checkpoint."
+          },
+          {
+            "id": "patho_133",
+            "topic": "Lymphoma Non Hodgkin",
+            "question": "A B-cell neoplasm is CD5+ and cyclin D1+. What is the expected CD23 result, and what is the diagnosis?",
+            "options": [
+              "CD23 positive; mantle cell lymphoma",
+              "CD23 negative; mantle cell lymphoma",
+              "CD23 positive; chronic lymphocytic leukemia",
+              "CD23 negative; follicular lymphoma"
+            ],
+            "correct_id": 1,
+            "explanation": "CD23 is the marker that separates this tumor from CLL."
+          },
+          {
+            "id": "patho_134",
+            "topic": "Lymphoma Non Hodgkin",
+            "question": "Endemic Burkitt lymphoma in children typically presents with which lesions?",
+            "options": [
+              "Jaw and facial bone masses",
+              "Ileocecal mass only",
+              "Mediastinal mass only",
+              "Generalized waxing and waning lymphadenopathy"
+            ],
+            "correct_id": 0,
+            "explanation": "The sporadic form is the abdominal one."
+          },
+          {
+            "id": "patho_135",
+            "topic": "Megaloblastic Anemia",
+            "question": "Which mechanism explains macrocytosis in megaloblastic anemia?",
+            "options": [
+              "Excess unpaired globin chains aggregate and damage the membrane",
+              "Insufficient iron limits heme synthesis and causes extra divisions",
+              "Lack of B12/folate delays thymidine and DNA synthesis while RNA and protein synthesis continue",
+              "Hepcidin degrades ferroportin and traps iron in macrophages"
+            ],
+            "correct_id": 2,
+            "explanation": "The nucleus and cytoplasm mature at different rates."
+          },
+          {
+            "id": "patho_136",
+            "topic": "Megaloblastic Anemia",
+            "question": "A 55-year-old strict vegan has numbness, tingling, loss of vibration and position sense, and ataxia. Which laboratory pattern is expected?",
+            "options": [
+              "MCV above 110 fL, hypersegmented neutrophils, elevated homocysteine and elevated MMA",
+              "Low MCV, low ferritin, high TIBC",
+              "High MCV, elevated homocysteine, normal MMA",
+              "Normal MCV, high ferritin, low TIBC"
+            ],
+            "correct_id": 0,
+            "explanation": "Neurological involvement points to one of the two vitamins."
+          },
+          {
+            "id": "patho_137",
+            "topic": "Megaloblastic Anemia",
+            "question": "An elderly alcoholic with a poor diet has MCV 112 fL and hypersegmented neutrophils, with no neurological symptoms. Which marker pattern is expected?",
+            "options": [
+              "Elevated homocysteine and elevated MMA",
+              "Elevated homocysteine with normal MMA",
+              "Normal homocysteine with elevated MMA",
+              "Normal homocysteine and normal MMA"
+            ],
+            "correct_id": 1,
+            "explanation": "One vitamin is needed for the methylmalonic acid pathway; the other is not."
+          },
+          {
+            "id": "patho_138",
+            "topic": "Megaloblastic Anemia",
+            "question": "Why are LDH and bilirubin markedly elevated in megaloblastic anemia?",
+            "options": [
+              "Extravascular destruction of spherocytes in the spleen",
+              "Complement-mediated intravascular lysis",
+              "Hypocellular marrow with fat replacement",
+              "Heavy death of erythroid precursors inside the marrow (ineffective erythropoiesis)"
+            ],
+            "correct_id": 3,
+            "explanation": "Where do the abnormal red cell precursors die?"
+          },
+          {
+            "id": "patho_139",
+            "topic": "Megaloblastic Anemia",
+            "question": "Which of the following causes megaloblastic anemia through vitamin B12 deficiency?",
+            "options": [
+              "Pregnancy",
+              "Methotrexate therapy",
+              "Poor diet in an alcoholic patient",
+              "Crohn disease with terminal ileum resection"
+            ],
+            "correct_id": 3,
+            "explanation": "The other options are classic causes of the other vitamin deficiency."
+          },
+          {
+            "id": "patho_140",
+            "topic": "Megaloblastic Anemia",
+            "question": "Which clinical sign of megaloblastic anemia reflects mild jaundice from intramarrow cell destruction?",
+            "options": [
+              "Koilonychia",
+              "Dactylitis",
+              "Crew-cut skull",
+              "Lemon-yellow pallor"
+            ],
+            "correct_id": 3,
+            "explanation": "Pallor combined with a yellowish tint."
+          },
+          {
+            "id": "patho_141",
+            "topic": "Megaloblastic Anemia",
+            "question": "Which statement defines megaloblastic anemia?",
+            "options": [
+              "A microcytic hypochromic anemia due to iron depletion",
+              "A macrocytic anemia with large abnormal RBC precursors (megaloblasts) in the marrow due to...",
+              "A hemolytic anemia due to spherocytes",
+              "A normocytic anemia due to IL-6 and hepcidin"
+            ],
+            "correct_id": 1,
+            "explanation": "The defect is in DNA synthesis."
+          },
+          {
+            "id": "patho_142",
+            "topic": "Megaloblastic Anemia",
+            "question": "Which smear finding is characteristic of megaloblastic anemia?",
+            "options": [
+              "Microcytes with pencil cells",
+              "Sickled cells and target cells",
+              "Macrocytes and neutrophils with more than five nuclear lobes",
+              "Heinz bodies with bite cells"
+            ],
+            "correct_id": 2,
+            "explanation": "Look at the neutrophil nuclei."
+          },
+          {
+            "id": "patho_143",
+            "topic": "Megaloblastic Anemia",
+            "question": "Pernicious anemia causes vitamin B12 deficiency through which mechanism?",
+            "options": [
+              "Terminal ileum resection only",
+              "Chronic GI blood loss",
+              "Autoimmune destruction of parietal cells / intrinsic factor",
+              "Hepcidin-mediated iron trapping"
+            ],
+            "correct_id": 2,
+            "explanation": "Without intrinsic factor B12 cannot be absorbed."
+          },
+          {
+            "id": "patho_144",
+            "topic": "Megaloblastic Anemia",
+            "question": "Which feature distinguishes B12 deficiency from folate deficiency clinically?",
+            "options": [
+              "Macrocytosis occurs only in folate deficiency",
+              "Hypersegmented neutrophils occur only in B12 deficiency",
+              "Folate deficiency causes ataxia and dementia",
+              "Neurological signs such as subacute combined degeneration of the cord occur only in B12 deficiency"
+            ],
+            "correct_id": 3,
+            "explanation": "Folate deficiency does not cause neurological symptoms."
+          },
+          {
+            "id": "patho_145",
+            "topic": "Reactive Lymphadenitis and Multiple Myeloma",
+            "question": "Which finding on lymph node histology favors malignant follicular lymphoma over reactive follicular hyperplasia?",
+            "options": [
+              "Prominent tingible-body macrophages",
+              "A distinct and well-preserved mantle zone",
+              "Marked variation in follicle size and shape",
+              "Absent or rare tingible-body macrophages due to decreased apoptosis"
+            ],
+            "correct_id": 3,
+            "explanation": "BCL2 overexpression reduces cell death, so there is little debris to phagocytose."
+          },
+          {
+            "id": "patho_146",
+            "topic": "Reactive Lymphadenitis and Multiple Myeloma",
+            "question": "A lymph node shows preserved architecture, follicles of varying size and shape with polarized light and dark zones, a preserved mantle zone and a polyclonal cell mix. What is the diagnosis?",
+            "options": [
+              "Reactive follicular hyperplasia",
+              "Follicular lymphoma",
+              "Mantle cell lymphoma",
+              "Nodular sclerosis Hodgkin lymphoma"
+            ],
+            "correct_id": 0,
+            "explanation": "Benign and reversible; B-lymphocyte activation, as in rheumatoid arthritis or early HIV."
+          },
+          {
+            "id": "patho_147",
+            "topic": "Reactive Lymphadenitis and Multiple Myeloma",
+            "question": "A 20-year-old with fever, sore throat and generalized lymphadenopathy from a viral infection has a node biopsy showing expansion of the interfollicular zones. Which pattern is this?",
+            "options": [
+              "Follicular hyperplasia (B-cell activation)",
+              "Sinus histiocytosis",
+              "Paracortical hyperplasia (T-cell activation)",
+              "Acute nonspecific lymphadenitis"
+            ],
+            "correct_id": 2,
+            "explanation": "The paracortex is the T-cell zone."
+          },
+          {
+            "id": "patho_148",
+            "topic": "Reactive Lymphadenitis and Multiple Myeloma",
+            "question": "A pathologist examining axillary nodes finds expansion of the subcapsular and medullary sinuses by macrophages. What should be suspected?",
+            "options": [
+              "Early HIV infection",
+              "Rheumatoid arthritis",
               "Burkitt lymphoma",
-              "Acute Promyelocytic Leukemia (APL)"
+              "A nearby malignancy being drained, such as breast carcinoma"
             ],
-            "correct_id": 0,
-            "explanation": "t(9;22) generates the BCR-ABL1 fusion gene, defining Chronic Myeloid Leukemia (CML)."
+            "correct_id": 3,
+            "explanation": "Also called reticular hyperplasia."
           },
           {
-            "id": "path_bl_004",
-            "question": "A 25-year-old female presents with fatigue and jaundice. Blood smear reveals spherocytes and Coombs test is positive. The most likely diagnosis is:",
+            "id": "patho_149",
+            "topic": "Reactive Lymphadenitis and Multiple Myeloma",
+            "question": "A 65-year-old presents with bone pain, hypercalcemia, renal insufficiency and anemia. The blood smear shows rouleaux formation. Which description of the underlying neoplasm is correct?",
             "options": [
-              "Autoimmune Hemolytic Anemia",
-              "Hereditary Spherocytosis",
-              "Sickle Cell Anemia",
-              "G6PD Deficiency"
+              "Clonal immature lymphoblasts with TdT positivity",
+              "Clonal malignant plasma cells secreting a single homogeneous immunoglobulin (M protein)",
+              "Reed-Sternberg cells secreting IL-5 and TGF-β",
+              "Mature B-cells with smudge cells and CD5+/CD23+"
             ],
-            "correct_id": 0,
-            "explanation": "Positive Coombs test (direct antiglobulin) differentiates autoimmune hemolytic anemia from hereditary spherocytosis."
+            "correct_id": 1,
+            "explanation": "The features listed form the CRAB criteria."
           },
           {
-            "id": "path_bl_005",
-            "question": "Bence-Jones proteins in the urine are characteristic of:",
+            "id": "patho_150",
+            "topic": "Reactive Lymphadenitis and Multiple Myeloma",
+            "question": "Which histologic picture fits acute nonspecific lymphadenitis?",
             "options": [
-              "Multiple Myeloma",
-              "Polycythemia Vera",
-              "Aplastic Anemia",
-              "Infectious Mononucleosis"
+              "Effaced architecture with sheets of monotonous cells",
+              "Starry sky pattern with Ki-67 near 100%",
+              "Swollen, engorged, painful nodes with large germinal centers, many mitoses and macrophages...",
+              "Rouleaux formation in sinuses"
+            ],
+            "correct_id": 2,
+            "explanation": "Reactive and painful."
+          },
+          {
+            "id": "patho_151",
+            "topic": "Reactive Lymphadenitis and Multiple Myeloma",
+            "question": "Which conditions are associated with follicular hyperplasia?",
+            "options": [
+              "EBV infection and post-vaccination",
+              "Drainage of breast carcinoma",
+              "Rheumatoid arthritis, toxoplasmosis and early HIV (B-lymphocyte activation)",
+              "Multiple myeloma"
+            ],
+            "correct_id": 2,
+            "explanation": "B-cell activation."
+          },
+          {
+            "id": "patho_152",
+            "topic": "Reactive Lymphadenitis and Multiple Myeloma",
+            "question": "Which feature favors reactive hyperplasia over malignant lymphoma?",
+            "options": [
+              "Absent mantle zones",
+              "Back-to-back uniform follicles",
+              "Capsular and fat invasion",
+              "Prominent tingible-body macrophages from high apoptosis and phagocytosis"
+            ],
+            "correct_id": 3,
+            "explanation": "Malignant follicular lymphoma has decreased apoptosis because of BCL2."
+          },
+          {
+            "id": "patho_153",
+            "topic": "Reactive Lymphadenitis and Multiple Myeloma",
+            "question": "What is the cellular composition of reactive lymphoid hyperplasia compared with lymphoma?",
+            "options": [
+              "Monoclonal, a homogeneous neoplastic population",
+              "Polyclonal, a heterogeneous mix of cells at different stages of maturation",
+              "Entirely plasma cells",
+              "Entirely Reed-Sternberg cells"
+            ],
+            "correct_id": 1,
+            "explanation": "Malignant lymphoma is the monoclonal one."
+          },
+          {
+            "id": "patho_154",
+            "topic": "Reactive Lymphadenitis and Multiple Myeloma",
+            "question": "What is the M protein in multiple myeloma?",
+            "options": [
+              "A single homogeneous immunoglobulin secreted by a clonal population of malignant plasma cells",
+              "A heterogeneous mix of immunoglobulins from reactive B cells",
+              "An enzyme released by dying red cells",
+              "A cytokine secreted by Reed-Sternberg cells"
             ],
             "correct_id": 0,
-            "explanation": "Bence-Jones proteins represent free immunoglobulin light chains filtered into the urine in Multiple Myeloma."
+            "explanation": "Monoclonal."
+          },
+          {
+            "id": "patho_155",
+            "topic": "Sickle Cell Disease",
+            "question": "Which best describes the molecular defect in sickle cell disease?",
+            "options": [
+              "Deletion of one to four α-globin genes on chromosome 16",
+              "Valine replaced by glutamic acid at position 6 of the β chain",
+              "Frameshift in the β gene causing absent β⁰ production",
+              "Missense mutation in the β-globin gene on chromosome 11 replacing glutamic acid with valine at..."
+            ],
+            "correct_id": 3,
+            "explanation": "Pay attention to the direction of the amino acid change and the chain involved."
+          },
+          {
+            "id": "patho_156",
+            "topic": "Sickle Cell Disease",
+            "question": "A healthy 25-year-old has sickle cell trait (HbAS). What does hemoglobin electrophoresis show?",
+            "options": [
+              "About 60% HbA and about 40% HbS",
+              "Predominantly HbS with no HbA",
+              "About 40% HbA and about 60% HbS",
+              "HbA2 above 3.5% with raised HbF"
+            ],
+            "correct_id": 0,
+            "explanation": "The trait keeps one normal β-globin allele."
+          },
+          {
+            "id": "patho_157",
+            "topic": "Sickle Cell Disease",
+            "question": "A metabisulfite sickling test is positive. What does this mean?",
+            "options": [
+              "It definitively confirms HbSS disease",
+              "It excludes sickle cell trait",
+              "Sickling can be induced, but trait and disease cannot be distinguished without electrophoresis...",
+              "It indicates thalassemia major"
+            ],
+            "correct_id": 2,
+            "explanation": "It is a screening test, not the definitive one."
+          },
+          {
+            "id": "patho_158",
+            "topic": "Sickle Cell Disease",
+            "question": "Which process converts reversibly sickled cells into irreversibly sickled cells?",
+            "options": [
+              "Complement fixation on the RBC surface",
+              "Aggregation of excess unpaired α chains",
+              "Oxidant damage with Heinz body formation",
+              "Repeated deoxygenation cycles with K⁺ and water efflux causing dehydration and membrane damage"
+            ],
+            "correct_id": 3,
+            "explanation": "Think about cell hydration and the membrane."
+          },
+          {
+            "id": "patho_159",
+            "topic": "Sickle Cell Disease",
+            "question": "A 20-year-old with HbSS presents with chest pain, fever, hypoxemia and new pulmonary infiltrates. What is the most likely diagnosis?",
+            "options": [
+              "Dactylitis",
+              "Avascular necrosis",
+              "Acute chest syndrome",
+              "Moyamoya transformation"
+            ],
+            "correct_id": 2,
+            "explanation": "This complication is the leading cause of death in the disease."
+          },
+          {
+            "id": "patho_160",
+            "topic": "Sickle Cell Disease",
+            "question": "Howell-Jolly bodies on the smear of a patient with sickle cell disease indicate what?",
+            "options": [
+              "Active hemolysis with reticulocytosis",
+              "Acute vaso-occlusive crisis",
+              "Ineffective erythropoiesis",
+              "Functional asplenia (autosplenectomy) with high risk of encapsulated bacterial infection"
+            ],
+            "correct_id": 3,
+            "explanation": "Repeated infarctions have affected one organ by childhood."
+          },
+          {
+            "id": "patho_161",
+            "topic": "Sickle Cell Disease",
+            "question": "A teenager with HbSS has hip pain; a pelvic X-ray shows femoral head changes. Which complication is this?",
+            "options": [
+              "Avascular necrosis",
+              "Moyamoya transformation",
+              "Acute chest syndrome",
+              "Dactylitis"
+            ],
+            "correct_id": 0,
+            "explanation": "Think about downstream ischemia of bone."
+          },
+          {
+            "id": "patho_162",
+            "topic": "Sickle Cell Disease",
+            "question": "What is the inheritance and genotype of sickle cell disease?",
+            "options": [
+              "X-linked recessive; males are HbSS",
+              "Autosomal dominant; HbAS is severe disease",
+              "Mitochondrial; passed only by the mother",
+              "Autosomal recessive; homozygous HbSS, while heterozygous HbAS is sickle cell trait and largely..."
+            ],
+            "correct_id": 3,
+            "explanation": "Both copies of the β-globin gene carry the mutation."
+          },
+          {
+            "id": "patho_163",
+            "topic": "Sickle Cell Disease",
+            "question": "Why does deoxygenated HbS distort the red cell?",
+            "options": [
+              "It fragments into free α chains",
+              "It loses its heme iron",
+              "It binds complement on the cell surface",
+              "It exposes hydrophobic patches and polymerizes into long stiff chains"
+            ],
+            "correct_id": 3,
+            "explanation": "Valine is hydrophobic."
+          },
+          {
+            "id": "patho_164",
+            "topic": "Sickle Cell Disease",
+            "question": "Which events trigger vaso-occlusive crises in sickle cell disease?",
+            "options": [
+              "Infection, cold or dehydration",
+              "High oxygen exposure",
+              "Iron supplementation",
+              "Vitamin B12 therapy"
+            ],
+            "correct_id": 0,
+            "explanation": "Think of situations that favor sickling."
+          },
+          {
+            "id": "patho_165",
+            "topic": "Thalassemia",
+            "question": "In β-thalassemia, which excess chain aggregates and damages the red cell membrane?",
+            "options": [
+              "Free β chains",
+              "Free δ chains",
+              "Free α chains",
+              "Polymerized HbS"
+            ],
+            "correct_id": 2,
+            "explanation": "The unaffected chain is left without a partner."
+          },
+          {
+            "id": "patho_166",
+            "topic": "Thalassemia",
+            "question": "A 25-year-old has mild microcytic anemia: MCV 62 fL, RBC 5.8 × 10¹²/L and normal ferritin. Which diagnosis and confirmation fit best?",
+            "options": [
+              "Iron deficiency anemia; low serum ferritin",
+              "β-thalassemia trait; electrophoresis showing raised HbA2 and HbF",
+              "Anemia of chronic disease; high ferritin with low TIBC",
+              "α-thalassemia trait; abnormal adult electrophoresis"
+            ],
+            "correct_id": 1,
+            "explanation": "Calculate MCV divided by RBC count."
+          },
+          {
+            "id": "patho_167",
+            "topic": "Thalassemia",
+            "question": "Which test confirms α-thalassemia trait in an adult?",
+            "options": [
+              "Hemoglobin electrophoresis showing HbA2 above 3.5%",
+              "Serum ferritin",
+              "Genetic (DNA) analysis for gene deletions",
+              "Mentzer index above 13"
+            ],
+            "correct_id": 2,
+            "explanation": "Adult electrophoresis is often normal in this form."
+          },
+          {
+            "id": "patho_168",
+            "topic": "Thalassemia",
+            "question": "A Mediterranean child becomes severely anemic and transfusion-dependent at 6–9 months of age. Why do symptoms appear at this age?",
+            "options": [
+              "Fetal hemoglobin declines and β-chain production becomes necessary",
+              "Maternal iron stores run out",
+              "The spleen begins destroying red cells at that age",
+              "HbS starts polymerizing after birth"
+            ],
+            "correct_id": 0,
+            "explanation": "Think about which hemoglobin the infant relies on early in life."
+          },
+          {
+            "id": "patho_169",
+            "topic": "Thalassemia",
+            "question": "A patient with β-thalassemia major receives regular transfusions. Which statement about iron therapy is correct?",
+            "options": [
+              "Iron supplements should be given routinely to correct the microcytosis",
+              "Iron should not be given unless iron deficiency coexists, given the risk of iron overload",
+              "Iron is indicated because ferritin is typically low",
+              "Iron should be given only after HbA2 normalizes"
+            ],
+            "correct_id": 1,
+            "explanation": "Consider both the transfusions and the normal or elevated iron studies."
+          },
+          {
+            "id": "patho_170",
+            "topic": "Thalassemia",
+            "question": "Why do target cells form in thalassemia?",
+            "options": [
+              "Excess cell membrane relative to the reduced hemoglobin volume",
+              "Precipitated oxidized hemoglobin attached to the membrane",
+              "Loss of membrane skeleton proteins",
+              "Polymerization of deoxygenated hemoglobin"
+            ],
+            "correct_id": 0,
+            "explanation": "Compare the amount of membrane with the amount of hemoglobin."
+          },
+          {
+            "id": "patho_171",
+            "topic": "Thalassemia",
+            "question": "What defines the thalassemia syndromes?",
+            "options": [
+              "Inherited quantitative reduction or absence of α or β globin chain synthesis",
+              "A structural amino acid substitution in the β chain",
+              "Defective iron absorption",
+              "Autoimmune destruction of red cells"
+            ],
+            "correct_id": 0,
+            "explanation": "The globin chain is normal in structure but made in reduced amounts."
+          },
+          {
+            "id": "patho_172",
+            "topic": "Thalassemia",
+            "question": "What is the genetic basis of α-thalassemia?",
+            "options": [
+              "Point mutations in the β gene on chromosome 11",
+              "A missense mutation replacing glutamic acid with valine",
+              "Deletion of one to four α genes on chromosome 16",
+              "Deficiency of G6PD"
+            ],
+            "correct_id": 2,
+            "explanation": "Alpha involves deletions, beta involves point mutations."
+          },
+          {
+            "id": "patho_173",
+            "topic": "Thalassemia",
+            "question": "A Mentzer index (MCV/RBC count) below 13 suggests which diagnosis?",
+            "options": [
+              "Iron deficiency anemia rather than thalassemia",
+              "Megaloblastic anemia",
+              "Anemia of chronic disease",
+              "Thalassemia trait rather than iron deficiency"
+            ],
+            "correct_id": 3,
+            "explanation": "In thalassemia the RBC count is normal or high."
+          },
+          {
+            "id": "patho_174",
+            "topic": "Thalassemia",
+            "question": "Which skeletal changes occur in β-thalassemia major?",
+            "options": [
+              "Bone fractures from marrow aplasia",
+              "Femoral head necrosis only",
+              "No skeletal changes",
+              "Crew-cut skull and chipmunk facies from massive marrow expansion"
+            ],
+            "correct_id": 3,
+            "explanation": "The marrow expands to compensate."
           }
         ]
       },
       "pharmacology": {
-        "title": "💊 Pharmacology (علم الأدوية)",
-        "description": "مضادات التخثر ومثبطات الصفائح وأدوية فقر الدم",
-        "questions": [
-          {
-            "id": "pharm_bl_001",
-            "question": "What is the primary mechanism of action of Unfractionated Heparin?",
-            "options": [
-              "Activates Antithrombin III",
-              "Inhibits Vitamin K epoxide reductase",
-              "Directly inhibits Thrombin (Factor IIa)",
-              "Irreversibly blocks platelet ADP receptors"
-            ],
-            "correct_id": 0,
-            "explanation": "Heparin binds Antithrombin III and accelerates its inhibition of thrombin and factor Xa."
-          },
-          {
-            "id": "pharm_bl_002",
-            "question": "Which of the following is the specific antidote for Warfarin-induced excessive anticoagulation?",
-            "options": [
-              "Vitamin K1 (Phytonadione)",
-              "Protamine sulfate",
-              "Idarucizumab",
-              "Andexanet alfa"
-            ],
-            "correct_id": 0,
-            "explanation": "Vitamin K1 restores synthesis of functional clotting factors II, VII, IX, and X. Protamine is for Heparin."
-          },
-          {
-            "id": "pharm_bl_003",
-            "question": "Which antiplatelet drug works by irreversible inhibition of Cyclooxygenase-1 (COX-1)?",
-            "options": [
-              "Aspirin",
-              "Clopidogrel",
-              "Ticagrelor",
-              "Abciximab"
-            ],
-            "correct_id": 0,
-            "explanation": "Aspirin irreversibly acetylates platelet COX-1, preventing Thromboxane A2 formation."
-          },
-          {
-            "id": "pharm_bl_004",
-            "question": "What is the antidote used to reverse the anticoagulant effect of Heparin?",
-            "options": [
-              "Protamine sulfate",
-              "Vitamin K1",
-              "Deferoxamine",
-              "Fresh Frozen Plasma"
-            ],
-            "correct_id": 0,
-            "explanation": "Protamine sulfate is a strongly basic peptide that chemically neutralizes acidic heparin."
-          },
-          {
-            "id": "pharm_bl_005",
-            "question": "Which drug is an iron chelating agent used in the treatment of chronic iron overload (hemochromatosis)?",
-            "options": [
-              "Deferoxamine",
-              "Penicillamine",
-              "Dimercaprol (BAL)",
-              "Filgrastim"
-            ],
-            "correct_id": 0,
-            "explanation": "Deferoxamine binds free iron and is excreted in urine, treating iron toxicity and overload."
-          }
-        ]
+        "title": "Pharmacology (علم الأدوية)",
+        "questions": []
       },
       "microbiology": {
-        "title": "🧫 Microbiology (علم الأحياء الدقيقة)",
-        "description": "عدوى الدم والجهاز اللمفاوي والبكتيريا والطفيليات المسببة",
-        "questions": [
-          {
-            "id": "micro_bl_001",
-            "question": "Which Plasmodium species is responsible for the most severe, fatal, and cerebral forms of Malaria?",
-            "options": [
-              "Plasmodium falciparum",
-              "Plasmodium vivax",
-              "Plasmodium ovale",
-              "Plasmodium malariae"
-            ],
-            "correct_id": 0,
-            "explanation": "Plasmodium falciparum parasitizes RBCs of all ages, causing severe cytoadherence and cerebral malaria."
-          },
-          {
-            "id": "micro_bl_002",
-            "question": "Epstein-Barr Virus (EBV), the cause of Infectious Mononucleosis, primarily infects which cell type?",
-            "options": [
-              "B lymphocytes via CD21",
-              "T lymphocytes via CD4",
-              "Erythrocytes via Glycophorin A",
-              "Neutrophils via CD16"
-            ],
-            "correct_id": 0,
-            "explanation": "EBV attaches to the complement receptor CD21 (CR2) on B lymphocytes."
-          },
-          {
-            "id": "micro_bl_003",
-            "question": "Which microorganism is the most frequent causative agent of acute infective endocarditis in intravenous drug users?",
-            "options": [
-              "Staphylococcus aureus",
-              "Streptococcus viridans",
-              "Enterococcus faecalis",
-              "Staphylococcus epidermidis"
-            ],
-            "correct_id": 0,
-            "explanation": "Staphylococcus aureus is the most common cause of acute right-sided (tricuspid) endocarditis in IV drug abusers."
-          },
-          {
-            "id": "micro_bl_004",
-            "question": "The presence of atypical reactive lymphocytes (Downey cells) in peripheral blood is most commonly seen in:",
-            "options": [
-              "Infectious Mononucleosis (EBV)",
-              "Typhoid fever",
-              "Streptococcal pharyngitis",
-              "Brucellosis"
-            ],
-            "correct_id": 0,
-            "explanation": "Atypical lymphocytes seen in infectious mononucleosis are reactive CD8+ cytotoxic T cells combating EBV-infected B cells."
-          },
-          {
-            "id": "micro_bl_005",
-            "question": "Which intracellular protozoan parasite is transmitted via feline (cat) feces and can cause congenital blood/CNS infection?",
-            "options": [
-              "Toxoplasma gondii",
-              "Leishmania donovani",
-              "Trypanosoma cruzi",
-              "Babesia microti"
-            ],
-            "correct_id": 0,
-            "explanation": "Toxoplasma gondii is transmitted from cats or undercooked meat and infects the reticuloendothelial system."
-          }
-        ]
+        "title": "Microbiology (الأحياء الدقيقة)",
+        "questions": []
       }
     }
   }

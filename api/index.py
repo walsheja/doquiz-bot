@@ -99,7 +99,9 @@ def get_subjects_keyboard(block_key: str):
     subjects = block.get("subjects", {})
     keyboard = []
     for key, subj in subjects.items():
-        keyboard.append([{"text": subj["title"], "callback_data": f"subj:{block_key}:{key}"}])
+        q_count = len(subj.get("questions", []))
+        badge = f" ({q_count} سؤال)" if q_count > 0 else " (قريباً ⏳)"
+        keyboard.append([{"text": f"{subj['title']}{badge}", "callback_data": f"subj:{block_key}:{key}"}])
     keyboard.append([{"text": "🔙 رجوع للبلوكات", "callback_data": "back_blocks"}])
     return {"inline_keyboard": keyboard}
 
@@ -162,8 +164,7 @@ class handler(BaseHTTPRequestHandler):
 
             if text.startswith("/start"):
                 welcome = (
-                    f"مرحباً بك يا **{first_name}** في بوت الاختبارات **Doquiz** 🧠✨\n\n"
-                    "هنا يمكنك خوض تجربة اختبارات سريرية تفاعلية.\n\n"
+                    f"مرحباً بك يا **{first_name}** في بوت الاختبارات الطبية **Doquiz** 🧠✨\n\n"
                     "👇 **الخطوة 1:** اختر البلوك الدراسي الذي ترغب في اختباره:"
                 )
                 call_telegram("sendMessage", {
@@ -279,15 +280,45 @@ class handler(BaseHTTPRequestHandler):
                 data_bank = get_questions_bank()
                 block = data_bank.get(block_key, {})
                 subj = block.get("subjects", {}).get(subject_key, {})
-                total_bank = len(subj.get("questions", []))
+                questions = subj.get("questions", [])
+                total_bank = len(questions)
+
+                if total_bank == 0:
+                    text = (
+                        f"🩸 **البلوك:** {block.get('title', '')}\n"
+                        f"📚 **المادة:** {subj.get('title', '')}\n\n"
+                        "⚠️ **بنك أسئلة هذه المادة قيد الإعداد والتجهيز!**\n"
+                        "سيتم إتاحته قريباً بإذن الله عند اكتمال ملفات الأسئلة. 🩺\n\n"
+                        "👈 يرجى اختيار مادة مفعلة حالياً: **علم الأمراض (Pathology)**."
+                    )
+                    reply_markup = {
+                        "inline_keyboard": [
+                            [{"text": "🔙 رجوع لاختيار مادة أخرى", "callback_data": f"blk:{block_key}"}]
+                        ]
+                    }
+                    res = call_telegram("editMessageText", {
+                        "chat_id": chat_id,
+                        "message_id": msg_id,
+                        "text": text,
+                        "parse_mode": "Markdown",
+                        "reply_markup": reply_markup
+                    })
+                    if not res.get("ok"):
+                        call_telegram("sendMessage", {
+                            "chat_id": chat_id,
+                            "text": text,
+                            "parse_mode": "Markdown",
+                            "reply_markup": reply_markup
+                        })
+                    return
 
                 text = (
                     f"🩸 **البلوك:** {block.get('title', '')}\n"
                     f"📚 **المادة:** {subj.get('title', '')}\n"
-                    f"📊 إجمالي بنك الأسئلة: {total_bank} سؤالاً.\n"
+                    f"📊 إجمالي بنك الأسئلة المتاح: {total_bank} سؤالاً سريرياً.\n"
                     "───────────────\n"
-                    "🎯 **نظام الجولة:** 20 سؤالاً سريرياً في كل مرحلة.\n"
-                    "💡 يتم اختيار الأسئلة الجديدة أولاً ثم الأسئلة السابقة التي تحتاج لتثبيت.\n\n"
+                    "🎯 **نظام الجولة:** 20 سؤالاً في كل مرحلة.\n"
+                    "💡 يتم تقديم الأسئلة غير المختبرة سابقاً أولاً، ثم الأسئلة التي تحتاج إلى تثبيت.\n\n"
                     "⏱️ **الوقت المحدد للجولة:** **[ مفتوح ♾️ (بدون مؤقت) ]**\n"
                     "يمكنك تعديل الوقت بالأزرار أدناه (حتى 30 دقيقة) أو البدء فوراً:"
                 )
@@ -322,10 +353,10 @@ class handler(BaseHTTPRequestHandler):
                 text = (
                     f"🩸 **البلوك:** {block.get('title', '')}\n"
                     f"📚 **المادة:** {subj.get('title', '')}\n"
-                    f"📊 إجمالي بنك الأسئلة: {total_bank} سؤالاً.\n"
+                    f"📊 إجمالي بنك الأسئلة المتاح: {total_bank} سؤالاً سريرياً.\n"
                     "───────────────\n"
-                    "🎯 **نظام الجولة:** 20 سؤالاً سريرياً في كل مرحلة.\n"
-                    "💡 يتم اختيار الأسئلة الجديدة أولاً ثم الأسئلة السابقة التي تحتاج لتثبيت.\n\n"
+                    "🎯 **نظام الجولة:** 20 سؤالاً في كل مرحلة.\n"
+                    "💡 يتم تقديم الأسئلة غير المختبرة سابقاً أولاً، ثم الأسئلة التي تحتاج إلى تثبيت.\n\n"
                     f"⏱️ **الوقت المحدد للجولة:** **[ {time_display} ]**\n"
                     "يمكنك تعديل الوقت بالأزرار أدناه (حتى 30 دقيقة) أو البدء فوراً:"
                 )
@@ -368,6 +399,37 @@ class handler(BaseHTTPRequestHandler):
         except Exception as e:
             print(f"Clean round error: {e}")
 
+    def select_round_questions(self, chat_id: int, questions: list) -> list:
+        try:
+            db = get_firestore_db()
+            user_doc = db.collection("doquiz_users").document(str(chat_id)).get()
+            history = {}
+            if user_doc.exists:
+                history = user_doc.to_dict().get("history", {})
+
+            unseen = [q for q in questions if q.get("id") not in history]
+            failed = [q for q in questions if history.get(q.get("id")) is False]
+            mastered = [q for q in questions if history.get(q.get("id")) is True]
+
+            random.shuffle(unseen)
+            random.shuffle(failed)
+            random.shuffle(mastered)
+
+            selected = (unseen + failed)[:20]
+            if len(selected) < 20 and mastered:
+                selected.extend(mastered[:(20 - len(selected))])
+
+            if len(selected) < 20:
+                remaining = [q for q in questions if q not in selected]
+                random.shuffle(remaining)
+                selected.extend(remaining[:(20 - len(selected))])
+
+            random.shuffle(selected)
+            return selected[:min(len(questions), 20)]
+        except Exception as e:
+            print(f"Error in select_round_questions: {e}")
+            return random.sample(questions, min(len(questions), 20))
+
     def launch_round(self, chat_id: int, block_key: str, subject_key: str, minutes: int, edit_msg_id: int = None):
         data_bank = get_questions_bank()
         block = data_bank.get(block_key, {})
@@ -378,7 +440,7 @@ class handler(BaseHTTPRequestHandler):
             call_telegram("sendMessage", {"chat_id": chat_id, "text": "لا توجد أسئلة متوفرة حالياً في هذه المادة."})
             return
 
-        selected = random.sample(questions, min(len(questions), 20))
+        selected = self.select_round_questions(chat_id, questions)
 
         session_data = {
             "block_key": block_key,
@@ -405,8 +467,7 @@ class handler(BaseHTTPRequestHandler):
             f"🩸 **البلوك:** {block.get('title', '')}\n"
             f"📚 **المادة:** {subj.get('title', '')}\n"
             f"🎯 عدد أسئلة الجولة: {len(selected)} سؤالاً.\n"
-            f"⏱️ إجمالي وقت الجولة: {time_info}\n"
-            "💡 **حرية التفكير:** خذ كامل وقتك في التفكير؛ وبمجرد اختيار الإجابة سيصلك السؤال التالي تلقائياً!\n\n"
+            f"⏱️ إجمالي وقت الجولة: {time_info}\n\n"
             "بالتوفيق يا دكتور! 🩺🌟"
         )
 
@@ -445,17 +506,29 @@ class handler(BaseHTTPRequestHandler):
             return
 
         q = questions[index]
-        q_text = f"السؤال ({index + 1} من {session['total']}):\n{q['question']}"
+        
+        header = f"السؤال ({index + 1} من {session['total']}):\n"
+        q_text = header + q.get("question", "")
+        if len(q_text) > 300:
+            allowed = 300 - len(header) - 3
+            q_text = header + q.get("question", "")[:allowed] + "..."
 
         raw_expl = q.get("explanation") or "إجابة سريرية صحيحة!"
         expl = raw_expl[:200]
 
+        cleaned_options = []
+        for opt in q.get("options", []):
+            s_opt = str(opt).strip()
+            if len(s_opt) > 100:
+                s_opt = s_opt[:97] + "..."
+            cleaned_options.append(s_opt)
+
         poll_payload = {
             "chat_id": chat_id,
-            "question": q_text[:300],
-            "options": [opt[:100] for opt in q["options"]],
+            "question": q_text,
+            "options": cleaned_options,
             "type": "quiz",
-            "correct_option_id": int(q["correct_id"]),
+            "correct_option_id": int(q.get("correct_id", 0)),
             "explanation": expl,
             "is_anonymous": False
         }
@@ -511,11 +584,23 @@ class handler(BaseHTTPRequestHandler):
             return
 
         questions = session.get("questions", [])
+        is_correct = False
         if cur_idx < len(questions):
             q = questions[cur_idx]
             new_score = session.get("score", 0)
-            if selected_option is not None and selected_option == q.get("correct_id"):
+            is_correct = (selected_option is not None and selected_option == q.get("correct_id"))
+            if is_correct:
                 new_score += 1
+                
+            # Track history for smart adaptive rounds
+            try:
+                q_id = q.get("id")
+                if q_id:
+                    db.collection("doquiz_users").document(str(target_user_id)).set({
+                        f"history.{q_id}": is_correct
+                    }, merge=True)
+            except Exception as e:
+                print(f"Error saving question history: {e}")
         else:
             new_score = session.get("score", 0)
 
@@ -560,7 +645,7 @@ class handler(BaseHTTPRequestHandler):
             f"🎯 **الدرجة:** {score} من {total}\n"
             f"📊 **النسبة المئوية:** {percentage}%\n"
             f"💬 **التقييم:** {grade}\n\n"
-            "💡 عند الضغط على **(بدء جولة جديدة)** سيتم تنظيف الشات وإطلاق جولة جديدة فوراً! 👇"
+            "💡 عند الضغط على **(بدء جولة جديدة)** سيتم تنظيف الشات واختيار 20 سؤالاً جديداً أو بحاجة لتثبيت! 👇"
         )
 
         share_url = f"https://t.me/share/url?url=https://t.me/{BOT_USERNAME}&text=حققت%20{score}%20من%20{total}%20في%20جولة%20{subject}%20({block})!%20تحداني%20وجرب%20نفسك%20الآن%20🩺🧠"
