@@ -166,7 +166,7 @@ class handler(BaseHTTPRequestHandler):
 
             if text.startswith("/start"):
                 welcome = (
-                    f"مرحباً بك يا **{first_name}** في بوت الاختبارات الطبية **Doquiz** 🧠✨\n\n"
+                    f"مرحباً بك يا **{first_name}** في بوت نماذج واختبارات الطب البشري **Doquiz** 🧠✨\n\n"
                     "👇 **الخطوة 1:** اختر البلوك الدراسي الذي ترغب في اختباره:"
                 )
                 call_telegram("sendMessage", {
@@ -202,14 +202,14 @@ class handler(BaseHTTPRequestHandler):
                 parts = text.split()
                 target = parts[1] if len(parts) > 1 else DEFAULT_CHANNEL
                 announcement = (
-                    "🩺 **نظام الجولات السريرية الذكية (Doquiz) متاح الآن!**\n\n"
-                    "نقدّم لطلابنا الأعزاء اختبارات تفاعلية بنظام الجولات (20 سؤالاً):\n"
-                    "🩸 **بلوك Blood & Lymph** (Pathology | Pharmacology | Microbiology)\n"
-                    "🔹 بنك أسئلة تكيفي يستهدف نقاط الضعف ويثبت المعلومات\n"
-                    "🔹 مؤقت زمني قابل للتخصيص وشرح تفصيلي لكل سؤال\n\n"
-                    "👇 اضغط على الزر أدناه لبدء جولتك الأولى:"
+                    "🩺 **بوت نماذج واختبارات الطب البشري (Doquiz)** 🧠✨\n\n"
+                    "نقدّم لطلابنا الأعزاء تجربة اختبارات تفاعلية بنظام الجولات السريرية الذكية (20 سؤالاً):\n\n"
+                    "🩸 **بلوك Blood & Lymph** (174 سؤالاً سريرياً في علم الأمراض Pathology)\n"
+                    "🔹 نظام تكيفي ذكي يركز على نقاط الضعف ويثبت المعلومات الطبية\n"
+                    "🔹 مؤقت زمني اختياري وشرح سريري تفصيلي لكل سؤال\n\n"
+                    "👇 اضغط على الزر أدناه لبدء اختبارك مباشرة في البوت:"
                 )
-                call_telegram("sendMessage", {
+                res = call_telegram("sendMessage", {
                     "chat_id": target,
                     "text": announcement,
                     "parse_mode": "Markdown",
@@ -219,10 +219,23 @@ class handler(BaseHTTPRequestHandler):
                         ]
                     }
                 })
-                call_telegram("sendMessage", {
-                    "chat_id": chat_id,
-                    "text": f"✅ تم نشر إعلان الاختبار في القناة: {target}"
-                })
+                if res.get("ok"):
+                    call_telegram("sendMessage", {
+                        "chat_id": chat_id,
+                        "text": f"✅ تم نشر إعلان الاختبار بنجاح في القناة: {target}"
+                    })
+                else:
+                    err_desc = res.get("description") or res.get("error") or "خطأ غير معروف"
+                    call_telegram("sendMessage", {
+                        "chat_id": chat_id,
+                        "text": (
+                            f"⚠️ **تعذر النشر في القناة ({target}):**\n`{err_desc}`\n\n"
+                            f"💡 **تأكد من:**\n"
+                            f"1. إضافة البوت **@{BOT_USERNAME}** كمشرف (Admin) في القناة.\n"
+                            f"2. منحه صلاحية **نشر الرسائل (Post Messages)**."
+                        ),
+                        "parse_mode": "Markdown"
+                    })
 
         # 2. ضغطات الأزرار (Callback Queries)
         elif "callback_query" in update:
