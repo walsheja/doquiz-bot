@@ -294,12 +294,6 @@ class handler(BaseHTTPRequestHandler):
 
         selected = random.sample(questions, min(len(questions), 20))
 
-        # حساب مؤقت السؤال: إذا حدد وقتاً (مثلاً 30 دقيقة لـ 20 سؤالاً)، نخصص دقيقة ونصف (90 ثانية) لكل سؤال!
-        # وإذا كان الوقت مفتوحاً نضع دقيقتين (120 ثانية) لتفادي ترك السؤال معلقاً دون إجابة
-        per_question_timeout = int((minutes * 60) / len(selected)) if minutes > 0 else 120
-        # حدود تلجرام لـ open_period هي بين 5 و 600 ثانية
-        open_period = max(15, min(300, per_question_timeout))
-
         sessions = load_sessions()
         sessions[str(chat_id)] = {
             "block_key": block_key,
@@ -311,19 +305,21 @@ class handler(BaseHTTPRequestHandler):
             "score": 0,
             "total": len(selected),
             "minutes": minutes,
-            "open_period": open_period,
+            "started_at": time.time(),
             "poll_msg_ids": [],
             "poll_to_q": {}
         }
         save_sessions(sessions)
+
+        time_info = "مفتوح ♾️ (بدون ضغط وقت)" if minutes == 0 else f"{minutes} دقيقة للجولة بالكامل ⏱️"
 
         start_text = (
             f"🚀 **استعد! بدأت جولة جديدة من {len(selected)} سؤالاً:**\n"
             f"🩸 **البلوك:** {block.get('title', '')}\n"
             f"📚 **المادة:** {subj.get('title', '')}\n"
             f"🎯 عدد أسئلة الجولة: {len(selected)} سؤالاً.\n"
-            f"⏱️ مؤقت السؤال الواحد: {open_period} ثانية ⏳\n"
-            f"⌛ إجمالي وقت الجولة: {'مفتوح' if minutes == 0 else f'{minutes} دقيقة'}\n\n"
+            f"⏱️ إجمالي وقت الجولة: {time_info}\n"
+            "💡 **حرية التفكير:** يمكنك قضاء أي وقت تحتاجه في التفكير في الحالات السريرية المعقدة وتعويضه في الأسئلة الأسرع!\n\n"
             "بالتوفيق يا دكتور! 🩺🌟"
         )
 
@@ -357,6 +353,7 @@ class handler(BaseHTTPRequestHandler):
         q = session["questions"][index]
         q_text = f"السؤال ({index + 1} من {session['total']}):\n{q['question']}"
 
+        # بدون قفل للسؤال، ليأخذ الطالب كامل وقته في التفكير ويتحكم في رصيد وقته الإجمالي
         poll_payload = {
             "chat_id": chat_id,
             "question": q_text[:300],
@@ -364,8 +361,7 @@ class handler(BaseHTTPRequestHandler):
             "type": "quiz",
             "correct_option_id": q["correct_id"],
             "explanation": (q.get("explanation") or "إجابة صحيحة!")[:200],
-            "is_anonymous": False,
-            "open_period": session.get("open_period", 90)
+            "is_anonymous": False
         }
 
         res = call_telegram("sendPoll", poll_payload)
