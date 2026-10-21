@@ -1,0 +1,206 @@
+{
+  "blood_lymph": {
+    "title": "🩸 Blood & Lymph (الدم والجهاز اللمفاوي)",
+    "description": "أمراض وأدوية وميكروبات أمراض الدم والمناعة",
+    "subjects": {
+      "pathology": {
+        "title": "🔬 Pathology (علم الأمراض)",
+        "description": "أمراض واعتلالات خلايا الدم ونخاع العظم والغدد اللمفاوية",
+        "questions": [
+          {
+            "id": "path_bl_001",
+            "question": "Which of the following is the most common cause of microcytic hypochromic anemia worldwide?",
+            "options": [
+              "Iron deficiency anemia",
+              "Folate deficiency",
+              "Vitamin B12 deficiency",
+              "Aplastic anemia"
+            ],
+            "correct_id": 0,
+            "explanation": "Iron deficiency anemia is the single most common cause of microcytic hypochromic anemia worldwide."
+          },
+          {
+            "id": "path_bl_002",
+            "question": "Reed-Sternberg cells (owl-eyed appearance) are the characteristic diagnostic hallmark of:",
+            "options": [
+              "Hodgkin lymphoma",
+              "Non-Hodgkin lymphoma",
+              "Multiple myeloma",
+              "Chronic lymphocytic leukemia"
+            ],
+            "correct_id": 0,
+            "explanation": "Reed-Sternberg cells are neoplastic giant cells characteristic of Hodgkin lymphoma."
+          },
+          {
+            "id": "path_bl_003",
+            "question": "The Philadelphia chromosome involving t(9;22) translocation is characteristically associated with:",
+            "options": [
+              "Chronic Myeloid Leukemia (CML)",
+              "Acute Lymphoblastic Leukemia (ALL)",
+              "Burkitt lymphoma",
+              "Acute Promyelocytic Leukemia (APL)"
+            ],
+            "correct_id": 0,
+            "explanation": "t(9;22) generates the BCR-ABL1 fusion gene, defining Chronic Myeloid Leukemia (CML)."
+          },
+          {
+            "id": "path_bl_004",
+            "question": "A 25-year-old female presents with fatigue and jaundice. Blood smear reveals spherocytes and Coombs test is positive. The most likely diagnosis is:",
+            "options": [
+              "Autoimmune Hemolytic Anemia",
+              "Hereditary Spherocytosis",
+              "Sickle Cell Anemia",
+              "G6PD Deficiency"
+            ],
+            "correct_id": 0,
+            "explanation": "Positive Coombs test (direct antiglobulin) differentiates autoimmune hemolytic anemia from hereditary spherocytosis."
+          },
+          {
+            "id": "path_bl_005",
+            "question": "Bence-Jones proteins in the urine are characteristic of:",
+            "options": [
+              "Multiple Myeloma",
+              "Polycythemia Vera",
+              "Aplastic Anemia",
+              "Infectious Mononucleosis"
+            ],
+            "correct_id": 0,
+            "explanation": "Bence-Jones proteins represent free immunoglobulin light chains filtered into the urine in Multiple Myeloma."
+          }
+        ]
+      },
+      "pharmacology": {
+        "title": "💊 Pharmacology (علم الأدوية)",
+        "description": "مضادات التخثر ومثبطات الصفائح وأدوية فقر الدم",
+        "questions": [
+          {
+            "id": "pharm_bl_001",
+            "question": "What is the primary mechanism of action of Unfractionated Heparin?",
+            "options": [
+              "Activates Antithrombin III",
+              "Inhibits Vitamin K epoxide reductase",
+              "Directly inhibits Thrombin (Factor IIa)",
+              "Irreversibly blocks platelet ADP receptors"
+            ],
+            "correct_id": 0,
+            "explanation": "Heparin binds Antithrombin III and accelerates its inhibition of thrombin and factor Xa."
+          },
+          {
+            "id": "pharm_bl_002",
+            "question": "Which of the following is the specific antidote for Warfarin-induced excessive anticoagulation?",
+            "options": [
+              "Vitamin K1 (Phytonadione)",
+              "Protamine sulfate",
+              "Idarucizumab",
+              "Andexanet alfa"
+            ],
+            "correct_id": 0,
+            "explanation": "Vitamin K1 restores synthesis of functional clotting factors II, VII, IX, and X. Protamine is for Heparin."
+          },
+          {
+            "id": "pharm_bl_003",
+            "question": "Which antiplatelet drug works by irreversible inhibition of Cyclooxygenase-1 (COX-1)?",
+            "options": [
+              "Aspirin",
+              "Clopidogrel",
+              "Ticagrelor",
+              "Abciximab"
+            ],
+            "correct_id": 0,
+            "explanation": "Aspirin irreversibly acetylates platelet COX-1, preventing Thromboxane A2 formation."
+          },
+          {
+            "id": "pharm_bl_004",
+            "question": "What is the antidote used to reverse the anticoagulant effect of Heparin?",
+            "options": [
+              "Protamine sulfate",
+              "Vitamin K1",
+              "Deferoxamine",
+              "Fresh Frozen Plasma"
+            ],
+            "correct_id": 0,
+            "explanation": "Protamine sulfate is a strongly basic peptide that chemically neutralizes acidic heparin."
+          },
+          {
+            "id": "pharm_bl_005",
+            "question": "Which drug is an iron chelating agent used in the treatment of chronic iron overload (hemochromatosis)?",
+            "options": [
+              "Deferoxamine",
+              "Penicillamine",
+              "Dimercaprol (BAL)",
+              "Filgrastim"
+            ],
+            "correct_id": 0,
+            "explanation": "Deferoxamine binds free iron and is excreted in urine, treating iron toxicity and overload."
+          }
+        ]
+      },
+      "microbiology": {
+        "title": "🧫 Microbiology (علم الأحياء الدقيقة)",
+        "description": "عدوى الدم والجهاز اللمفاوي والبكتيريا والطفيليات المسببة",
+        "questions": [
+          {
+            "id": "micro_bl_001",
+            "question": "Which Plasmodium species is responsible for the most severe, fatal, and cerebral forms of Malaria?",
+            "options": [
+              "Plasmodium falciparum",
+              "Plasmodium vivax",
+              "Plasmodium ovale",
+              "Plasmodium malariae"
+            ],
+            "correct_id": 0,
+            "explanation": "Plasmodium falciparum parasitizes RBCs of all ages, causing severe cytoadherence and cerebral malaria."
+          },
+          {
+            "id": "micro_bl_002",
+            "question": "Epstein-Barr Virus (EBV), the cause of Infectious Mononucleosis, primarily infects which cell type?",
+            "options": [
+              "B lymphocytes via CD21",
+              "T lymphocytes via CD4",
+              "Erythrocytes via Glycophorin A",
+              "Neutrophils via CD16"
+            ],
+            "correct_id": 0,
+            "explanation": "EBV attaches to the complement receptor CD21 (CR2) on B lymphocytes."
+          },
+          {
+            "id": "micro_bl_003",
+            "question": "Which microorganism is the most frequent causative agent of acute infective endocarditis in intravenous drug users?",
+            "options": [
+              "Staphylococcus aureus",
+              "Streptococcus viridans",
+              "Enterococcus faecalis",
+              "Staphylococcus epidermidis"
+            ],
+            "correct_id": 0,
+            "explanation": "Staphylococcus aureus is the most common cause of acute right-sided (tricuspid) endocarditis in IV drug abusers."
+          },
+          {
+            "id": "micro_bl_004",
+            "question": "The presence of atypical reactive lymphocytes (Downey cells) in peripheral blood is most commonly seen in:",
+            "options": [
+              "Infectious Mononucleosis (EBV)",
+              "Typhoid fever",
+              "Streptococcal pharyngitis",
+              "Brucellosis"
+            ],
+            "correct_id": 0,
+            "explanation": "Atypical lymphocytes seen in infectious mononucleosis are reactive CD8+ cytotoxic T cells combating EBV-infected B cells."
+          },
+          {
+            "id": "micro_bl_005",
+            "question": "Which intracellular protozoan parasite is transmitted via feline (cat) feces and can cause congenital blood/CNS infection?",
+            "options": [
+              "Toxoplasma gondii",
+              "Leishmania donovani",
+              "Trypanosoma cruzi",
+              "Babesia microti"
+            ],
+            "correct_id": 0,
+            "explanation": "Toxoplasma gondii is transmitted from cats or undercooked meat and infects the reticuloendothelial system."
+          }
+        ]
+      }
+    }
+  }
+}
