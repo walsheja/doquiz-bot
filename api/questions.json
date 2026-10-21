@@ -1,4 +1,22 @@
 {
+  "intro_1": {
+    "title": "🧬 Introduction 1 (المقدمة الطبية 1)",
+    "description": "يشمل المفاهيم الأساسية، علم الأمراض العام، الفارما، والأحياء الدقيقة.",
+    "subjects": {
+      "pathology": {
+        "title": "Pathology (علم الأمراض العام)",
+        "questions": []
+      },
+      "pharmacology": {
+        "title": "Pharmacology (علم الأدوية الأساسي)",
+        "questions": []
+      },
+      "microbiology": {
+        "title": "Microbiology (الأحياء الدقيقة العامة)",
+        "questions": []
+      }
+    }
+  },
   "blood_lymph": {
     "title": "🩸 Blood & Lymph (الدم والجهاز اللمفاوي)",
     "description": "يشمل أمراض الدم، الأدوية، والأحياء الدقيقة الخاصة بالدم والجهاز المناعي.",
@@ -2269,6 +2287,60 @@
             "explanation": "The marrow expands to compensate."
           }
         ]
+      },
+      "pharmacology": {
+        "title": "Pharmacology (علم الأدوية)",
+        "questions": []
+      },
+      "microbiology": {
+        "title": "Microbiology (الأحياء الدقيقة)",
+        "questions": []
+      }
+    }
+  },
+  "musculoskeletal": {
+    "title": "🦴 Musculoskeletal (الجهاز العضلي الهيكلي)",
+    "description": "يشمل أمراض العظام والمفاصل والعضلات والأدوية والأحياء الدقيقة المرتبطة بها.",
+    "subjects": {
+      "pathology": {
+        "title": "Pathology (علم الأمراض)",
+        "questions": []
+      },
+      "pharmacology": {
+        "title": "Pharmacology (علم الأدوية)",
+        "questions": []
+      },
+      "microbiology": {
+        "title": "Microbiology (الأحياء الدقيقة)",
+        "questions": []
+      }
+    }
+  },
+  "cardiovascular": {
+    "title": "🫀 Cardiovascular (الجهاز القلبي الوعائي)",
+    "description": "يشمل أمراض القلب والأوعية الدموية وعلوم الأدوية والأحياء الدقيقة ذات الصلة.",
+    "subjects": {
+      "pathology": {
+        "title": "Pathology (علم الأمراض)",
+        "questions": []
+      },
+      "pharmacology": {
+        "title": "Pharmacology (علم الأدوية)",
+        "questions": []
+      },
+      "microbiology": {
+        "title": "Microbiology (الأحياء الدقيقة)",
+        "questions": []
+      }
+    }
+  },
+  "respiratory": {
+    "title": "🫁 Respiratory (الجهاز التنفسي)",
+    "description": "يشمل أمراض الرئة والجهاز التنفسي والأدوية والأحياء الدقيقة المرتبطة بها.",
+    "subjects": {
+      "pathology": {
+        "title": "Pathology (علم الأمراض)",
+        "questions": []
       },
       "pharmacology": {
         "title": "Pharmacology (علم الأدوية)",

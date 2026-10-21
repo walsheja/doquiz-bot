@@ -90,7 +90,9 @@ def get_blocks_keyboard():
     data = get_questions_bank()
     keyboard = []
     for key, block in data.items():
-        keyboard.append([{"text": block["title"], "callback_data": f"blk:{key}"}])
+        total_q = sum(len(s.get("questions", [])) for s in block.get("subjects", {}).values())
+        badge = f" ({total_q} سؤال)" if total_q > 0 else " (قريباً ⏳)"
+        keyboard.append([{"text": f"{block['title']}{badge}", "callback_data": f"blk:{key}"}])
     return {"inline_keyboard": keyboard}
 
 def get_subjects_keyboard(block_key: str):
