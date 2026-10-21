@@ -524,11 +524,13 @@ class handler(BaseHTTPRequestHandler):
 
         q = questions[index]
         
-        header = f"السؤال ({index + 1} من {session['total']}):\n"
-        q_text = header + q.get("question", "")
-        if len(q_text) > 300:
+        header = f"({index + 1}/{session['total']}) "
+        full_q = header + q.get("question", "").strip()
+        if len(full_q) <= 300:
+            q_text = full_q
+        else:
             allowed = 300 - len(header) - 3
-            q_text = header + q.get("question", "")[:allowed] + "..."
+            q_text = header + q.get("question", "").strip()[:allowed] + "..."
 
         raw_expl = q.get("explanation") or "إجابة سريرية صحيحة!"
         expl = raw_expl[:200]
