@@ -54,6 +54,32 @@ def get_firestore_db():
 
     raise RuntimeError("Could not initialize Firebase: credentials not found in env or files.")
 
+def clean_latex(text: str) -> str:
+    if not text:
+        return ""
+    s = text
+    s = re.sub(r'\\text\s*\{\s*([^}]*)\s*\}', r' \1 ', s)
+    s = s.replace(r'\le', ' ≤ ')
+    s = s.replace(r'\ge', ' ≥ ')
+    s = s.replace(r'\rightarrow', ' → ')
+    s = s.replace(r'\leftarrow', ' ← ')
+    s = s.replace(r'\pm', ' ± ')
+    s = s.replace(r'\times', ' × ')
+    s = s.replace(r'\mu', ' µ')
+    s = s.replace(r'\alpha', ' α ')
+    s = s.replace(r'\beta', ' β ')
+    s = s.replace(r'\gamma', ' γ ')
+    s = re.sub(r'Sb\^\{\s*5\+\s*\}', 'Sb⁵⁺', s)
+    s = re.sub(r'Fe\^\{\s*2\+\s*\}', 'Fe²⁺', s)
+    s = re.sub(r'bc_1', 'bc₁', s)
+    s = s.replace('$', '')
+    s = s.replace('\\', '')
+    s = re.sub(r'\s+', ' ', s)
+    s = re.sub(r'\s+([,.:;?!])', r'\1', s)
+    s = re.sub(r'\(\s+', '(', s)
+    s = re.sub(r'\s+\)', ')', s)
+    return s.strip()
+
 def get_questions_bank():
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     possible_paths = [
@@ -163,6 +189,19 @@ class handler(BaseHTTPRequestHandler):
             text = msg.get("text", "")
             chat_id = msg["chat"]["id"]
             first_name = msg.get("from", {}).get("first_name", "دكتور")
+            username = msg.get("from", {}).get("username", "")
+
+            # حفظ وتحديث المشترك في قاعدة البيانات السحابية
+            try:
+                db = get_firestore_db()
+                db.collection("doquiz_subscribers").document(str(chat_id)).set({
+                    "chat_id": chat_id,
+                    "first_name": first_name,
+                    "username": username,
+                    "last_active": time.time()
+                }, merge=True)
+            except Exception as e:
+                pass
 
             if text.startswith("/start"):
                 welcome = (
@@ -197,6 +236,40 @@ class handler(BaseHTTPRequestHandler):
                 except Exception as e:
                     print(f"Stop command error: {e}")
                     traceback.print_exc()
+
+            elif text.startswith("/broadcast"):
+                broadcast_content = text.replace("/broadcast", "").strip()
+                if not broadcast_content:
+                    call_telegram("sendMessage", {
+                        "chat_id": chat_id,
+                        "text": "⚠️ **يرجى كتابة نص الرسالة بعد الأمر، مثال:**\n`/broadcast تحديث جديد: تم إضافة أسئلة...`",
+                        "parse_mode": "Markdown"
+                    })
+                else:
+                    try:
+                        db = get_firestore_db()
+                        subs = list(db.collection("doquiz_subscribers").stream())
+                        sent_count = 0
+                        for s in subs:
+                            u_chat_id = s.to_dict().get("chat_id") or s.id
+                            res = call_telegram("sendMessage", {
+                                "chat_id": u_chat_id,
+                                "text": broadcast_content,
+                                "reply_markup": {
+                                    "inline_keyboard": [
+                                        [{"text": "🚀 ابدأ جولة الاختبار الآن", "url": f"https://t.me/{BOT_USERNAME}?start=broadcast"}]
+                                    ]
+                                }
+                            })
+                            if res.get("ok"):
+                                sent_count += 1
+                        call_telegram("sendMessage", {
+                            "chat_id": chat_id,
+                            "text": f"✅ **تم إرسال الإشعار والتحديث بنجاح إلى {sent_count} من مستخدمي البوت.**",
+                            "parse_mode": "Markdown"
+                        })
+                    except Exception as e:
+                        print(f"Broadcast error: {e}")
 
             elif text.startswith("/post"):
                 parts = text.split()
@@ -526,19 +599,20 @@ class handler(BaseHTTPRequestHandler):
         q = questions[index]
         
         header = f"({index + 1}/{session['total']}) "
-        full_q = header + q.get("question", "").strip()
+        raw_q_text = clean_latex(q.get("question", "").strip())
+        full_q = header + raw_q_text
         if len(full_q) <= 300:
             q_text = full_q
         else:
             allowed = 300 - len(header) - 3
-            q_text = header + q.get("question", "").strip()[:allowed] + "..."
+            q_text = header + raw_q_text[:allowed] + "..."
 
-        raw_expl = q.get("explanation") or "إجابة سريرية صحيحة!"
+        raw_expl = clean_latex(q.get("explanation") or "إجابة سريرية صحيحة!")
         expl = raw_expl[:200]
 
         cleaned_options = []
         for opt in q.get("options", []):
-            s_opt = str(opt).strip()
+            s_opt = clean_latex(str(opt).strip())
             if len(s_opt) > 100:
                 s_opt = s_opt[:97] + "..."
             cleaned_options.append(s_opt)
