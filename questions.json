@@ -12363,7 +12363,1603 @@
       },
       "pharmacology": {
         "title": "Pharmacology (علم الأدوية)",
-        "questions": []
+        "questions": [
+          {
+            "id": "blood_pharma_1",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "The antiplatelet Epoprostenol drug from subgroup:",
+            "options": [
+              "PGI inhibitor (Analog)",
+              "ADP inhibitor",
+              "PDE inhibitor",
+              "inhibit synthesis thromboxane A2"
+            ],
+            "correct_id": 0,
+            "explanation": "Correct Answer: PGI inhibitor (Analog)"
+          },
+          {
+            "id": "blood_pharma_2",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "The antiplatelet Dipyridamole drug from subgroup:",
+            "options": [
+              "PGI inhibitor",
+              "ADP inhibitor",
+              "PDE inhibitor",
+              "inhibit synthesis thromboxane A2"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: PDE inhibitor"
+          },
+          {
+            "id": "blood_pharma_3",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "The antiplatelet Aspirin drug from subgroup:",
+            "options": [
+              "PGI inhibitor",
+              "ADP inhibitor",
+              "PDE inhibitor",
+              "inhibit synthesis thromboxane A2"
+            ],
+            "correct_id": 3,
+            "explanation": "Correct Answer: inhibit synthesis thromboxane A2"
+          },
+          {
+            "id": "blood_pharma_4",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "The antiplatelet Clopidogrel drug from subgroup:",
+            "options": [
+              "PGI inhibitor",
+              "ADP inhibitor",
+              "PDE inhibitor",
+              "inhibit synthesis thromboxane A2"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: ADP inhibitor"
+          },
+          {
+            "id": "blood_pharma_5",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "The drug monoclonal antibody antagonist glycoprotein:",
+            "options": [
+              "Tirofiban",
+              "Abciximab",
+              "Andexanet alpha",
+              "None of above"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Abciximab"
+          },
+          {
+            "id": "blood_pharma_6",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "The drug monoclonal antibody antidote for Dabigatran:",
+            "options": [
+              "Tirofiban",
+              "Abciximab",
+              "Andexanet alpha",
+              "None of above"
+            ],
+            "correct_id": 3,
+            "explanation": "The specific antidote is Idarucizumab"
+          },
+          {
+            "id": "blood_pharma_7",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Flutamide use for:",
+            "options": [
+              "breast cancer",
+              "prostatic cancer",
+              "gastric atrophy"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: prostatic cancer"
+          },
+          {
+            "id": "blood_pharma_8",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "This drug prednisolone from type:",
+            "options": [
+              "Tyrosine kinase inhibitor",
+              "Alkaloid",
+              "DNA synthesis inhibitor",
+              "Hormonal agent"
+            ],
+            "correct_id": 3,
+            "explanation": "Correct Answer: Hormonal agent"
+          },
+          {
+            "id": "blood_pharma_9",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "The drug vincristine from type:",
+            "options": [
+              "Tyrosine kinase inhibitor",
+              "Alkaloid",
+              "DNA synthesis inhibitor",
+              "Hormonal agent"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Alkaloid"
+          },
+          {
+            "id": "blood_pharma_10",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Favism cause:",
+            "options": [
+              "hemolytic anemia",
+              "megaloblastic anemia",
+              "aplastic anemia",
+              "iron deficiency anemia"
+            ],
+            "correct_id": 0,
+            "explanation": "Correct Answer: hemolytic anemia"
+          },
+          {
+            "id": "blood_pharma_11",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Vit B12 deficiency cause:",
+            "options": [
+              "hemolytic anemia",
+              "megaloblastic anemia",
+              "aplastic anemia",
+              "iron deficiency anemia"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: megaloblastic anemia"
+          },
+          {
+            "id": "blood_pharma_12",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "The Sulfadiazine used for:",
+            "options": [
+              "toxoplasmosis",
+              "hemolytic anemia"
+            ],
+            "correct_id": 0,
+            "explanation": "Correct Answer: toxoplasmosis"
+          },
+          {
+            "id": "blood_pharma_13",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Drug used alternative to warfarin:",
+            "options": [
+              "heparin",
+              "Dabigatran"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Dabigatran"
+          },
+          {
+            "id": "blood_pharma_14",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "The drug is Direct thrombin inhibitor:",
+            "options": [
+              "Dabigatran",
+              "Aspirin",
+              "heparin"
+            ],
+            "correct_id": 0,
+            "explanation": "Correct Answer: Dabigatran"
+          },
+          {
+            "id": "blood_pharma_15",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Antidote for Warfarin:",
+            "options": [
+              "protamine sulphate",
+              "vitamine K",
+              "Dabigatran"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: vitamine K"
+          },
+          {
+            "id": "blood_pharma_16",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the drug of choice for a patient with Severe P. falciparum malaria?",
+            "options": [
+              "Coartem",
+              "Artesunate (IV)",
+              "Fansidar",
+              "Chloroquine"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Artesunate (IV)"
+          },
+          {
+            "id": "blood_pharma_17",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the drug of choice for a patient with Moderate P. falciparum malaria?",
+            "options": [
+              "Coartem",
+              "Quinine",
+              "Primaquine",
+              "Artesunate"
+            ],
+            "correct_id": 0,
+            "explanation": "Correct Answer: Coartem"
+          },
+          {
+            "id": "blood_pharma_18",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What should be given first to a patient with Primary Resistant malaria?",
+            "options": [
+              "Doxycycline",
+              "Chloroquine",
+              "Fansidar",
+              "Mefloquine"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: Fansidar"
+          },
+          {
+            "id": "blood_pharma_19",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "If a patient has Multi-drug resistant malaria, what is the primary curative choice?",
+            "options": [
+              "Doxycycline",
+              "Artesunate",
+              "Sulfadiazine",
+              "Spiramycin"
+            ],
+            "correct_id": 0,
+            "explanation": "Correct Answer: Doxycycline"
+          },
+          {
+            "id": "blood_pharma_20",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the primary treatment for Toxoplasmosis in a non-pregnant patient?",
+            "options": [
+              "Spiramycin",
+              "Clindamycin",
+              "Sulfadiazine",
+              "Metronidazole"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: Sulfadiazine"
+          },
+          {
+            "id": "blood_pharma_21",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the drug of choice for a pregnant woman diagnosed with Toxoplasmosis?",
+            "options": [
+              "Sulfadiazine",
+              "Spiramycin",
+              "Pyrimethamine",
+              "Doxycycline"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Spiramycin"
+          },
+          {
+            "id": "blood_pharma_22",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What does Heparin-Induced Thrombocytopenia (HIT) cause?",
+            "options": [
+              "Severe systemic bleeding",
+              "Thrombosis (clots)",
+              "Iron deficiency anemia",
+              "Leukocytosis"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Thrombosis (clots)"
+          },
+          {
+            "id": "blood_pharma_23",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "How is Heparin-Induced Thrombocytopenia (HIT) treated?",
+            "options": [
+              "Warfarin",
+              "Protamine Sulfate",
+              "Argatroban",
+              "Aspirin",
+              "File 1: Antiplatelet Drugs"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: Argatroban"
+          },
+          {
+            "id": "blood_pharma_24",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which of the following drugs acts as an irreversible COX-1 inhibitor, decreasing TXA2 synthesis?",
+            "options": [
+              "Clopidogrel",
+              "Aspirin",
+              "Ticagrelor",
+              "Cilostazol"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Aspirin"
+          },
+          {
+            "id": "blood_pharma_25",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which of the following P2Y12 inhibitors is administered intravenously (IV) only and has a reversible effect?",
+            "options": [
+              "Prasugrel",
+              "Clopidogrel",
+              "Cangrelor",
+              "Ticagrelor"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: Cangrelor"
+          },
+          {
+            "id": "blood_pharma_26",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which antiplatelet drug is a prodrug that requires hepatic activation via the CYP2C19 enzyme?",
+            "options": [
+              "Ticagrelor",
+              "Clopidogrel",
+              "Abciximab",
+              "Vorapaxar"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Clopidogrel"
+          },
+          {
+            "id": "blood_pharma_27",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which of the following drugs is a monoclonal antibody that irreversibly blocks GP IIb/IIIa receptors?",
+            "options": [
+              "Tirofiban",
+              "Eptifibatide",
+              "Abciximab",
+              "Cangrelor"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: Abciximab"
+          },
+          {
+            "id": "blood_pharma_28",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Cilostazol (a PDE3 inhibitor) has a Black Box Warning and is strictly contraindicated in patients with:",
+            "options": [
+              "Diabetes mellitus",
+              "Heart failure",
+              "Asthma",
+              "Gout"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Heart failure"
+          },
+          {
+            "id": "blood_pharma_29",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the mechanism of action of Vorapaxar?",
+            "options": [
+              "PDE3 inhibitor",
+              "COX-1 inhibitor",
+              "PAR-1 (thrombin receptor) blocker",
+              "ADP receptor inhibitor"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: PAR-1 (thrombin receptor) blocker"
+          },
+          {
+            "id": "blood_pharma_30",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which of the following antiplatelet drugs are strictly contraindicated in patients with a history of prior stroke or TIA?",
+            "options": [
+              "Clopidogrel and Aspirin",
+              "Prasugrel and Vorapaxar",
+              "Dipyridamole and Cilostazol",
+              "Ticagrelor and Abciximab"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Prasugrel and Vorapaxar"
+          },
+          {
+            "id": "blood_pharma_31",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which oral P2Y12 inhibitor is an active drug (not a prodrug), binds reversibly, and commonly causes dyspnea and elevated uric acid?",
+            "options": [
+              "Ticagrelor",
+              "Clopidogrel",
+              "Prasugrel",
+              "Cangrelor"
+            ],
+            "correct_id": 0,
+            "explanation": "Correct Answer: Ticagrelor"
+          },
+          {
+            "id": "blood_pharma_32",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "To prevent Reye's syndrome, Aspirin must be avoided in:",
+            "options": [
+              "Elderly patients",
+              "Children with viral infections",
+              "Patients with peripheral arterial disease",
+              "Patients undergoing PCI"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Children with viral infections"
+          },
+          {
+            "id": "blood_pharma_33",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which laboratory test is used to monitor the Intrinsic Pathway of the coagulation cascade?",
+            "options": [
+              "PT / INR",
+              "aPTT",
+              "Bleeding time",
+              "Thrombin time",
+              "File 2: Anticoagulant Drugs"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: aPTT"
+          },
+          {
+            "id": "blood_pharma_34",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which anticoagulant is the preferred drug of choice for use during pregnancy?",
+            "options": [
+              "Warfarin",
+              "Low Molecular Weight Heparin (LMWH)",
+              "Rivaroxaban",
+              "Dabigatran"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Low Molecular Weight Heparin (LMWH)"
+          },
+          {
+            "id": "blood_pharma_35",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which drug is a synthetic pentasaccharide that selectively inhibits Factor Xa via antithrombin?",
+            "options": [
+              "Unfractionated Heparin (UFH)",
+              "Fondaparinux",
+              "Argatroban",
+              "Apixaban"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Fondaparinux"
+          },
+          {
+            "id": "blood_pharma_36",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the specific reversal agent (antidote) for Dabigatran overdose?",
+            "options": [
+              "Andexanet alfa",
+              "Idarucizumab",
+              "Protamine sulfate",
+              "Vitamin K"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Idarucizumab"
+          },
+          {
+            "id": "blood_pharma_37",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the specific reversal agent for Direct Factor Xa inhibitors (such as Apixaban and Rivaroxaban)?",
+            "options": [
+              "Idarucizumab",
+              "Andexanet alfa",
+              "Fondaparinux",
+              "Bivalirudin"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Andexanet alfa"
+          },
+          {
+            "id": "blood_pharma_38",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which Direct Thrombin Inhibitor (DTI) is cleared hepatically and is the main drug of choice for treating acute Heparin-Induced Thrombocytopenia (HIT)?",
+            "options": [
+              "Bivalirudin",
+              "Argatroban",
+              "LMWH",
+              "Dabigatran"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Argatroban"
+          },
+          {
+            "id": "blood_pharma_39",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the mechanism of action of Warfarin?",
+            "options": [
+              "Direct inhibition of Factor Xa",
+              "Activation of Antithrombin III",
+              "Blocks VKORC1, decreasing synthesis of factors II, VII, IX, and X",
+              "Direct inhibition of Thrombin (IIa)"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: Blocks VKORC1, decreasing synthesis of factors II, VII, IX, and X"
+          },
+          {
+            "id": "blood_pharma_40",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Direct Oral Anticoagulants (DOACs) are strictly contraindicated in patients with:",
+            "options": [
+              "Deep Vein Thrombosis (DVT)",
+              "Non-valvular atrial fibrillation",
+              "Mechanical heart valves",
+              "Orthopedic surgery prophylaxis"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: Mechanical heart valves"
+          },
+          {
+            "id": "blood_pharma_41",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which of the following drugs inhibits Warfarin metabolism, leading to an increased INR and higher risk of bleeding?",
+            "options": [
+              "Rifampicin",
+              "Carbamazepine",
+              "Amiodarone (or Metronidazole)",
+              "Phenytoin"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: Amiodarone (or Metronidazole)"
+          },
+          {
+            "id": "blood_pharma_42",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which parenteral anticoagulant is safe to use in patients with severe renal failure ($CrCl < 30$) and is monitored using aPTT?",
+            "options": [
+              "Fondaparinux",
+              "Unfractionated Heparin (UFH)",
+              "LMWH",
+              "Edoxaban"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Unfractionated Heparin (UFH)"
+          },
+          {
+            "id": "blood_pharma_43",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the target INR range for a patient on Warfarin who has a mechanical heart valve?",
+            "options": [
+              "1.0 – 2.0",
+              "2.0 – 3.0",
+              "2.5 – 3.5",
+              "4.0 – 5.0",
+              "File 3: Thrombolytic Drugs"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: 2.5 – 3.5"
+          },
+          {
+            "id": "blood_pharma_44",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the primary mechanism of action of thrombolytic (fibrinolytic) drugs?",
+            "options": [
+              "Inhibit platelet aggregation",
+              "Convert inactive plasminogen to active plasmin to degrade fibrin clots",
+              "Inhibit synthesis of clotting factors",
+              "Enhance antithrombin activity"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Convert inactive plasminogen to active plasmin to degrade fibrin clots"
+          },
+          {
+            "id": "blood_pharma_45",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which of the following thrombolytic drugs is non-fibrin specific, antigenic, and associated with a higher risk of allergic reactions and bleeding?",
+            "options": [
+              "Alteplase (tPA)",
+              "Tenecteplase",
+              "Streptokinase",
+              "Reteplase"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: Streptokinase"
+          },
+          {
+            "id": "blood_pharma_46",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the maximum time window from symptom onset to administer IV thrombolytic therapy in an acute ischemic stroke?",
+            "options": [
+              "$\\le 4.5\\text{ hours}$",
+              "$\\le 12\\text{ hours}$",
+              "$\\le 24\\text{ hours}$",
+              "$\\le 90\\text{ minutes}$"
+            ],
+            "correct_id": 0,
+            "explanation": "Correct Answer: $\\le 4.5\\text{ hours}$"
+          },
+          {
+            "id": "blood_pharma_47",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Before administering Alteplase to a patient with suspected acute ischemic stroke, what must be performed first?",
+            "options": [
+              "Check aPTT level",
+              "CT scan of the head to exclude intracranial hemorrhage (bleed)",
+              "Administer Oral Warfarin",
+              "Perform a lumbar puncture"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: CT scan of the head to exclude intracranial hemorrhage (bleed)"
+          },
+          {
+            "id": "blood_pharma_48",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "In patients with Pulmonary Embolism (PE), thrombolytic therapy is indicated primarily for:",
+            "options": [
+              "All stable PE patients",
+              "High-risk PE presenting with shock or hypotension",
+              "Routine DVT prophylaxis",
+              "Asymptomatic patients"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: High-risk PE presenting with shock or hypotension"
+          },
+          {
+            "id": "blood_pharma_49",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the most serious and life-threatening adverse effect of thrombolytic therapy?",
+            "options": [
+              "Thrombocytopenia",
+              "Intracranial hemorrhage (ICH)",
+              "Skin necrosis",
+              "Osteoporosis"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Intracranial hemorrhage (ICH)"
+          },
+          {
+            "id": "blood_pharma_50",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which of the following is an absolute contraindication to thrombolytic therapy?",
+            "options": [
+              "Age over 65 years",
+              "Prior intracranial hemorrhage (ICH) or suspected aortic dissection",
+              "STEMI presenting within 2 hours",
+              "Controlled hypertension"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Prior intracranial hemorrhage (ICH) or suspected aortic dissection"
+          },
+          {
+            "id": "blood_pharma_51",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "A patient presents with acute STEMI (< 2 hours), and PCI is not available (delayed > 90 min). What is the recommended reperfusion strategy?",
+            "options": [
+              "Warfarin monotherapy",
+              "Fibrinolytic (thrombolytic) therapy",
+              "Cilostazol",
+              "Observation only"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Fibrinolytic (thrombolytic) therapy"
+          },
+          {
+            "id": "blood_pharma_52",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "If a patient on Warfarin suddenly consumes a large amount of spinach (high in Vitamin K), what happens to the INR and clinical risk?",
+            "options": [
+              "INR increases, increasing bleeding risk",
+              "INR decreases, increasing thrombosis (clotting) risk",
+              "INR remains unchanged",
+              "aPTT increases significantly"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: INR decreases, increasing thrombosis (clotting) risk"
+          },
+          {
+            "id": "blood_pharma_53",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which class of drugs directly dissolves an already formed fibrin clot in acute vascular occlusion?",
+            "options": [
+              "Antiplatelets (e.g., Aspirin, Clopidogrel)",
+              "Anticoagulants (e.g., Heparin, Warfarin)",
+              "Thrombolytics (e.g., Alteplase, Tenecteplase)",
+              "PDE inhibitors (e.g., Cilostazol)"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: Thrombolytics (e.g., Alteplase, Tenecteplase)"
+          },
+          {
+            "id": "blood_pharma_54",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which of the following combination chemotherapy regimens is the standard treatment for Non-Hodgkin lymphoma?",
+            "options": [
+              "ABVD",
+              "CHOP",
+              "FOLFOX",
+              "MOPP"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: CHOP"
+          },
+          {
+            "id": "blood_pharma_55",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Cyclophosphamide and Ifosfamide can cause hemorrhagic cystitis due to the accumulation of which toxic metabolite in the urine?",
+            "options": [
+              "FdUMP",
+              "Acrolein",
+              "Asparagine",
+              "Uric acid"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Acrolein"
+          },
+          {
+            "id": "blood_pharma_56",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which cytoprotective agent is co-administered with Cyclophosphamide to prevent hemorrhagic cystitis?",
+            "options": [
+              "Dexrazoxane",
+              "MESNA",
+              "Leucovorin",
+              "Allopurinol"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: MESNA"
+          },
+          {
+            "id": "blood_pharma_57",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Doxorubicin is associated with dose-limiting cardiotoxicity (dilated cardiomyopathy). Which drug is used to protect the heart and reduce this toxicity?",
+            "options": [
+              "MESNA",
+              "Dexrazoxane",
+              "Folinic acid",
+              "N-acetylcysteine"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Dexrazoxane"
+          },
+          {
+            "id": "blood_pharma_58",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which anticancer drug is G2-phase specific and causes pulmonary fibrosis as its hallmark toxicity with minimal myelosuppression?",
+            "options": [
+              "Cisplatin",
+              "Bleomycin",
+              "Methotrexate",
+              "Vincristine"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Bleomycin"
+          },
+          {
+            "id": "blood_pharma_59",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the role of Leucovorin (folinic acid) when administered with Methotrexate (MTX) versus 5-Fluorouracil (5-FU)?",
+            "options": [
+              "Enhances toxicity of both drugs",
+              "Rescues normal cells with MTX, and enhances the anticancer effect with 5-FU",
+              "Rescues normal cells with 5-FU, and enhances the anticancer effect with MTX",
+              "Inactivates both drugs in the urine"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Rescues normal cells with MTX, and enhances the anticancer effect with 5-FU"
+          },
+          {
+            "id": "blood_pharma_60",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which platinum compound used in colorectal cancer is characteristically associated with cold-induced peripheral neuropathy?",
+            "options": [
+              "Cisplatin",
+              "Carboplatin",
+              "Oxaliplatin",
+              "Mitomycin C"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: Oxaliplatin"
+          },
+          {
+            "id": "blood_pharma_61",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "How do the mechanisms of action of Vinca alkaloids (Vincristine) and Taxanes (Paclitaxel) differ in arresting the M-phase?",
+            "options": [
+              "Both stabilize microtubules",
+              "Vinca alkaloids inhibit polymerization; Taxanes stabilize microtubules & block depolymerization",
+              "Vinca alkaloids inhibit Topoisomerase I, while Taxanes inhibit Topoisomerase II",
+              "Both inhibit dihydrofolate reductase (DHFR)"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Vinca alkaloids inhibit polymerization; Taxanes stabilize microtubules & block depolymerization"
+          },
+          {
+            "id": "blood_pharma_62",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "When administering 6-Mercaptopurine (6-MP) to a patient taking Allopurinol, what adjustment must be made?",
+            "options": [
+              "Increase the 6-MP dose",
+              "Reduce the 6-MP dose (because Allopurinol increases 6-MP toxicity)",
+              "Discontinue Allopurinol and add Aspirin",
+              "No dose adjustment is needed"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Reduce the 6-MP dose (because Allopurinol increases 6-MP toxicity)"
+          },
+          {
+            "id": "blood_pharma_63",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which Topoisomerase I inhibitor is notoriously associated with severe diarrhea (both early and late)?",
+            "options": [
+              "Etoposide",
+              "Irinotecan",
+              "Doxorubicin",
+              "Topotecan"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Irinotecan"
+          },
+          {
+            "id": "blood_pharma_64",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which monoclonal antibody targets HER2-positive breast cancer and carries a significant risk of cardiotoxicity?",
+            "options": [
+              "Pembrolizumab",
+              "Trastuzumab",
+              "Tamoxifen",
+              "Abciximab"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Trastuzumab"
+          },
+          {
+            "id": "blood_pharma_65",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the specific target and main clinical use of Imatinib?",
+            "options": [
+              "ER blocker for breast cancer",
+              "BCR-ABL tyrosine kinase inhibitor for Chronic Myeloid Leukemia (CML)",
+              "PD-1 inhibitor for melanoma",
+              "DHFR inhibitor for osteosarcoma"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: BCR-ABL tyrosine kinase inhibitor for Chronic Myeloid Leukemia (CML)"
+          },
+          {
+            "id": "blood_pharma_66",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "In the coagulation cascade, which factor is activated by thrombin to cross-link loose fibrin fibers into a stable fibrin clot?",
+            "options": [
+              "Factor X",
+              "Factor VII",
+              "Factor XIII",
+              "Factor VIII"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: Factor XIII"
+          },
+          {
+            "id": "blood_pharma_67",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Why does the antiplatelet effect of a single low dose of Aspirin last for 7 to 10 days?",
+            "options": [
+              "Aspirin has a plasma half-life of 7 days",
+              "It irreversibly acetylates COX-1 (at Ser530), and platelets cannot synthesize new COX-1",
+              "It permanently blocks GP IIb/IIIa receptors",
+              "It is stored in adipose tissue and released slowly"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: It irreversibly acetylates COX-1 (at Ser530), and platelets cannot synthesize new COX-1"
+          },
+          {
+            "id": "blood_pharma_68",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "A patient on low-dose Aspirin for cardioprotection needs an analgesic. Why should concurrent Ibuprofen (an NSAID) be avoided?",
+            "options": [
+              "It causes severe hypertension",
+              "It reduces the antiplatelet effect of Aspirin and increases GI bleeding risk",
+              "It converts Aspirin into a toxic metabolite",
+              "It causes Reye's syndrome in adults"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: It reduces the antiplatelet effect of Aspirin and increases GI bleeding risk"
+          },
+          {
+            "id": "blood_pharma_69",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which GP IIb/IIIa inhibitor is a monoclonal antibody that shows slow, irreversible binding and does NOT require renal dose adjustment?",
+            "options": [
+              "Eptifibatide",
+              "Tirofiban",
+              "Abciximab",
+              "Cangrelor"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: Abciximab"
+          },
+          {
+            "id": "blood_pharma_70",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which oral drug acts by inhibiting Both PDE and adenosine uptake, and is used in combination with Aspirin for secondary stroke prevention?",
+            "options": [
+              "Cilostazol",
+              "Dipyridamole",
+              "Vorapaxar",
+              "Prasugrel"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Dipyridamole"
+          },
+          {
+            "id": "blood_pharma_71",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Why is Tenecteplase (TNK-tPA) often preferred over Alteplase in acute settings?",
+            "options": [
+              "It is non-fibrin specific",
+              "It has higher fibrin specificity, a longer half-life, and can be given as a single IV bolus",
+              "It carries zero risk of bleeding",
+              "It is extracted from bacteria (Streptococci)"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: It has higher fibrin specificity, a longer half-life, and can be given as a single IV bolus"
+          },
+          {
+            "id": "blood_pharma_72",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which antimetabolite inhibits ribonucleotide reductase and is also used in Sickle Cell Disease because it increases fetal hemoglobin (HbF)?",
+            "options": [
+              "Cytarabine (Ara-C)",
+              "Hydroxyurea",
+              "L-Asparaginase",
+              "5-Fluorouracil"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Hydroxyurea"
+          },
+          {
+            "id": "blood_pharma_73",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Cancer cells can develop resistance to multiple anticancer drugs simultaneously by pumping the drugs out of the cell via which transporter?",
+            "options": [
+              "VKORC1",
+              "P-glycoprotein (P-gp)",
+              "GP IIb/IIIa",
+              "Dihydrofolate reductase (DHFR)"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: P-glycoprotein (P-gp)"
+          },
+          {
+            "id": "blood_pharma_74",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which antibiotic is specifically noted for causing drug-induced anemia via bone marrow depression?",
+            "options": [
+              "Amoxicillin",
+              "Linezolid",
+              "Azithromycin",
+              "Ciprofloxacin"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Linezolid"
+          },
+          {
+            "id": "blood_pharma_75",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Iron deficiency anemia is morphologically classified as:",
+            "options": [
+              "Macrocytic anemia",
+              "Microcytic hypochromic anemia",
+              "Megaloblastic anemia",
+              "Normocytic anemia"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Microcytic hypochromic anemia"
+          },
+          {
+            "id": "blood_pharma_76",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the standard oral treatment for iron deficiency anemia?",
+            "options": [
+              "Cyanocobalamin",
+              "Ferrous sulfate (or Ferrous gluconate)",
+              "Deferoxamine",
+              "Epoetin"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Ferrous sulfate (or Ferrous gluconate)"
+          },
+          {
+            "id": "blood_pharma_77",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "How should oral iron supplements (Ferrous sulfate) be administered to minimize gastric mucosal irritation?",
+            "options": [
+              "On an empty stomach before sleep",
+              "Once daily, post-meal (after breakfast or lunch)",
+              "With a cup of black tea",
+              "Intramuscularly once a week"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Once daily, post-meal (after breakfast or lunch)"
+          },
+          {
+            "id": "blood_pharma_78",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Why should patients avoid drinking tea or coffee when taking oral Ferrous sulfate?",
+            "options": [
+              "It causes severe tachycardia",
+              "Tannins bind ferrous iron and decrease its absorption",
+              "It converts iron into a toxic compound",
+              "It causes anaphylactoid reactions"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Tannins bind ferrous iron and decrease its absorption"
+          },
+          {
+            "id": "blood_pharma_79",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Concurrent administration of oral iron supplements with which antibiotic class forms insoluble chelation complexes, abolishing the absorption of both drugs?",
+            "options": [
+              "Penicillins",
+              "Tetracyclines",
+              "Macrolides",
+              "Cephalosporins"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Tetracyclines"
+          },
+          {
+            "id": "blood_pharma_80",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which of the following is an expected, benign side effect of oral iron therapy?",
+            "options": [
+              "Red urine",
+              "Dark / black stool",
+              "Peripheral neuropathy",
+              "Bronze skin"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Dark / black stool"
+          },
+          {
+            "id": "blood_pharma_81",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which classic clinical signs are associated with severe Iron Deficiency Anemia?",
+            "options": [
+              "Jaundice and splenomegaly",
+              "Pica and koilonychia (spoon-shaped nails)",
+              "Numbness and tingling in hands",
+              "Bone pain and thrombocytopenia"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Pica and koilonychia (spoon-shaped nails)"
+          },
+          {
+            "id": "blood_pharma_82",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Why must a test dose be administered before giving parenteral Iron Dextran?",
+            "options": [
+              "To check for G6PD deficiency",
+              "Because it can cause anaphylactoid (hypersensitivity) reactions",
+              "To prevent hemorrhagic cystitis",
+              "To avoid rapid drop in blood pressure"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Because it can cause anaphylactoid (hypersensitivity) reactions"
+          },
+          {
+            "id": "blood_pharma_83",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the specific antidote for acute iron poisoning/overdose, and what water-soluble complex does it form to be excreted in urine?",
+            "options": [
+              "Protamine sulfate $\\rightarrow$ Ferroxamine",
+              "Deferoxamine (IV/IM) $\\rightarrow$ Ferrioxamine (Ferroxamine)",
+              "Leucovorin $\\rightarrow$ Hemosiderin",
+              "Vitamin K $\\rightarrow$ Transferrin"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Deferoxamine (IV/IM) $\\rightarrow$ Ferrioxamine (Ferroxamine)"
+          },
+          {
+            "id": "blood_pharma_84",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "According to the lecture notes, at what hemoglobin (Hb) threshold should therapeutic phlebotomy (blood donation) be started in a patient with Hemochromatosis?",
+            "options": [
+              "$\\text{Hb} \\le 7\\text{ g/dL}$",
+              "$\\text{Hb } 15\\text{–}17\\text{ g/dL}$ (before reaching $18\\text{ g/dL}$)",
+              "$\\text{Hb } 11\\text{–}12\\text{ g/dL}$",
+              "$\\text{Hb} > 22\\text{ g/dL}$"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: $\\text{Hb } 15\\text{–}17\\text{ g/dL}$ (before reaching $18\\text{ g/dL}$)"
+          },
+          {
+            "id": "blood_pharma_85",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Untreated Hemochromatosis ($\\text{Hb} \\ge 17\\text{–}18\\text{ g/dL}$) leads to which triad of irreversible end-organ complications?",
+            "options": [
+              "Renal failure, blindness, and neuropathy",
+              "Liver cirrhosis, Diabetes Mellitus, and Bronze skin (Bronze Diabetes)",
+              "Pulmonary fibrosis, heart failure, and gout",
+              "Peptic ulcer, aplastic anemia, and alopecia"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Liver cirrhosis, Diabetes Mellitus, and Bronze skin (Bronze Diabetes)"
+          },
+          {
+            "id": "blood_pharma_86",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Both Folic acid deficiency and Vitamin B12 deficiency impair DNA synthesis and result in which type of anemia?",
+            "options": [
+              "Microcytic anemia",
+              "Macrocytic (Megaloblastic) anemia",
+              "Aplastic anemia",
+              "Hemolytic anemia"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Macrocytic (Megaloblastic) anemia"
+          },
+          {
+            "id": "blood_pharma_87",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the recommended daily dose of Folic acid during pregnancy (from 1st to 3rd trimester) or for Methotrexate-induced deficiency according to the lecture?",
+            "options": [
+              "$100\\text{ mg}$ IV",
+              "$5\\text{ mg}$ PO once daily after meal",
+              "$50\\text{ mg}$ IM",
+              "$0.1\\text{ mg}$ sublingual"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: $5\\text{ mg}$ PO once daily after meal"
+          },
+          {
+            "id": "blood_pharma_88",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Why is Folic acid prophylaxis mandatory for all pregnant women?",
+            "options": [
+              "To prevent neonatal jaundice",
+              "To prevent teratogenic congenital neural tube defects (e.g., spina bifida) in the fetus",
+              "To prevent maternal gestational diabetes",
+              "To increase maternal platelet count"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: To prevent teratogenic congenital neural tube defects (e.g., spina bifida) in the fetus"
+          },
+          {
+            "id": "blood_pharma_89",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which clinical feature distinguishes Pernicious Anemia (Vitamin B12 deficiency) from Folic Acid deficiency?",
+            "options": [
+              "Microcytic RBCs",
+              "Peripheral neuropathy (numbness, tingling, myelin sheath destruction)",
+              "Dark black stool",
+              "Hemorrhagic cystitis"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Peripheral neuropathy (numbness, tingling, myelin sheath destruction)"
+          },
+          {
+            "id": "blood_pharma_90",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Why must Cyanocobalamin (Vitamin B12) be administered strictly by Intramuscular (IM) injection in patients with Pernicious Anemia or gastrectomy?",
+            "options": [
+              "Because it is destroyed by stomach acid",
+              "Because oral B12 cannot be absorbed in the absence of Intrinsic Factor (IF)",
+              "Because oral B12 causes severe bloody vomiting",
+              "Because IM injection prevents anaphylaxis"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Because oral B12 cannot be absorbed in the absence of Intrinsic Factor (IF)"
+          },
+          {
+            "id": "blood_pharma_91",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which cells secrete Intrinsic Factor (IF), and which antidiabetic drug can also inhibit intestinal Vitamin B12 absorption?",
+            "options": [
+              "Chief cells / Insulin",
+              "Gastric parietal cells / Metformin",
+              "G-cells / Gliclazide",
+              "Goblet cells / Acarbose"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Gastric parietal cells / Metformin"
+          },
+          {
+            "id": "blood_pharma_92",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What are the components of \"Tri-B\" (Neurobion) used alongside B12 to promote peripheral nerve repair and remyelination?",
+            "options": [
+              "Vitamin A, C, and E",
+              "Vitamin B1 (Thiamine), Vitamin B6 (Pyridoxine), and Vitamin B12 (Cyanocobalamin)",
+              "Folic acid, Iron, and Calcium",
+              "Vitamin B2, B3, and Biotin"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Vitamin B1 (Thiamine), Vitamin B6 (Pyridoxine), and Vitamin B12 (Cyanocobalamin)"
+          },
+          {
+            "id": "blood_pharma_93",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Why is it dangerous to treat an undiagnosed megaloblastic anemia with Folic acid alone?",
+            "options": [
+              "It causes acute renal failure",
+              "It reverses hematologic signs & masks B12 deficiency, allowing severe neurologic damage to progress",
+              "It induces severe hemolysis in G6PD patients",
+              "It chelates iron in the gut"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: It reverses hematologic signs & masks B12 deficiency, allowing severe neurologic damage to progress"
+          },
+          {
+            "id": "blood_pharma_94",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "How is Aplastic Anemia defined?",
+            "options": [
+              "Isolated decrease in RBCs only",
+              "Pancytopenia: decreased RBCs, decreased WBCs, and decreased Platelets",
+              "Excessive accumulation of iron in the liver",
+              "Autoimmune destruction of platelets only"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Pancytopenia: decreased RBCs, decreased WBCs, and decreased Platelets"
+          },
+          {
+            "id": "blood_pharma_95",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "In the replacement therapy of Aplastic Anemia, which drug is used specifically to stimulate Red Blood Cell (RBC) production?",
+            "options": [
+              "Filgrastim",
+              "Epoetin (Erythropoietin)",
+              "Romiplostim",
+              "Sargramostim"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Epoetin (Erythropoietin)"
+          },
+          {
+            "id": "blood_pharma_96",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Why does Epoetin have NO value in the treatment of acute anemia?",
+            "options": [
+              "It is rapidly degraded in the blood",
+              "Because of its delayed onset of action",
+              "It causes immediate hemolysis",
+              "It only works on white blood cells"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Because of its delayed onset of action"
+          },
+          {
+            "id": "blood_pharma_97",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which colony-stimulating factors are used to treat severe neutropenia (low WBCs) in Aplastic Anemia, and what is their common adverse effect?",
+            "options": [
+              "Romiplostim $\\rightarrow$ GI bleeding",
+              "Filgrastim (G-CSF) and Sargramostim (GM-CSF) $\\rightarrow$ Bone pain",
+              "Epoetin $\\rightarrow$ Bronchospasm",
+              "Deferoxamine $\\rightarrow$ Tinnitus"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Filgrastim (G-CSF) and Sargramostim (GM-CSF) $\\rightarrow$ Bone pain"
+          },
+          {
+            "id": "blood_pharma_98",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which drug is administered via IV infusion to replace/stimulate platelets in Aplastic Anemia?",
+            "options": [
+              "Epoetin",
+              "Filgrastim",
+              "Romiplostim",
+              "Prednisolone"
+            ],
+            "correct_id": 2,
+            "explanation": "Correct Answer: Romiplostim"
+          },
+          {
+            "id": "blood_pharma_99",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Favism is a hereditary X-linked hemolytic anemia caused by a deficiency in which enzyme?",
+            "options": [
+              "Dihydrofolate reductase (DHFR)",
+              "Glucose-6-Phosphate Dehydrogenase (G6PD / G-6-PDHase)",
+              "Cyclooxygenase-1 (COX-1)",
+              "Thymidylate synthase"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Glucose-6-Phosphate Dehydrogenase (G6PD / G-6-PDHase)"
+          },
+          {
+            "id": "blood_pharma_100",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which of the following drugs and foods must be strictly avoided in patients with G6PD deficiency (Favism) to prevent massive life-threatening hemolysis?",
+            "options": [
+              "Ferrous sulfate and meat",
+              "Fava beans/legumes, Cotrimoxazole, and antimalarials (Primaquine, Chloroquine, Quinine, Mefloquine)",
+              "Folic acid and green leafy vegetables",
+              "Paracetamol and dairy products"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Fava beans/legumes, Cotrimoxazole, and antimalarials (Primaquine, Chloroquine, Quinine, Mefloquine)"
+          },
+          {
+            "id": "blood_pharma_101",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the first-line immunosuppressive Drug of Choice (DOC) for managing Autoimmune Hemolytic Anemia alongside blood transfusion?",
+            "options": [
+              "Methotrexate",
+              "Prednisolone / Corticosteroids (e.g., Prednisone PO or Hydrocortisone IV)",
+              "Deferoxamine",
+              "Filgrastim"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Prednisolone / Corticosteroids (e.g., Prednisone PO or Hydrocortisone IV)"
+          },
+          {
+            "id": "blood_pharma_102",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "At what hemoglobin (Hb) threshold is an emergency blood transfusion mandatory in patients with Malaria-induced or G6PD hemolytic crisis?",
+            "options": [
+              "$\\text{Hb} \\le 11\\text{ g/dL}$",
+              "$\\text{Hb} \\le 7\\text{ g/dL}$",
+              "$\\text{Hb} \\le 10\\text{ g/dL}$",
+              "$\\text{Hb} \\ge 15\\text{ g/dL}$"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: $\\text{Hb} \\le 7\\text{ g/dL}$"
+          },
+          {
+            "id": "blood_pharma_103",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "How should a patient with Malaria-induced hemolytic anemia be treated (assuming normal G6PD activity)?",
+            "options": [
+              "Iron supplements only",
+              "Antimalarial therapy + Blood transfusion",
+              "Stop all drugs and give Vitamin B12",
+              "Phlebotomy and Deferoxamine"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Antimalarial therapy + Blood transfusion"
+          },
+          {
+            "id": "blood_pharma_104",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which Plasmodium species form dormant liver hypnozoites, requiring radical cure to prevent relapses?",
+            "options": [
+              "P. falciparum and P. malariae",
+              "P. vivax and P. ovale",
+              "P. knowlesi and P. falciparum",
+              "P. malariae and P. vivax"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: P. vivax and P. ovale"
+          },
+          {
+            "id": "blood_pharma_105",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which antimalarial drugs act as tissue schizonticides to eradicate dormant liver hypnozoites?",
+            "options": [
+              "Chloroquine and Quinine",
+              "Primaquine and Tafenoquine",
+              "Artemether and Lumefantrine",
+              "Atovaquone and Proguanil"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Primaquine and Tafenoquine"
+          },
+          {
+            "id": "blood_pharma_106",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the first-line drug of choice for the treatment of severe P. falciparum malaria, and is it safe in G6PD deficiency?",
+            "options": [
+              "Oral Coartem (Unsafe in G6PD deficiency)",
+              "IV Artesunate (Safe in G6PD deficiency)",
+              "IV Chloroquine (Unsafe in G6PD deficiency)",
+              "Oral Primaquine (Safe in G6PD deficiency)"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: IV Artesunate (Safe in G6PD deficiency)"
+          },
+          {
+            "id": "blood_pharma_107",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What are the active components of Coartem, the first-line oral ACT for uncomplicated P. falciparum malaria?",
+            "options": [
+              "Sulfadoxine + Pyrimethamine",
+              "Artemether + Lumefantrine",
+              "Artesunate + Amodiaquine",
+              "Dihydroartemisinin + Piperaquine"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Artemether + Lumefantrine"
+          },
+          {
+            "id": "blood_pharma_108",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the primary mechanism of action of Chloroquine against malaria parasites?",
+            "options": [
+              "Inhibits dihydrofolate reductase (DHFR)",
+              "Inhibits heme polymerization in the parasite food vacuole, leading to toxic free heme accumulation",
+              "Generates free radicals via heme iron ($Fe^{2+}$)",
+              "Inhibits mitochondrial electron transport (cytochrome $bc_1$)"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Inhibits heme polymerization in the parasite food vacuole, leading to toxic free heme accumulation"
+          },
+          {
+            "id": "blood_pharma_109",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What are the components of Fansidar, and what is its mechanism of action?",
+            "options": [
+              "Atovaquone + Proguanil $\\rightarrow$ inhibits protein synthesis",
+              "Sulfadoxine + Pyrimethamine $\\rightarrow$ sequential folate blockade (inhibits DHPS and DHFR)",
+              "Quinine + Doxycycline $\\rightarrow$ inhibits heme detoxification",
+              "Trimethoprim + Sulfamethoxazole $\\rightarrow$ forms membrane pores"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Sulfadoxine + Pyrimethamine $\\rightarrow$ sequential folate blockade (inhibits DHPS and DHFR)"
+          },
+          {
+            "id": "blood_pharma_110",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Administration of Quinine is characteristically associated with \"Cinchonism\" and which metabolic abnormality?",
+            "options": [
+              "Hyperglycemia and hypertension",
+              "Tinnitus, headache, dizziness, nausea, and hypoglycemia",
+              "Pulmonary fibrosis and nephrotoxicity",
+              "Yellow-black discoloration of teeth"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Tinnitus, headache, dizziness, nausea, and hypoglycemia"
+          },
+          {
+            "id": "blood_pharma_111",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Why is Mefloquine strictly contraindicated in certain patients during malaria prophylaxis?",
+            "options": [
+              "History of peptic ulcer disease",
+              "History of neuropsychiatric disorders or seizures",
+              "Mild iron deficiency anemia",
+              "History of gout"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: History of neuropsychiatric disorders or seizures"
+          },
+          {
+            "id": "blood_pharma_112",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Why is Doxycycline contraindicated in children and pregnant women?",
+            "options": [
+              "It causes severe pancreatitis",
+              "It is teratogenic, causes bone deformity, and leads to yellow-black discoloration of teeth",
+              "It causes acute hemolysis in all patients",
+              "It causes irreversible retinopathy"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: It is teratogenic, causes bone deformity, and leads to yellow-black discoloration of teeth"
+          },
+          {
+            "id": "blood_pharma_113",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the vector for Leishmaniasis, and what happens to the parasite inside human macrophages?",
+            "options": [
+              "Anopheles mosquito; sporozoites transform into merozoites",
+              "Sandfly; promastigotes are phagocytosed by macrophages and transform into amastigotes",
+              "Cat feces; oocysts transform into bradyzoites",
+              "Tsetse fly; trypomastigotes multiply in blood"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Sandfly; promastigotes are phagocytosed by macrophages and transform into amastigotes"
+          },
+          {
+            "id": "blood_pharma_114",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which drug is currently preferred for treating Visceral Leishmaniasis (Kala-azar), and how does it act?",
+            "options": [
+              "Paromomycin $\\rightarrow$ inhibits folate synthesis",
+              "Liposomal Amphotericin B $\\rightarrow$ binds ergosterol-like sterols and forms membrane pores",
+              "Spiramycin $\\rightarrow$ binds the 50S ribosomal subunit",
+              "Primaquine $\\rightarrow$ generates reactive oxygen species"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Liposomal Amphotericin B $\\rightarrow$ binds ergosterol-like sterols and forms membrane pores"
+          },
+          {
+            "id": "blood_pharma_115",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What are the pentavalent antimonials ($Sb^{5+}$) used in Leishmaniasis, and what are their major toxicities that require monitoring?",
+            "options": [
+              "Miltefosine and Paromomycin $\\rightarrow$ ototoxicity",
+              "Sodium stibogluconate & Meglumine antimoniate -> cardiotoxicity (QT prolongation), pancreatitis",
+              "Suramin and Pentamidine $\\rightarrow$ hemorrhagic cystitis",
+              "Artesunate and Amodiaquine $\\rightarrow$ agranulocytosis"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Sodium stibogluconate & Meglumine antimoniate -> cardiotoxicity (QT prolongation), pancreatitis"
+          },
+          {
+            "id": "blood_pharma_116",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which drug is the ONLY oral agent listed for treating Visceral and Cutaneous Leishmaniasis, and carries a strict warning for being teratogenic (contraindicated in pregnancy)?",
+            "options": [
+              "Liposomal Amphotericin B",
+              "Miltefosine",
+              "Paromomycin",
+              "Sodium stibogluconate"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Miltefosine"
+          },
+          {
+            "id": "blood_pharma_117",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which aminoglycoside antibiotic is administered intramuscularly (IM) for Visceral Leishmaniasis and carries a risk of nephrotoxicity and ototoxicity?",
+            "options": [
+              "Spiramycin",
+              "Paromomycin",
+              "Clindamycin",
+              "Doxycycline"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Paromomycin"
+          },
+          {
+            "id": "blood_pharma_118",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the definitive host for Toxoplasma gondii, and which form of the parasite is responsible for acute infection and transplacental transmission?",
+            "options": [
+              "Mosquito; Bradyzoite (tissue cyst)",
+              "Cat; Tachyzoite (rapidly multiplying form)",
+              "Sandfly; Promastigote",
+              "Monkey; Sporozoite"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Cat; Tachyzoite (rapidly multiplying form)"
+          },
+          {
+            "id": "blood_pharma_119",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "What is the first-line combination regimen for severe/CNS Toxoplasmosis (e.g., toxoplasmic encephalitis in HIV patients), and why is Leucovorin always co-administered?",
+            "options": [
+              "Spiramycin + Clindamycin; to enhance absorption",
+              "Pyrimethamine + Sulfadiazine + Leucovorin (rescues host cells from Pyrimethamine marrow suppression)",
+              "Suramin + Pentamidine; to prevent nephrotoxicity",
+              "Artemether + Lumefantrine; to prevent relapse"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Pyrimethamine + Sulfadiazine + Leucovorin (rescues host cells from Pyrimethamine marrow suppression)"
+          },
+          {
+            "id": "blood_pharma_120",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which macrolide antibiotic is the drug of choice for maternal Toxoplasmosis during pregnancy (when fetal infection is NOT established) to reduce transplacental transmission?",
+            "options": [
+              "Clindamycin",
+              "Spiramycin (1 g orally every 8 hours)",
+              "Sulfadiazine",
+              "Paromomycin"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Spiramycin (1 g orally every 8 hours)"
+          },
+          {
+            "id": "blood_pharma_121",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "In a patient with Toxoplasmosis who has a severe sulfa allergy (cannot tolerate Sulfadiazine), or during lactation, which drug is combined with Pyrimethamine?",
+            "options": [
+              "Doxycycline",
+              "Clindamycin",
+              "Miltefosine",
+              "Melarsoprol"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Clindamycin"
+          },
+          {
+            "id": "blood_pharma_122",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "In the treatment of Trypanosomiasis, which drugs are used for the Early Stage versus the Late Stage (with CNS involvement)?",
+            "options": [
+              "Early: Melarsoprol | Late: Ivermectin",
+              "Early: Suramin + Pentamidine (IV) | Late: Melarsoprol (IV) or Nifurtimox (Oral)",
+              "Early: Diethylcarbamazine | Late: Spiramycin",
+              "Early: Nifurtimox | Late: Suramin"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Early: Suramin + Pentamidine (IV) | Late: Melarsoprol (IV) or Nifurtimox (Oral)"
+          },
+          {
+            "id": "blood_pharma_123",
+            "topic": "Blood & Lymph Pharmacology (Dr. Asmaa)",
+            "question": "Which oral drug used for Late-stage Trypanosomiasis is ALSO the primary drug used for treating Chagas disease, and which two oral drugs are used to treat Filariasis?",
+            "options": [
+              "Chagas: Suramin | Filariasis: Pentamidine and Amphotericin B",
+              "Chagas: Nifurtimox | Filariasis: Diethylcarbamazine and Ivermectin",
+              "Chagas: Melarsoprol | Filariasis: Miltefosine and Paromomycin",
+              "Chagas: Primaquine | Filariasis: Chloroquine and Quinine"
+            ],
+            "correct_id": 1,
+            "explanation": "Correct Answer: Chagas: Nifurtimox | Filariasis: Diethylcarbamazine and Ivermectin"
+          }
+        ]
       },
       "microbiology": {
         "title": "Microbiology (الأحياء الدقيقة)",
