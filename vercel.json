@@ -1,4 +1,10 @@
 {
+  "crons": [
+    {
+      "path": "/",
+      "schedule": "0 0 * * *"
+    }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/api/index.py" }
   ]

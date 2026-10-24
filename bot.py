@@ -62,32 +62,44 @@ user_timer_selection: Dict[int, int] = {}
 
 
 def get_blocks_keyboard() -> InlineKeyboardMarkup:
-    """توليد أزرار اختيار البلوك أولاً (Blood & Lymph, etc.)"""
+    """توليد أزرار اختيار البلوك أو المادة"""
     data = load_questions()
     keyboard = []
     for block_key, block_info in data.items():
-        btn = InlineKeyboardButton(block_info["title"], callback_data=f"blk:{block_key}")
+        unique_q_ids = set()
+        for sk, s in block_info.get("subjects", {}).items():
+            if sk.endswith("_all") or sk == "all" or sk == "para_all":
+                continue
+            for q in s.get("questions", []):
+                qid = q.get("id") if isinstance(q, dict) else str(q)
+                unique_q_ids.add(qid)
+        total_q = len(unique_q_ids)
+        badge = f" ({total_q})" if total_q > 0 else ""
+        btn = InlineKeyboardButton(f"{block_info['title']}{badge}", callback_data=f"blk:{block_key}")
         keyboard.append([btn])
     return InlineKeyboardMarkup(keyboard)
 
 
 def get_subjects_keyboard(block_key: str) -> InlineKeyboardMarkup:
-    """توليد أزرار اختيار المادة داخل البلوك المحدد (Pathology, Pharmacology, etc.)"""
+    """توليد أزرار اختيار المادة أو الموضوع داخل البلوك أو المادة المحددة"""
     data = load_questions()
     block_data = data.get(block_key, {})
     subjects = block_data.get("subjects", {})
 
     keyboard = []
     for subj_key, subj_info in subjects.items():
-        btn = InlineKeyboardButton(subj_info["title"], callback_data=f"subj:{block_key}:{subj_key}")
+        q_count = len(subj_info.get("questions", []))
+        badge = f" ({q_count})" if q_count > 0 else ""
+        btn = InlineKeyboardButton(f"{subj_info['title']}{badge}", callback_data=f"subj:{block_key}:{subj_key}")
         keyboard.append([btn])
 
-    keyboard.append([InlineKeyboardButton("🔙 رجوع للبلوكات", callback_data="back_blocks")])
+    keyboard.append([InlineKeyboardButton("🔙 رجوع للقائمة الرئيسية", callback_data="back_blocks")])
     return InlineKeyboardMarkup(keyboard)
 
 
 def get_timer_keyboard(block_key: str, subject_key: str, current_minutes: int) -> InlineKeyboardMarkup:
     """توليد لوحة تحكم ضبط الوقت بالأزرار 🔼 و 🔽 مع زر البدء"""
+    back_text = "🔙 رجوع للموضوعات" if block_key == "parasitology" else "🔙 رجوع للمواد"
     keyboard = [
         [
             InlineKeyboardButton("🔼 +5 د", callback_data=f"time_adj:{block_key}:{subject_key}:5"),
@@ -101,10 +113,11 @@ def get_timer_keyboard(block_key: str, subject_key: str, current_minutes: int) -
             InlineKeyboardButton("♾️ وقت مفتوح (بدون مؤقت)", callback_data=f"time_set:{block_key}:{subject_key}:0")
         ],
         [
-            InlineKeyboardButton("🚀 بدء الجولة الآن (20 سؤال)", callback_data=f"start_round:{block_key}:{subject_key}:{current_minutes}")
+            InlineKeyboardButton("🚀 بدء الجولة الآن (20)", callback_data=f"start_round:{block_key}:{subject_key}:{current_minutes}")
         ],
         [
-            InlineKeyboardButton("🔙 رجوع للمواد", callback_data=f"blk:{block_key}")
+            InlineKeyboardButton(back_text, callback_data=f"blk:{block_key}"),
+            InlineKeyboardButton("🏠 القائمة الرئيسية", callback_data="back_blocks")
         ]
     ]
     return InlineKeyboardMarkup(keyboard)
@@ -115,8 +128,7 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     user = update.effective_user
     welcome_text = (
         f"مرحباً بك يا **{user.first_name}** في بوت الاختبارات **Doquiz** 🧠✨\n\n"
-        "هنا يمكنك خوض تجربة اختبارات تفاعلية مميزة\n\n"
-        "👇 **الخطوة 1:** اختر البلوك الدراسي الذي ترغب في اختباره:"
+        "👇 اختر ما ترغب في اختباره:"
     )
     reply_markup = get_blocks_keyboard()
 
@@ -153,13 +165,21 @@ async def handle_callback_query(update: Update, context: ContextTypes.DEFAULT_TY
         block_data = all_data.get(block_key)
 
         if not block_data:
-            await query.edit_message_text("عذراً، هذا البلوك غير متوفر حالياً.")
+            await query.edit_message_text("عذراً، هذا القسم غير متوفر حالياً.")
             return
 
+        if block_key == "parasitology":
+            header_label = "المادة المختارة"
+            step_text = "👇 **الخطوة 2:** اختر الموضوع الذي ترغب باختباره:"
+        else:
+            header_label = "البلوك المختار"
+            step_text = "👇 **الخطوة 2:** اختر المادة التي ترغب باختبارها:"
+
+        desc_line = f"ℹ️ {block_data.get('description')}\n\n" if block_data.get("description") else ""
         text = (
-            f"🩸 **البلوك المختار:** {block_data['title']}\n"
-            f"ℹ️ {block_data.get('description', '')}\n\n"
-            "👇 **الخطوة 2:** اختر المادة التي ترغب باختبارها في هذا البلوك:"
+            f"🩸 **{header_label}:** {block_data['title']}\n"
+            f"{desc_line}"
+            f"{step_text}"
         )
         reply_markup = get_subjects_keyboard(block_key)
         await query.edit_message_text(text=text, reply_markup=reply_markup, parse_mode=ParseMode.MARKDOWN)
@@ -172,7 +192,7 @@ async def handle_callback_query(update: Update, context: ContextTypes.DEFAULT_TY
         subject_data = block_data.get("subjects", {}).get(subject_key, {})
 
         if not subject_data:
-            await query.edit_message_text("عذراً، هذه المادة غير متوفرة.")
+            await query.edit_message_text("عذراً، هذا القسم غير متوفر.")
             return
 
         # الافتراضي 0 دقائق (وقت مفتوح)
@@ -182,13 +202,17 @@ async def handle_callback_query(update: Update, context: ContextTypes.DEFAULT_TY
         time_display = "مفتوح ♾️ (بدون مؤقت)" if current_time == 0 else f"{current_time} دقيقة ⏱️"
         total_bank = len(subject_data.get("questions", []))
 
+        if block_key == "parasitology":
+            sec_info = f"🦠 **المادة:** {block_data.get('title', '')}\n📂 **الموضوع:** {subject_data.get('title', '')}"
+        else:
+            sec_info = f"🩸 **البلوك:** {block_data.get('title', '')}\n📚 **المادة:** {subject_data.get('title', '')}"
+
         text = (
-            f"🩸 **البلوك:** {block_data['title']}\n"
-            f"📚 **المادة:** {subject_data['title']}\n"
-            f"📊 إجمالي بنك الأسئلة: {total_bank} سؤالاً.\n"
+            f"{sec_info}\n"
+            f"📊 إجمالي بنك الأسئلة المتاح: ({total_bank})\n"
             "───────────────\n"
-            "🎯 **نظام الجولة:** 20 سؤالاً سريرياً في كل مرحلة.\n"
-            "💡 يتم اختيار الأسئلة الجديدة أولاً ثم الأسئلة السابقة التي تحتاج لتثبيت.\n\n"
+            "🎯 **نظام الجولة:** (20) في كل مرحلة.\n"
+            "💡 يتم تقديم الأسئلة غير المختبرة سابقاً أولاً، ثم الأسئلة التي تحتاج إلى تثبيت.\n\n"
             f"⏱️ **الوقت المحدد للجولة:** **[ {time_display} ]**\n"
             "يمكنك تعديل الوقت بالأزرار أدناه أو البدء فوراً:"
         )
@@ -210,13 +234,17 @@ async def handle_callback_query(update: Update, context: ContextTypes.DEFAULT_TY
         time_display = "مفتوح ♾️ (بدون مؤقت)" if new_time == 0 else f"{new_time} دقيقة ⏱️"
         total_bank = len(subject_data.get("questions", []))
 
+        if block_key == "parasitology":
+            sec_info = f"🦠 **المادة:** {block_data.get('title', '')}\n📂 **الموضوع:** {subject_data.get('title', '')}"
+        else:
+            sec_info = f"🩸 **البلوك:** {block_data.get('title', '')}\n📚 **المادة:** {subject_data.get('title', '')}"
+
         text = (
-            f"🩸 **البلوك:** {block_data['title']}\n"
-            f"📚 **المادة:** {subject_data['title']}\n"
-            f"📊 إجمالي بنك الأسئلة: {total_bank} سؤالاً.\n"
+            f"{sec_info}\n"
+            f"📊 إجمالي بنك الأسئلة المتاح: ({total_bank})\n"
             "───────────────\n"
-            "🎯 **نظام الجولة:** 20 سؤالاً سريرياً في كل مرحلة.\n"
-            "💡 يتم اختيار الأسئلة الجديدة أولاً ثم الأسئلة السابقة التي تحتاج لتثبيت.\n\n"
+            "🎯 **نظام الجولة:** (20) في كل مرحلة.\n"
+            "💡 يتم تقديم الأسئلة غير المختبرة سابقاً أولاً، ثم الأسئلة التي تحتاج إلى تثبيت.\n\n"
             f"⏱️ **الوقت المحدد للجولة:** **[ {time_display} ]**\n"
             "يمكنك تعديل الوقت بالأزرار أدناه أو البدء فوراً:"
         )
@@ -236,16 +264,22 @@ async def handle_callback_query(update: Update, context: ContextTypes.DEFAULT_TY
         time_display = "مفتوح ♾️ (بدون مؤقت)" if val == 0 else f"{val} دقيقة ⏱️"
         total_bank = len(subject_data.get("questions", []))
 
+        if block_key == "parasitology":
+            sec_info = f"🦠 **المادة:** {block_data.get('title', '')}\n📂 **الموضوع:** {subject_data.get('title', '')}"
+        else:
+            sec_info = f"🩸 **البلوك:** {block_data.get('title', '')}\n📚 **المادة:** {subject_data.get('title', '')}"
+
         text = (
-            f"🩸 **البلوك:** {block_data['title']}\n"
-            f"📚 **المادة:** {subject_data['title']}\n"
-            f"📊 إجمالي بنك الأسئلة: {total_bank} سؤالاً.\n"
+            f"{sec_info}\n"
+            f"📊 إجمالي بنك الأسئلة المتاح: ({total_bank})\n"
             "───────────────\n"
-            "🎯 **نظام الجولة:** 20 سؤالاً سريرياً في كل مرحلة.\n"
-            "💡 يتم اختيار الأسئلة الجديدة أولاً ثم الأسئلة السابقة التي تحتاج لتثبيت.\n\n"
+            "🎯 **نظام الجولة:** (20) في كل مرحلة.\n"
+            "💡 يتم تقديم الأسئلة غير المختبرة سابقاً أولاً، ثم الأسئلة التي تحتاج إلى تثبيت.\n\n"
             f"⏱️ **الوقت المحدد للجولة:** **[ {time_display} ]**\n"
             "يمكنك تعديل الوقت بالأزرار أدناه أو البدء فوراً:"
         )
+        reply_markup = get_timer_keyboard(block_key, subject_key, val)
+        await query.edit_message_text(text=text, reply_markup=reply_markup, parse_mode=ParseMode.MARKDOWN)
         reply_markup = get_timer_keyboard(block_key, subject_key, val)
         await query.edit_message_text(text=text, reply_markup=reply_markup, parse_mode=ParseMode.MARKDOWN)
 
@@ -379,18 +413,37 @@ async def send_current_question(user_id: int, context: ContextTypes.DEFAULT_TYPE
         return
 
     q = questions[index]
-    question_title = f"السؤال ({index + 1} من {total}):\n{q['question']}"
+    header = f"({index + 1}/{total}) "
+    raw_q_text = q.get("question", "").strip()
+    full_q = header + raw_q_text
 
     try:
-        message = await context.bot.send_poll(
-            chat_id=user_id,
-            question=question_title[:300],
-            options=[opt[:100] for opt in q["options"]],
-            type=Poll.QUIZ,
-            correct_option_id=q["correct_id"],
-            explanation=q.get("explanation", "إجابة صحيحة!")[:200],
-            is_anonymous=False,
-        )
+        if len(full_q) <= 300:
+            q_text = full_q
+        else:
+            case_msg = await context.bot.send_message(
+                chat_id=user_id,
+                text=f"📋 **حالة سريرية للسؤال ({index + 1}/{total}):**\n\n{raw_q_text}",
+                parse_mode=ParseMode.MARKDOWN,
+            )
+            session["poll_msg_ids"].append(case_msg.message_id)
+            q_text = f"({index + 1}/{total}) بناءً على الحالة السريرية أعلاه، ما هو الخيار الصحيح؟"
+
+        correct_opt_id = q.get("correct_id") if q.get("correct_id") is not None else q.get("correct_index", 0)
+
+        poll_kwargs = {
+            "chat_id": user_id,
+            "question": q_text,
+            "options": [str(opt)[:100] for opt in q["options"]],
+            "type": Poll.QUIZ,
+            "correct_option_id": int(correct_opt_id),
+            "is_anonymous": False,
+        }
+        raw_expl = (q.get("explanation") or "").strip()
+        if raw_expl and raw_expl not in ["إجابة صحيحة!", "إجابة سريرية صحيحة!", "إجابة صحيحة", "إجابة سريرية صحيحة"]:
+            poll_kwargs["explanation"] = raw_expl[:200]
+
+        message = await context.bot.send_poll(**poll_kwargs)
         session["last_poll_id"] = message.poll.id
         session["poll_msg_ids"].append(message.message_id)
         poll_to_user[message.poll.id] = user_id
@@ -462,23 +515,31 @@ async def finish_quiz(user_id: int, context: ContextTypes.DEFAULT_TYPE, timed_ou
     else:
         grade = "محاولة طيبة! راجع الشروحات والأخطاء وكرر الجولة 📖🩺"
 
+    is_para = session.get("block_key") == "parasitology"
+    if is_para:
+        scope_info = f"🦠 **المادة:** {block}\n📂 **الموضوع:** {subject}"
+        back_choice_text = "🔙 اختيار موضوع آخر"
+    else:
+        scope_info = f"🩸 **البلوك:** {block}\n📚 **المادة:** {subject}"
+        back_choice_text = "🔙 اختيار مادة أخرى"
+
     status_header = "⏰ **انتهى الوقت المحدد للجولة!**\n\n" if timed_out else "🏁 **اكتملت الجولة بنجاح!**\n\n"
 
     result_text = (
         f"{status_header}"
-        f"🩸 **البلوك:** {block}\n"
-        f"📚 **المادة:** {subject}\n"
-        f"🎯 **الدرجة:** {score} من {total}\n"
+        f"{scope_info}\n"
+        f"🎯 **الدرجة:** ({score} / {total})\n"
         f"📊 **النسبة المئوية:** {percentage}%\n"
         f"💬 **التقييم:** {grade}\n\n"
-        "💡 عند الضغط على **(بدء جولة جديدة)** سيتم تنظيف الشات واختيار أسئلة جديدة تلقائياً! 👇"
+        "💡 عند الضغط على **(بدء جولة جديدة)** سيتم اختيار (20) جديدة أو بحاجة لتثبيت! 👇"
     )
 
-    share_url = f"https://t.me/share/url?url=https://t.me/{config.BOT_USERNAME}&text=حققت%20{score}%20من%20{total}%20في%20جولة%20{subject}%20({block})!%20تحداني%20وجرب%20نفسك%20الآن%20🩺🧠"
+    share_url = f"https://t.me/share/url?url=https://t.me/{config.BOT_USERNAME}&text=حققت%20({score}%20/%20{total})%20في%20جولة%20{subject}%20({block})!%20تحداني%20وجرب%20نفسك%20الآن%20🩺🧠"
 
     keyboard = InlineKeyboardMarkup([
-        [InlineKeyboardButton("🔄 بدء جولة جديدة (20 سؤال)", callback_data=f"new_round:{session['block_key']}:{session['subject_key']}")],
-        [InlineKeyboardButton("📚 اختيار بلوك / مادة أخرى", callback_data="back_blocks")],
+        [InlineKeyboardButton("🔄 بدء جولة جديدة (20)", callback_data=f"new_round:{session['block_key']}:{session['subject_key']}")],
+        [InlineKeyboardButton(back_choice_text, callback_data=f"blk:{session['block_key']}")],
+        [InlineKeyboardButton("🏠 القائمة الرئيسية", callback_data="back_blocks")],
         [InlineKeyboardButton("📢 شارك نتيجتك مع زملائك", url=share_url)],
     ])
 
@@ -491,7 +552,12 @@ async def finish_quiz(user_id: int, context: ContextTypes.DEFAULT_TYPE, timed_ou
 
 
 async def post_to_channel_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """نشر إعلان الاختبار في القناة"""
+    """نشر إعلان الاختبار في القناة (خاص بالمشرفين فقط)"""
+    user_id = update.effective_user.id if update.effective_user else 0
+    admin_ids = getattr(config, "ADMIN_IDS", [593866129, 479584086])
+    if user_id not in admin_ids:
+        return
+
     channel_id = context.args[0] if context.args else getattr(config, "DEFAULT_CHANNEL", None)
 
     if not channel_id:
@@ -592,8 +658,10 @@ def main() -> None:
 
     app.post_init = post_init
 
-    print("Bot is running successfully!")
-    app.run_polling(drop_pending_updates=False)
+    print("تحذير أمني: البوت يعمل حالياً عبر Vercel Webhook في بيئة الإنتاج.")
+    print("تشغيل run_polling هنا سيؤدي تلقائياً إلى مسح الـ Webhook وإيقاف البوت عن المستخدمين.")
+    print("إذا كنت تريد تشغيل البولينج للاختبار المحلي فقط، قم بتعليق هذا التحذير.")
+    return
 
 
 if __name__ == "__main__":
